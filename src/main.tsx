@@ -221,7 +221,6 @@ function HomePage({
 }
 
 function ContactPage() {
-  const origin = window.location.origin;
   const isThankYou = window.location.pathname === '/thanks';
 
   return (
@@ -251,12 +250,9 @@ function ContactPage() {
       ) : (
         <form
           className="contact-form"
-          action="https://formsubmit.co/genesis.richards@getrecater.com"
+          action="/api/contact"
           method="post"
         >
-          <input type="hidden" name="_subject" value="New ReCater website inquiry" />
-          <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value={`${origin}/thanks`} />
           <input type="text" name="_honey" tabIndex={-1} autoComplete="off" className="honeypot" />
           <label>
             Name

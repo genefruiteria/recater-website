@@ -17,6 +17,16 @@ npm run build
 
 The static output is generated in `dist/`.
 
+## Environment Variables
+
+Set this in Vercel Project Settings -> Environment Variables:
+
+```bash
+CONTACT_TO_EMAIL=<your-recipient-email>
+```
+
+The public contact form posts to `/api/contact`; the recipient email is read server-side and is not shipped in the browser bundle.
+
 ## Free Custom-Domain Hosting
 
 Good options:
