@@ -231,13 +231,13 @@ function ContactPage() {
         {isThankYou ? (
           <>
             <h1 id="contact-title">Thanks for reaching out.</h1>
-            <p>Your message has been sent to Genesis Richards.</p>
+            <p>Your message has been sent to the ReCater team.</p>
           </>
         ) : (
           <>
             <h1 id="contact-title">Bring surplus food recovery to your campus.</h1>
             <p>
-              Send a note to the ReCater team and it will be addressed to Genesis Richards.
+              Send a note to the ReCater team and we will follow up soon.
             </p>
           </>
         )}
