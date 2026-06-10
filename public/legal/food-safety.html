@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReCater — Food Safety Statement</title>
+<meta name="description" content="ReCater&#x27;s food-safety framework: assumption of risk, the 40-140°F danger zone, approved and prohibited food sources, allergen disclosure, and incident reporting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Stylish&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+/* ReCater Legal — page-specific styles
+   --------------------------------------------------------------------------
+   Brand constraint: this site uses two faces. Outfit handles all body and
+   display text. Stylish is reserved for 3 warm-accent rules (below) plus
+   the hand-drawn wordmark in the topbar. Do not use Stylish elsewhere.
+*/
+.rc-legal {
+  --rc-amber: #e0913a;
+  --rc-amber-deep: #c5762a;
+  --rc-paper: #f6f3ec;
+  --rc-ink: #263238;
+  --rc-sage: #5d7e68;
+  --rc-line: rgba(38, 50, 56, 0.13);
+  --rc-rule-1: 1.2rem;
+  --rc-rule-2: 1.6rem;
+  --rc-measure: 72ch;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--rc-ink);
+  background: var(--rc-paper);
+  line-height: 1.6;
+}
+
+.rc-legal__hero {
+  padding: clamp(64px, 8vw, 112px) 0 clamp(40px, 5vw, 64px);
+  border-bottom: 1px solid var(--rc-line);
+}
+.rc-legal__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin: 0 0 1rem;
+}
+.rc-legal__title {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  max-width: 18ch;
+}
+.rc-legal__blurb {
+  font-size: 1.05rem;
+  max-width: 56ch;
+  margin: 0 0 1.5rem;
+  color: rgba(38, 50, 56, 0.85);
+}
+.rc-legal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(38, 50, 56, 0.7);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rc-line);
+}
+.rc-legal__meta strong { color: var(--rc-ink); font-weight: 600; }
+
+.rc-legal__body {
+  padding: clamp(48px, 6vw, 80px) 0 clamp(80px, 10vw, 120px);
+}
+.rc-legal__body h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: var(--rc-rule-2) 0 0.75rem;
+  scroll-margin-top: 92px;
+  color: var(--rc-ink);
+}
+.rc-legal__body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: var(--rc-rule-1) 0 0.5rem;
+  scroll-margin-top: 92px;
+  color: var(--rc-ink);
+}
+.rc-legal__body h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.9rem 0 0.4rem;
+  color: var(--rc-ink);
+}
+.rc-legal__body p {
+  max-width: var(--rc-measure);
+  margin: 0 0 1rem;
+}
+.rc-legal__body ul, .rc-legal__body ol {
+  max-width: var(--rc-measure);
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+}
+.rc-legal__body li { margin: 0 0 0.4rem; }
+.rc-legal__body li > ul, .rc-legal__body li > ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.rc-legal__body a {
+  color: var(--rc-amber-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.rc-legal__body code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: rgba(38, 50, 56, 0.06);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+.rc-legal__body pre {
+  background: rgba(38, 50, 56, 0.05);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-width: var(--rc-measure);
+  font-size: 0.9em;
+}
+.rc-legal__body pre code { background: none; padding: 0; }
+.rc-legal__body hr {
+  border: none;
+  border-top: 1px solid var(--rc-line);
+  margin: 2rem 0;
+  max-width: var(--rc-measure);
+}
+.rc-legal__body blockquote {
+  border-left: 3px solid var(--rc-amber);
+  background: rgba(224, 145, 58, 0.07);
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0 1.25rem;
+  max-width: var(--rc-measure);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.97rem;
+}
+.rc-legal__body blockquote p:last-child { margin-bottom: 0; }
+
+.rc-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 8px;
+  background: #fffdf8;
+}
+.rc-legal__body table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92rem;
+}
+.rc-legal__body th, .rc-legal__body td {
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--rc-line);
+  vertical-align: top;
+}
+.rc-legal__body th {
+  background: rgba(93, 126, 104, 0.08);
+  font-weight: 600;
+  color: var(--rc-ink);
+}
+.rc-legal__body tr:last-child td { border-bottom: none; }
+.rc-legal__body td code, .rc-legal__body th code { font-size: 0.85em; }
+
+.rc-toc {
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  background: #fffdf8;
+  max-width: var(--rc-measure);
+  margin: 1.5rem 0 2rem;
+}
+.rc-toc__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin: 0 0 0.75rem;
+}
+.rc-toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+}
+.rc-toc__list li { margin: 0 0 0.4rem; }
+.rc-toc__list a { text-decoration: none; color: var(--rc-ink); }
+.rc-toc__list a:hover { color: var(--rc-amber-deep); text-decoration: underline; }
+.rc-toc__list li.lvl-3 { padding-left: 1.25rem; font-size: 0.88rem; color: rgba(38, 50, 56, 0.78); }
+
+.rc-crosslinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rc-line);
+}
+.rc-crosslinks__chip {
+  font-size: 0.82rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--rc-line-strong);
+  border-radius: 999px;
+  color: var(--rc-ink);
+  text-decoration: none;
+  background: #fffdf8;
+}
+.rc-crosslinks__chip:hover {
+  border-color: var(--rc-amber);
+  color: var(--rc-amber-deep);
+}
+
+.rc-contact {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  background: rgba(93, 126, 104, 0.05);
+  max-width: var(--rc-measure);
+}
+.rc-contact h2 { margin-top: 0; font-size: 1.2rem; }
+.rc-contact p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+.rc-contact a { font-weight: 500; }
+
+@media (max-width: 720px) {
+  .rc-legal__body h2 { scroll-margin-top: 76px; }
+  .rc-legal__body h3 { scroll-margin-top: 76px; }
+}
+</style>
+</head>
+<body class="rc-legal">
+<nav class="rc-topbar" aria-label="ReCater primary">
+  <a href="/" class="rc-topbar__brand" aria-label="ReCater home">
+    <img src="/assets/recater-logo.svg" alt="ReCater" class="rc-topbar__wordmark">
+  </a>
+  <ul class="rc-topbar__nav">
+    <li><a href="/#the-loop">The Loop</a></li>
+    <li><a href="/#how-it-works">How it works</a></li>
+    <li><a href="/#impact">Impact</a></li>
+    <li><a href="/#students">Students</a></li>
+    <li><a href="/#security">Trust</a></li>
+    <li><a href="/#pricing">Pricing</a></li>
+    <li><a href="/#journal">Journal</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+  <a href="/#contact" class="rc-topbar__cta">Get a demo</a>
+</nav>
+<main>
+<section class="rc-legal__hero">
+<div class="rc-shell">
+<span class="rc-legal__eyebrow">Legal · Food Safety</span>
+<h1 class="rc-legal__title">Food Safety Statement</h1>
+<p class="rc-legal__blurb">ReCater&#x27;s food-safety framework: assumption of risk, the 40-140°F danger zone, approved and prohibited food sources, allergen disclosure, and incident reporting.</p>
+<div class="rc-legal__meta">
+<span><strong>Effective:</strong> 1 July 2026</span>
+<span><strong>Published:</strong> 2026-06-07</span>
+<span><strong>Version:</strong> 2.0 (replaces "User Terms (5).pdf", June 2025)</span>
+</div>
+</div>
+</section>
+<section class="rc-legal__body">
+<div class="rc-shell">
+<p>This document is organized into 11 sections. Use the table of contents below to jump to a specific section.</p>
+<aside class="rc-toc">
+<p class="rc-toc__title">On this page</p>
+<ul class="rc-toc__list">
+<li class="lvl-2"><a href="#1-the-role-statement">1. The Role Statement</a></li>
+<li class="lvl-2"><a href="#2-assumption-of-risk">2. Assumption of Risk</a></li>
+<li class="lvl-2"><a href="#3-general-food-safety-guidelines">3. General Food Safety Guidelines</a></li>
+<li class="lvl-2"><a href="#4-approved-food-sources">4. Approved Food Sources</a></li>
+<li class="lvl-2"><a href="#5-prohibited-food-sources">5. Prohibited Food Sources</a></li>
+<li class="lvl-2"><a href="#6-allergens-and-dietary-restrictions">6. Allergens and Dietary Restrictions</a></li>
+<li class="lvl-2"><a href="#7-university-specific-addenda">7. University-Specific Addenda</a></li>
+<li class="lvl-2"><a href="#8-food-safety-incident-reporting">8. Food Safety Incident Reporting</a></li>
+<li class="lvl-2"><a href="#9-the-platforms-commitment">9. The Platform&amp;rsquo;s Commitment</a></li>
+<li class="lvl-2"><a href="#10-questions">10. Questions</a></li>
+<li class="lvl-2"><a href="#11-effective-date">11. Effective Date</a></li>
+</ul></aside>
+<h1 id="recater-food-safety-statement">ReCater — Food Safety Statement</h1>
+<p><strong>Last updated:</strong> 7 June 2026
+<strong>Effective:</strong> 1 July 2026
+<strong>Version:</strong> 2.0</p>
+<blockquote>
+<p><strong>Plain-English summary.</strong> ReCater is an information platform. We do not prepare, inspect, transport, store, or serve food. We do not independently verify food safety. When you consume Surplus Food through ReCater, you assume the same risk as an Event Guest would have assumed had they consumed the same food on-site at the original event. The food safety, allergen disclosure, and handling rules that applied at the original event apply unchanged. This document explains what that means in practice and what temperature, allergen, and source rules apply.</p>
+<p><strong>Questions about food safety.</strong> Email <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>. For an in-flight food-safety incident, use the &ldquo;Report a User&rdquo; link in the mobile app with the &ldquo;Food safety&rdquo; tag, and contact your campus health services directly.</p>
+</blockquote>
+<hr>
+<h2 id="1-the-role-statement">1. The Role Statement</h2>
+<p>ReCater is an information platform that routes notifications between verified, active members of an approved campus community. We do not:</p>
+<ul>
+<li>Prepare, cook, package, or portion food.</li>
+<li>Inspect food for safety, freshness, or suitability.</li>
+<li>Transport food from event to event.</li>
+<li>Store food in temperature-controlled facilities.</li>
+<li>Serve food to students at pickup.</li>
+<li>Independently verify that food available through the platform is safe for consumption, free of allergens, or otherwise suitable for any particular user.</li>
+</ul>
+<p>We do provide:</p>
+<ul>
+<li>A mobile app and web dashboard for posting, viewing, and claiming surplus food.</li>
+<li>Push notifications when new posts are published.</li>
+<li>QR-code check-in at pickup, which records the time, the post, and the User&rsquo;s Pseudonym.</li>
+<li>A &ldquo;Same Risk as Event Guest&rdquo; framework, which preserves the liability structure that applied at the original event.</li>
+<li>Temperature and allergen guidelines for Food Providers to follow at the time of posting.</li>
+<li>A 4-clause assumption-of-risk acknowledgment that all Users accept when creating an account.</li>
+</ul>
+<hr>
+<h2 id="2-assumption-of-risk">2. Assumption of Risk</h2>
+<p>In consideration of being permitted to access and use the ReCater mobile app, the ReCater web dashboard, and any related services (collectively, the &ldquo;Service&rdquo;), you acknowledge and agree that:</p>
+<ol>
+<li>
+<p><strong>Consuming leftover food available through the Service is a potentially dangerous activity and involves the risk of serious injury, illness, allergic reaction, and even death.</strong></p>
+</li>
+<li>
+<p><strong>ReCater has established guidelines for food posting; however, it does not independently verify that food available through the Service is in compliance with the Food Safety Guidelines, the Food Donation Guidelines, or any other applicable standard, and is not otherwise safe for consumption, free of allergens, or marked as containing allergens.</strong></p>
+</li>
+<li>
+<p><strong>You assume any and all risks of injury, illness, allergic reaction, and death arising from consuming food available through the Service.</strong></p>
+</li>
+<li>
+<p><strong>To the maximum extent permitted by applicable law, you waive claims against any university that appears on ReCater, its trustees, officers, employees, and agents, and against any caterer, food vendor, or other third party whose food is shared through the Service, arising out of the consumption of leftover food available through the Service, where the claim arises from ordinary negligence.</strong> This waiver does not apply to claims for gross negligence, willful misconduct, fraud, or any other claim that cannot lawfully be waived. Where the law of a particular jurisdiction prohibits a waiver of even ordinary negligence in a particular setting, that waiver is severed and the rest of this provision remains in effect.</p>
+</li>
+</ol>
+<p>This assumption of risk applies to the maximum extent permitted by law and survives the termination of your account.</p>
+<hr>
+<h2 id="3-general-food-safety-guidelines">3. General Food Safety Guidelines</h2>
+<p>Food Providers must follow these guidelines when posting Surplus Food.</p>
+<h3 id="31-cold-foods">3.1 Cold foods</h3>
+<p>Cold foods must be held at <strong>40°F (4°C) or below</strong> during the entire Pickup Window. This is consistent with the U.S. Food and Drug Administration Food Code for cold holding.</p>
+<h3 id="32-hot-foods">3.2 Hot foods</h3>
+<p>Hot foods must be held at <strong>140°F (60°C) or above</strong> during the entire Pickup Window. This is consistent with the U.S. Food and Drug Administration Food Code for hot holding.</p>
+<h3 id="33-danger-zone">3.3 Danger zone</h3>
+<p>Foods held in the temperature range <strong>40–140°F (the &ldquo;danger zone&rdquo;)</strong> for more than <strong>2 hours</strong> — or <strong>1 hour</strong> if the ambient temperature was above <strong>90°F (32°C)</strong> — are no longer safe to eat and must not be posted.</p>
+<h3 id="34-perishable-food-window">3.4 Perishable food window</h3>
+<p><strong>Perishable food should be eaten within 4 hours of leaving temperature control</strong> (cold below 40°F, hot above 140°F). Beyond that window, the food may no longer be safe regardless of the platform&rsquo;s posting.</p>
+<h3 id="35-catering-staff-removes-unsafe-items">3.5 Catering staff removes unsafe items</h3>
+<p>Catering staff must remove any items from the buffet that have exceeded the safe food-handling guidelines. Such items must not be posted and made available to students.</p>
+<h3 id="36-original-serving-location">3.6 Original serving location</h3>
+<p>The food remains at the <strong>original serving location</strong> and is not relocated. Food Providers do not move food to a different room, building, or location for the pickup.</p>
+<h3 id="37-no-to-go-containers-from-recater">3.7 No to-go containers from ReCater</h3>
+<p>ReCater does <strong>not</strong> supply to-go containers, plates, food wrap, or foil. Users must <strong>bring their own container</strong>. This is consistent with Frood&rsquo;s policy and the assumption-of-risk framework. The Platform does not sell, give away, or otherwise provide to-go materials.</p>
+<h3 id="38-equipment-handling">3.8 Equipment handling</h3>
+<p>Catering equipment (chafing dishes, serving utensils, warming trays, etc.) must remain at the event. Missing equipment is the responsibility of the Food Provider, and replacement charges may apply.</p>
+<h3 id="39-pickup-window">3.9 Pickup Window</h3>
+<p>The Pickup Window must be set at the time of posting. The default Pickup Window is <strong>15 minutes</strong>, configurable per Tenant. Posts are final once published; the Pickup Window cannot be extended after the fact.</p>
+<h3 id="310-posted-allergens-and-dietary-information">3.10 Posted allergens and dietary information</h3>
+<p>The Food Provider must populate the post&rsquo;s allergen and dietary flags accurately. ReCater displays the organizer&rsquo;s stated information as-is. The Platform does not independently verify ingredients, preparation surfaces, or cross-contamination risk.</p>
+<hr>
+<h2 id="4-approved-food-sources">4. Approved Food Sources</h2>
+<p>Food Providers may post Surplus Food from the following sources:</p>
+<ul>
+<li><strong>University dining services</strong> (e.g., campus dining hall surplus, catering services operated by the university).</li>
+<li><strong>Licensed caterers</strong> (e.g., third-party catering companies with a valid license, permit, or registration in the relevant jurisdiction).</li>
+<li><strong>Campus retail food vendors</strong> (e.g., on-campus cafés, food courts, convenience stores).</li>
+<li><strong>Club-purchased food from licensed vendors</strong> (e.g., a student organization that ordered pizza from a licensed pizzeria for an event and has leftover slices).</li>
+<li><strong>Other sources</strong> that the University Tenant has explicitly approved in writing.</li>
+</ul>
+<p>The University Tenant is responsible for determining which of these sources are acceptable in its environment.</p>
+<hr>
+<h2 id="5-prohibited-food-sources">5. Prohibited Food Sources</h2>
+<p>Food Providers may <strong>not</strong> post Surplus Food from the following sources:</p>
+<ul>
+<li><strong>Homemade or home-prepared food</strong>, including personal-cookout, dorm-room, or apartment-kitchen preparations.</li>
+<li><strong>Potluck or shared-plate food</strong> where the chain of custody is unclear or where individuals have brought food from private residences.</li>
+<li><strong>Takeout or restaurant leftovers</strong> intended for personal use.</li>
+<li><strong>Food from unlicensed vendors</strong> (e.g., a vendor without a valid food-service license, a vendor whose license has been suspended or revoked).</li>
+<li><strong>Food past its labeled &ldquo;use by,&rdquo; &ldquo;best by,&rdquo; or &ldquo;sell by&rdquo; date.</strong></li>
+<li><strong>Food prepared in unsanitary conditions</strong> (e.g., in a home with a sick household member, on a non-food-safe surface, without proper hand-washing facilities).</li>
+<li><strong>Food that has been recalled</strong> by the FDA, USDA, or other regulatory authority.</li>
+<li><strong>Food containing cannabis, alcohol, or other controlled substances</strong> that the venue&rsquo;s rules prohibit.</li>
+</ul>
+<p>ReCater reserves the right to remove any post that contains a prohibited food source, with or without notice, and to take moderation action against the Food Provider.</p>
+<hr>
+<h2 id="6-allergens-and-dietary-restrictions">6. Allergens and Dietary Restrictions</h2>
+<p>The ReCater platform supports the following dietary and allergen flags.</p>
+<h3 id="61-dietary-options-selectable-by-the-food-provider">6.1 Dietary options (selectable by the Food Provider)</h3>
+<ul>
+<li><strong>Vegan</strong>: contains no animal products.</li>
+<li><strong>Vegetarian</strong>: contains no meat or fish.</li>
+<li><strong>Gluten-free</strong>: contains no wheat, barley, rye, or related grains.</li>
+<li><strong>Kosher</strong>: prepared in accordance with Jewish dietary law.</li>
+<li><strong>Halal</strong>: prepared in accordance with Islamic dietary law.</li>
+<li><strong>Dairy-free</strong>: contains no milk or milk-derived ingredients.</li>
+<li><strong>Nut-free</strong>: contains no tree nuts or peanuts.</li>
+<li><strong>Other</strong>: see the post for specifics.</li>
+</ul>
+<h3 id="62-allergen-information-selectable-by-the-food-provider">6.2 Allergen information (selectable by the Food Provider)</h3>
+<p>The Platform supports disclosure of the major food allergens identified by the U.S. FDA:</p>
+<ul>
+<li>Milk</li>
+<li>Eggs</li>
+<li>Fish</li>
+<li>Crustacean shellfish</li>
+<li>Tree nuts</li>
+<li>Peanuts</li>
+<li>Wheat</li>
+<li>Soybeans</li>
+<li>Sesame</li>
+<li>Other (specify in the post)</li>
+</ul>
+<h3 id="63-the-organizers-responsibility">6.3 The organizer&rsquo;s responsibility</h3>
+<p>The Food Provider is responsible for:</p>
+<ul>
+<li><strong>Accurately disclosing</strong> the dietary options and allergens in the post. The organizer is in the best position to know what is in the food and how it was prepared.</li>
+<li><strong>Updating the post</strong> if the menu changes between posting and pickup.</li>
+<li><strong>Not posting</strong> the food if the organizer cannot accurately confirm the ingredients, preparation methods, or cross-contamination risk.</li>
+</ul>
+<p>The Platform displays the organizer&rsquo;s stated information as-is. The Platform does not independently verify ingredients, preparation surfaces, or cross-contamination risk.</p>
+<h3 id="64-the-students-responsibility">6.4 The student&rsquo;s responsibility</h3>
+<p>The student User is responsible for:</p>
+<ul>
+<li><strong>Reading the dietary and allergen information</strong> before claiming a post.</li>
+<li><strong>Making a reasonable judgment</strong> about whether the food is suitable for their dietary needs and allergen profile.</li>
+<li><strong>Not consuming</strong> food that they suspect may contain an allergen or ingredient that affects them.</li>
+</ul>
+<p>If you have a severe allergy, a strict dietary restriction, or any other health condition that requires you to be certain about food ingredients, do not rely solely on the post&rsquo;s dietary and allergen flags. Contact the Food Provider directly through the app, or skip the post. ReCater does not warrant the accuracy of the organizer&rsquo;s stated dietary and allergen information.</p>
+<h3 id="65-cross-contamination">6.5 Cross-contamination</h3>
+<p>ReCater does not control the preparation environment of the food. Cross-contamination (e.g., shared utensils, shared cutting boards, shared fryers) is the responsibility of the caterer and the Food Provider to disclose. The Platform displays what the Food Provider enters.</p>
+<hr>
+<h2 id="7-university-specific-addenda">7. University-Specific Addenda</h2>
+<p>Some University Tenants have additional food-safety rules, allergen policies, or vendor requirements that go beyond this document. These are described in the <strong><a href="https://getrecater.com/legal/addenda">University-specific Terms Addenda</a></strong>.</p>
+<p>If your University Tenant has published an addendum, the addendum controls over this document for that Tenant.</p>
+<hr>
+<h2 id="8-food-safety-incident-reporting">8. Food Safety Incident Reporting</h2>
+<p>If you believe a posted food item is unsafe, has caused illness, or has caused an allergic reaction, follow these steps:</p>
+<h3 id="81-immediate-steps">8.1 Immediate steps</h3>
+<ol>
+<li><strong>Seek medical attention if needed.</strong> Contact your campus health services or your local emergency services.</li>
+<li><strong>Report the food safety incident in the app.</strong> Use the &ldquo;Report a User&rdquo; link on the relevant post, with the &ldquo;Food safety&rdquo; tag. Include photos of the food, the receipt (if available), and a description of the symptoms.</li>
+<li><strong>Email ReCater.</strong> Send a copy of your report to <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.</li>
+<li><strong>Notify your University Tenant.</strong> Use the in-app &ldquo;Contact University&rdquo; link or email your university&rsquo;s sustainability office.</li>
+</ol>
+<h3 id="82-recaters-response">8.2 ReCater&rsquo;s response</h3>
+<p>ReCater will:</p>
+<ul>
+<li>Acknowledge the report within 24 hours.</li>
+<li>Investigate the incident within 48 hours.</li>
+<li>Take appropriate moderation action (warning, suspension, or ban of the Food Provider, depending on severity and recurrence).</li>
+<li>Cooperate with the University Tenant&rsquo;s investigation.</li>
+<li>Cooperate with campus health authorities if a public-health concern is identified.</li>
+<li>Preserve the relevant evidence (post, images, audit log) for at least 90 days.</li>
+</ul>
+<h3 id="83-carve-out-from-dispute-resolution">8.3 Carve-out from dispute resolution</h3>
+<p>Food-safety incidents escalated to campus health authorities are not subject to the binding arbitration clause in the User Terms §11. This means that you, ReCater, and the University Tenant retain the right to seek resolution in court for food-safety incidents, in addition to the platform&rsquo;s informal resolution process.</p>
+<hr>
+<h2 id="9-the-platforms-commitment">9. The Platform&rsquo;s Commitment</h2>
+<p>ReCater commits to:</p>
+<ul>
+<li>Providing Food Providers with clear, prominent UI for posting allergen and dietary information.</li>
+<li>Providing Users with prominent UI for filtering posts by their dietary needs and allergen profile.</li>
+<li>Maintaining audit logs of every post and every check-in for at least the life of the Tenant.</li>
+<li>Cooperating fully with University Tenant and public-health investigations of food-safety incidents.</li>
+<li>Notifying affected Users and University Tenants of confirmed food-safety incidents within 48 hours of confirmation.</li>
+<li>Reviewing and updating this Food Safety Statement at least annually.</li>
+</ul>
+<p>ReCater does <strong>not</strong> commit to:</p>
+<ul>
+<li>Guaranteeing the safety of any specific food item.</li>
+<li>Refunding Users for the cost of medical care, lost time, or other damages.</li>
+<li>Covering any food-safety insurance or liability.</li>
+</ul>
+<hr>
+<h2 id="10-questions">10. Questions</h2>
+<p>For questions about this Food Safety Statement, contact:</p>
+<ul>
+<li><strong>Email</strong>: <a href="mailto:legal@getrecater.com">legal@getrecater.com</a></li>
+<li><strong>Mail</strong>: ReCater Inc. (registered agent&rsquo;s address; current address is on file with the Delaware Secretary of State)</li>
+</ul>
+<hr>
+<h2 id="11-effective-date">11. Effective Date</h2>
+<p>This Food Safety Statement is effective as of 1 July 2026.</p>
+<hr>
+<p><em>End of Food Safety Statement (Version 2.0).</em></p>
+<p><em>This statement is informed by the public food-safety statements of comparable campus food-recovery platforms (Free Food Alert, Frood), the U.S. FDA Food Code, and the ReCater internal context bundle. It is intended for the U.S. higher-education market. International Tenants may need additional jurisdiction-specific guidance; contact <code>legal@getrecater.com</code> for details.</em></p>
+<div class="rc-crosslinks"><a class="rc-crosslinks__chip" href="terms.html">Terms of Use</a><a class="rc-crosslinks__chip" href="privacy.html">Privacy Policy</a><a class="rc-crosslinks__chip" href="dpa.html">Data Processing Addendum</a><a class="rc-crosslinks__chip" href="addenda.html">Per-University Addenda</a></div>
+<div class="rc-contact">
+  <h2 id="contact">Questions, comments, or concerns</h2>
+  <p>This document is published by ReCater, Inc. (the entity that operates the ReCater service). For questions about this document, contact us at <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.</p>
+  <p>For privacy and data-protection questions, contact <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>.</p>
+  <p>To report a security vulnerability, contact <a href="mailto:security@getrecater.com">security@getrecater.com</a>.</p>
+  <p>For product support, contact <a href="mailto:support@getrecater.com">support@getrecater.com</a>.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="rc-footer" role="contentinfo">
+  <div class="rc-shell">
+    <div class="rc-footer__grid">
+      <div class="rc-footer__brand-area">
+        <a href="/" class="rc-footer__brand" aria-label="ReCater home">
+          <img src="/assets/recater-mark.png" alt="" class="rc-footer__brand-mark" aria-hidden="true">
+          <span class="rc-footer__brand-word">ReCater</span>
+        </a>
+        <p class="rc-footer__tag">
+          The verified impact loop for campus food recovery. Multi-tenant SaaS for universities that need student energy and reportable data.
+        </p>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/#the-loop">The Loop</a></li>
+          <li><a href="/#how-it-works">How it works</a></li>
+          <li><a href="/#impact">Impact &amp; reporting</a></li>
+          <li><a href="/#students">For students</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/#security">Security &amp; trust</a></li>
+          <li><a href="/#compare">Capability comparison</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="mailto:hello@getrecater.com?subject=ReCater%20docs">University docs</a></li>
+          <li><a href="mailto:hello@getrecater.com?subject=Status%20page%20request">Status &amp; uptime</a></li>
+        </ul>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="terms.html">User Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="food-safety.html">Food Safety</a></li>
+          <li><a href="dpa.html">Data Processing Addendum</a></li>
+          <li><a href="addenda.html">Per-University Addenda</a></li>
+          <li><a href="mailto:legal@getrecater.com?subject=Legal%20inquiry">legal@getrecater.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rc-footer__bottom">
+      <span>© 2026 ReCater. Built for campuses that need both.</span>
+      <div class="rc-footer__bottom-links">
+        <a href="mailto:privacy@getrecater.com?subject=Privacy%20inquiry">Privacy</a>
+        <a href="mailto:legal@getrecater.com?subject=Terms%20inquiry">Terms</a>
+        <a href="mailto:security@getrecater.com?subject=Security%20report">Report a security issue</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

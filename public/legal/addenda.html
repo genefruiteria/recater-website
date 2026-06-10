@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReCater — Per-University Addenda</title>
+<meta name="description" content="The per-University Addenda template, an illustrative worked example, and the five per-state addenda (CA, MA, TX, NY, WA) that ReCater maintains for Tenant procurement and IT review.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Stylish&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+/* ReCater Legal — page-specific styles
+   --------------------------------------------------------------------------
+   Brand constraint: this site uses two faces. Outfit handles all body and
+   display text. Stylish is reserved for 3 warm-accent rules (below) plus
+   the hand-drawn wordmark in the topbar. Do not use Stylish elsewhere.
+*/
+.rc-legal {
+  --rc-amber: #e0913a;
+  --rc-amber-deep: #c5762a;
+  --rc-paper: #f6f3ec;
+  --rc-ink: #263238;
+  --rc-sage: #5d7e68;
+  --rc-line: rgba(38, 50, 56, 0.13);
+  --rc-rule-1: 1.2rem;
+  --rc-rule-2: 1.6rem;
+  --rc-measure: 72ch;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--rc-ink);
+  background: var(--rc-paper);
+  line-height: 1.6;
+}
+
+.rc-legal__hero {
+  padding: clamp(64px, 8vw, 112px) 0 clamp(40px, 5vw, 64px);
+  border-bottom: 1px solid var(--rc-line);
+}
+.rc-legal__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin: 0 0 1rem;
+}
+.rc-legal__title {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  max-width: 18ch;
+}
+.rc-legal__blurb {
+  font-size: 1.05rem;
+  max-width: 56ch;
+  margin: 0 0 1.5rem;
+  color: rgba(38, 50, 56, 0.85);
+}
+.rc-legal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(38, 50, 56, 0.7);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rc-line);
+}
+.rc-legal__meta strong { color: var(--rc-ink); font-weight: 600; }
+
+.rc-legal__body {
+  padding: clamp(48px, 6vw, 80px) 0 clamp(80px, 10vw, 120px);
+}
+.rc-legal__body h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: var(--rc-rule-2) 0 0.75rem;
+  scroll-margin-top: 92px;
+  color: var(--rc-ink);
+}
+.rc-legal__body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: var(--rc-rule-1) 0 0.5rem;
+  scroll-margin-top: 92px;
+  color: var(--rc-ink);
+}
+.rc-legal__body h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.9rem 0 0.4rem;
+  color: var(--rc-ink);
+}
+.rc-legal__body p {
+  max-width: var(--rc-measure);
+  margin: 0 0 1rem;
+}
+.rc-legal__body ul, .rc-legal__body ol {
+  max-width: var(--rc-measure);
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+}
+.rc-legal__body li { margin: 0 0 0.4rem; }
+.rc-legal__body li > ul, .rc-legal__body li > ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.rc-legal__body a {
+  color: var(--rc-amber-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.rc-legal__body code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: rgba(38, 50, 56, 0.06);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+.rc-legal__body pre {
+  background: rgba(38, 50, 56, 0.05);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-width: var(--rc-measure);
+  font-size: 0.9em;
+}
+.rc-legal__body pre code { background: none; padding: 0; }
+.rc-legal__body hr {
+  border: none;
+  border-top: 1px solid var(--rc-line);
+  margin: 2rem 0;
+  max-width: var(--rc-measure);
+}
+.rc-legal__body blockquote {
+  border-left: 3px solid var(--rc-amber);
+  background: rgba(224, 145, 58, 0.07);
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0 1.25rem;
+  max-width: var(--rc-measure);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.97rem;
+}
+.rc-legal__body blockquote p:last-child { margin-bottom: 0; }
+
+.rc-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 8px;
+  background: #fffdf8;
+}
+.rc-legal__body table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92rem;
+}
+.rc-legal__body th, .rc-legal__body td {
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--rc-line);
+  vertical-align: top;
+}
+.rc-legal__body th {
+  background: rgba(93, 126, 104, 0.08);
+  font-weight: 600;
+  color: var(--rc-ink);
+}
+.rc-legal__body tr:last-child td { border-bottom: none; }
+.rc-legal__body td code, .rc-legal__body th code { font-size: 0.85em; }
+
+.rc-toc {
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  background: #fffdf8;
+  max-width: var(--rc-measure);
+  margin: 1.5rem 0 2rem;
+}
+.rc-toc__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin: 0 0 0.75rem;
+}
+.rc-toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+}
+.rc-toc__list li { margin: 0 0 0.4rem; }
+.rc-toc__list a { text-decoration: none; color: var(--rc-ink); }
+.rc-toc__list a:hover { color: var(--rc-amber-deep); text-decoration: underline; }
+.rc-toc__list li.lvl-3 { padding-left: 1.25rem; font-size: 0.88rem; color: rgba(38, 50, 56, 0.78); }
+
+.rc-crosslinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rc-line);
+}
+.rc-crosslinks__chip {
+  font-size: 0.82rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--rc-line-strong);
+  border-radius: 999px;
+  color: var(--rc-ink);
+  text-decoration: none;
+  background: #fffdf8;
+}
+.rc-crosslinks__chip:hover {
+  border-color: var(--rc-amber);
+  color: var(--rc-amber-deep);
+}
+
+.rc-contact {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  background: rgba(93, 126, 104, 0.05);
+  max-width: var(--rc-measure);
+}
+.rc-contact h2 { margin-top: 0; font-size: 1.2rem; }
+.rc-contact p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+.rc-contact a { font-weight: 500; }
+
+@media (max-width: 720px) {
+  .rc-legal__body h2 { scroll-margin-top: 76px; }
+  .rc-legal__body h3 { scroll-margin-top: 76px; }
+}
+</style>
+</head>
+<body class="rc-legal">
+<nav class="rc-topbar" aria-label="ReCater primary">
+  <a href="/" class="rc-topbar__brand" aria-label="ReCater home">
+    <img src="/assets/recater-logo.svg" alt="ReCater" class="rc-topbar__wordmark">
+  </a>
+  <ul class="rc-topbar__nav">
+    <li><a href="/#the-loop">The Loop</a></li>
+    <li><a href="/#how-it-works">How it works</a></li>
+    <li><a href="/#impact">Impact</a></li>
+    <li><a href="/#students">Students</a></li>
+    <li><a href="/#security">Trust</a></li>
+    <li><a href="/#pricing">Pricing</a></li>
+    <li><a href="/#journal">Journal</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+  <a href="/#contact" class="rc-topbar__cta">Get a demo</a>
+</nav>
+<main>
+<section class="rc-legal__hero">
+<div class="rc-shell">
+<span class="rc-legal__eyebrow">Legal · Per-University Addenda</span>
+<h1 class="rc-legal__title">Per-University Addenda</h1>
+<p class="rc-legal__blurb">The per-University Addenda template, an illustrative worked example, and the five per-state addenda (CA, MA, TX, NY, WA) that ReCater maintains for Tenant procurement and IT review.</p>
+<div class="rc-legal__meta">
+<span><strong>Effective:</strong> 1 July 2026</span>
+<span><strong>Published:</strong> 2026-06-07</span>
+<span><strong>Version:</strong> 2.0 (replaces "User Terms (5).pdf", June 2025)</span>
+</div>
+</div>
+</section>
+<section class="rc-legal__body">
+<div class="rc-shell">
+<p>This document is organized into 5 parts: instructions, the template, an illustrative example, the per-state addenda, and a record-keeping note.</p>
+<aside class="rc-toc">
+<p class="rc-toc__title">On this page</p>
+<ul class="rc-toc__list">
+<li class="lvl-2"><a href="#a-template-instructions">A. Template Instructions</a></li>
+<li class="lvl-2"><a href="#b-the-template-university-fills-in-the-bracketed-fields">B. The Template (University fills in the bracketed fields)</a></li>
+<li class="lvl-2"><a href="#c-filled-in-example-illustrative-non-binding">C. Filled-In Example (Illustrative, Non-Binding)</a></li>
+<li class="lvl-2"><a href="#d-per-state-addenda-optional-auto-included">D. Per-State Addenda (Optional, Auto-Included)</a></li>
+<li class="lvl-2"><a href="#e-acceptance-record">E. Acceptance Record</a></li>
+</ul></aside>
+<h1 id="recater-university-specific-terms-addenda">ReCater — University-specific Terms Addenda</h1>
+<p><strong>Last updated:</strong> 7 June 2026
+<strong>Effective:</strong> 1 July 2026
+<strong>Version:</strong> 2.0
+<strong>Template (to be completed per University Tenant)</strong></p>
+<blockquote>
+<p><strong>What this is.</strong> Each University Tenant may have additional state-specific, FERPA-specific, or AUP-specific terms that need to be acknowledged by Users. Free Food Alert maintains three such addenda (Portland Community College, Oregon State University, University of North Carolina Wilmington); ReCater uses a similar template, expanded to cover FERPA explicitly and to support both email-auth and SSO authentication paths. The University fills in the bracketed fields before publishing; ReCater hosts a signed copy on <a href="https://getrecater.com/legal/addenda">getrecater.com/legal/addenda/<university-slug>.html</a>.</p>
+<p><strong>This is a template, not a contract.</strong> The bracketed fields (e.g., <code>[UNIVERSITY NAME]</code>, <code>[STATE]</code>, <code>[EFFECTIVE DATE]</code>) MUST be completed by the University and ReCater for the executed version. The filled-in example in section C uses the placeholder name &ldquo;Pinecrest University&rdquo; and is purely illustrative; it is not a commitment by ReCater or any University, and it has no legal effect.</p>
+<p><strong>Questions.</strong> Email <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.</p>
+</blockquote>
+<hr>
+<h2 id="a-template-instructions">A. Template Instructions</h2>
+<p>The University Tenant completes the following bracketed fields and publishes the completed addendum at <code>getrecater.com/legal/addenda/&lt;university-slug&gt;.html</code>. The addendum becomes part of the binding User Terms for Users within the Tenant.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Where it goes</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[UNIVERSITY NAME]</code></td>
+<td>Throughout</td>
+<td>The legal name of the University</td>
+</tr>
+<tr>
+<td><code>[UNIVERSITY SHORT NAME]</code></td>
+<td>Throughout</td>
+<td>The brand name (e.g., &ldquo;ACME University&rdquo;)</td>
+</tr>
+<tr>
+<td><code>[STATE]</code></td>
+<td>§1, §3</td>
+<td>State where the University is located</td>
+</tr>
+<tr>
+<td><code>[EFFECTIVE DATE]</code></td>
+<td>Header</td>
+<td>The date the addendum becomes effective</td>
+</tr>
+<tr>
+<td><code>[AUP URL]</code></td>
+<td>§2</td>
+<td>Link to the University&rsquo;s Acceptable Use Policy, if one exists</td>
+</tr>
+<tr>
+<td><code>[SSO URL]</code></td>
+<td>§4</td>
+<td>If SSO is configured, link to the University&rsquo;s IdP entry point</td>
+</tr>
+<tr>
+<td><code>[CAMPUS HEALTH CONTACT]</code></td>
+<td>§6</td>
+<td>Email or phone for campus health services</td>
+</tr>
+<tr>
+<td><code>[SPECIAL PROVISIONS]</code></td>
+<td>§8</td>
+<td>Any additional university-specific provisions (e.g., age exception, dietary policy)</td>
+</tr>
+<tr>
+<td><code>[VENUE]</code></td>
+<td>§3</td>
+<td>City/county/state for judicial venue, if the default Wilmington, Delaware is not used</td>
+</tr>
+<tr>
+<td><code>[LIABILITY CAP TERMS]</code></td>
+<td>§7</td>
+<td>If liability cap is changed by mutual agreement; otherwise leave blank and the default User Terms §4.2 applies</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="b-the-template-university-fills-in-the-bracketed-fields">B. The Template (University fills in the bracketed fields)</h2>
+<h3 id="b1-identifying-information">B.1 Identifying information</h3>
+<blockquote>
+<p><strong>ReCater University Addendum — [UNIVERSITY NAME]</strong></p>
+<p><strong>Effective:</strong> <code>[EFFECTIVE DATE]</code>
+<strong>State of governing law:</strong> <code>[STATE]</code>
+<strong>Authentication path:</strong> <code>[email-auth OR SSO — circle one]</code></p>
+<p>These ReCater University Addenda — [UNIVERSITY NAME] (the &ldquo;Addendum&rdquo;) supplement and are incorporated by reference into the ReCater User Terms of Use (the &ldquo;User Terms&rdquo;) and the ReCater Privacy Policy (the &ldquo;Privacy Policy&rdquo;). These Addenda apply to all Users affiliated with [UNIVERSITY NAME] through a verified campus email at the University Tenant&rsquo;s approved email domain, or through the University&rsquo;s Identity Provider.</p>
+</blockquote>
+<h3 id="b2-acceptable-use-policy-aup">B.2 Acceptable Use Policy (AUP)</h3>
+<p>Use of ReCater at [UNIVERSITY NAME] is governed by the University&rsquo;s Acceptable Use Policy at <code>[AUP URL]</code>. The AUP governs behavior on the University&rsquo;s network and University systems. ReCater defers to the AUP where the AUP imposes additional requirements on Users; ReCater&rsquo;s User Terms and Privacy Policy govern where ReCater&rsquo;s requirements are additional or more specific.</p>
+<h3 id="b3-governing-law-and-venue">B.3 Governing law and venue</h3>
+<p>This Addendum, and any dispute arising out of or related to the use of the ReCater platform within the [UNIVERSITY NAME] Tenant, is governed by the laws of the State of <code>[STATE]</code>, without regard to its conflict of laws principles. Any judicial proceedings permitted under the dispute-resolution provisions of the User Terms §11 shall be brought in the state or federal courts located in <code>[VENUE]</code> (or, if left blank, in the default venue in the User Terms §12), and the User and ReCater each consent to the exclusive jurisdiction and venue of such courts.</p>
+<h3 id="b4-sso-and-authentication">B.4 SSO and authentication</h3>
+<p>If [UNIVERSITY NAME] has configured Single Sign-On (SSO) via <code>[SSO URL]</code>, Users affiliated with the University will be authenticated through the University&rsquo;s Identity Provider. The opaque identifier from the IdP is what ReCater stores. ReCater does not receive or store the User&rsquo;s real name, university ID number, or academic record through the SSO integration. If [UNIVERSITY NAME] has configured email-auth (the default), Users will sign up with their approved <code>@[UNIVERSITY DOMAIN]</code> email address. The email is stored in ReCater&rsquo;s authentication layer (Supabase Auth) and is not displayed in the app or in standard reports. (See the User Terms §10.2 for the limited, audited circumstances in which authentication-layer identifiers may be accessed by Tenant administrators or ReCater platform administrators.)</p>
+<h3 id="b5-ferpa-disclosure">B.5 FERPA disclosure</h3>
+<p>Under federal law, the Family Educational Rights and Privacy Act (FERPA), 20 U.S.C. § 1232g, and its implementing regulations at 34 C.F.R. Part 99, students of [UNIVERSITY NAME] have certain rights regarding their education records. ReCater is designed to minimize data collection such that the platform does not require access to student education records, rosters, transcripts, course enrollment, or financial aid data. In-app identity is pseudonymous; authentication-layer data is stored separately. Whether ReCater falls within or outside the University&rsquo;s specific FERPA obligations depends on the deployment configuration and the University&rsquo;s own legal interpretation. The University should consult its own counsel.</p>
+<p>By using ReCater within the [UNIVERSITY NAME] Tenant, the User confirms that the User has read this FERPA disclosure and understands that the User&rsquo;s in-app identity is pseudonymous, that the User&rsquo;s authentication-layer identifier is not displayed in the app, and that ReCater does not produce identifiable student-level exports without explicit written authorization from the University.</p>
+<h3 id="b6-food-safety-escalation">B.6 Food safety escalation</h3>
+<p>Food safety incidents at [UNIVERSITY NAME] should be reported through the ReCater app&rsquo;s &ldquo;Report a User&rdquo; → &ldquo;Food safety&rdquo; tag, AND directly to <code>[CAMPUS HEALTH CONTACT]</code>. The University Tenant may impose additional food safety or vendor requirements beyond the ReCater Food Safety Statement; if so, those requirements are added to the addendum and govern for Users within the Tenant.</p>
+<h3 id="b7-university-specific-liability-cap">B.7 University-specific liability cap</h3>
+<p>The liability cap in the User Terms §4.2 controls by default. The University and ReCater may, by mutual written agreement, agree to a different cap for claims arising from the ReCater platform within the [UNIVERSITY NAME] Tenant. Any such agreement must be entered in <code>[LIABILITY CAP TERMS]</code> and signed by both parties. The cap may not be increased above what ReCater&rsquo;s then-current insurance program supports, and the University should not assume any specific cap is in effect unless and until this section is completed and signed.</p>
+<h3 id="b8-special-provisions">B.8 Special provisions</h3>
+<p><code>[UNIVERSITY NAME] has the following special provisions, if any, that apply to its Tenant:</code></p>
+<ul>
+<li><strong>Eligibility exceptions (if any):</strong> [e.g., &ldquo;Users aged 16 and older who are affiliated with [UNIVERSITY NAME] as student organization members are eligible to use the platform, notwithstanding the 18+ requirement in the User Terms §3.1.&rdquo; OR &ldquo;All users affiliated with [UNIVERSITY NAME] are eligible to use the platform, including users under 18, in accordance with applicable state law.&rdquo;]</li>
+<li><strong>University-specific dietary or allergen requirements (if any):</strong> [e.g., &ldquo;All food posts must include allergen information for the top 9 FDA allergens. Posts missing allergen information will be auto-hid by the platform.&rdquo;]</li>
+<li><strong>University-specific posting restrictions (if any):</strong> [e.g., &ldquo;Only faculty, staff, and registered student organizations are eligible to post. Personal student accounts cannot post.&rdquo;]</li>
+<li><strong>Other (if any):</strong> [Free-text field for any other special provisions]</li>
+</ul>
+<h3 id="b9-acceptance">B.9 Acceptance</h3>
+<p>By using ReCater within the [UNIVERSITY NAME] Tenant, the User confirms that the User has read and agrees to the ReCater User Terms of Use, the ReCater Privacy Policy, the ReCater Food Safety Statement, the ReCater Data Processing Addendum, and this [UNIVERSITY NAME] Addendum.</p>
+<hr>
+<h2 id="c-filled-in-example-illustrative-non-binding">C. Filled-In Example (Illustrative, Non-Binding)</h2>
+<blockquote>
+<p><strong>THIS EXAMPLE IS ILLUSTRATIVE ONLY AND HAS NO LEGAL EFFECT.</strong> The University name &ldquo;Pinecrest University,&rdquo; all phone numbers, email addresses, and URLs used below are fictitious placeholders. The increased liability cap in §C.7, the under-18 eligibility in §C.8, the &ldquo;Branded&rdquo; tier in §C.8, and any other specific terms in this example are <strong>illustrative of the type of language that a fully executed addendum might contain</strong> — they do not represent any commitment by ReCater or any University. The first ReCater Tenant&rsquo;s actual addendum will be created by completing the template in §B with that Tenant&rsquo;s specific information and signing it.</p>
+</blockquote>
+<h3 id="c1-identifying-information">C.1 Identifying information</h3>
+<blockquote>
+<p><strong>ReCater University Addendum — Pinecrest University (ILLUSTRATIVE)</strong></p>
+<p><strong>Effective:</strong> <em>Not yet effective. An executed addendum would carry the actual effective date agreed between the University and ReCater.</em>
+<strong>State of governing law:</strong> <code>Commonwealth of Massachusetts (illustrative)</code>
+<strong>Authentication path:</strong> <code>SSO (illustrative)</code></p>
+<p>[Body omitted for brevity — see §B.1 for the template text, with &ldquo;Pinecrest University&rdquo; substituted for <code>[UNIVERSITY NAME]</code>.]</p>
+</blockquote>
+<h3 id="c2-acceptable-use-policy-aup">C.2 Acceptable Use Policy (AUP)</h3>
+<p>[Body omitted for brevity — see §B.2. The illustrative AUP URL is <code>https://policies.pinecrest.edu/aup</code>.]</p>
+<h3 id="c3-governing-law-and-venue">C.3 Governing law and venue</h3>
+<p>[Body omitted for brevity — see §B.3. In the illustrative example, the state is the Commonwealth of Massachusetts and the venue is Suffolk County, Massachusetts. Real addenda should use the state and venue actually agreed.]</p>
+<h3 id="c4-sso-and-authentication">C.4 SSO and authentication</h3>
+<p>[Body omitted for brevity — see §B.4. In the illustrative example, the SSO URL is <code>https://sso.pinecrest.edu</code>. Real addenda should use the URL actually configured.]</p>
+<h3 id="c5-ferpa-disclosure">C.5 FERPA disclosure</h3>
+<p>[Body omitted for brevity — see §B.5.]</p>
+<h3 id="c6-food-safety-escalation">C.6 Food safety escalation</h3>
+<p>[Body omitted for brevity — see §B.6. In the illustrative example, the campus health contact is <code>health@pinecrest.edu</code> or <code>+1 (555) 010-2345</code>. Real addenda should use the contact actually designated.]</p>
+<h3 id="c7-university-specific-liability-cap">C.7 University-specific liability cap</h3>
+<blockquote>
+<p><strong>Illustrative only.</strong> The following paragraph is an example of a <em>mutual agreement</em> to vary the cap. <strong>It is not in effect</strong> and is <strong>not</strong> a representation that any specific cap is available to any University. The actual cap for any executed addendum is whatever the parties sign.</p>
+</blockquote>
+<p><em>Illustrative text (NOT in effect):</em> &ldquo;The liability cap in the User Terms §4.2 ($100 or 12 months of fees, whichever is greater) is increased to <strong>$1,000,000 per occurrence, $5,000,000 in the aggregate per calendar year</strong> for claims arising from the ReCater platform within the Pinecrest University Tenant. This increased cap is funded by ReCater&rsquo;s commercial general liability insurance and a separate cyber-liability insurance policy. Certificates of insurance are available on request to <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.&rdquo;</p>
+<p>The current User Terms §4.2 cap controls unless and until this section is signed by both ReCater and the University. ReCater&rsquo;s insurance program varies over time; the University should request a current certificate of insurance before relying on this paragraph.</p>
+<h3 id="c8-special-provisions">C.8 Special provisions</h3>
+<blockquote>
+<p><strong>Illustrative only.</strong> The following paragraphs are examples of special provisions that an executed addendum might contain. <strong>They are not in effect</strong> and <strong>do not</strong> create any obligation.</p>
+</blockquote>
+<ul>
+<li><strong>Eligibility (illustrative)</strong>: All users affiliated with Pinecrest University are eligible to use the platform, including student employees under 18, in accordance with Massachusetts law governing student employees of state institutions of higher education. <em>(ReCater does not make a representation that this exception is available; the User Terms §3.1 18+ default applies unless an executed addendum expressly grants an exception.)</em></li>
+<li><strong>University-specific allergen requirements (illustrative)</strong>: All food posts must include allergen information for the top 9 FDA allergens. Posts missing allergen information will be auto-hid by the platform.</li>
+<li><strong>University-specific posting restrictions (illustrative)</strong>: Only faculty, staff, and registered student organizations in good standing with the Office of Student Life are eligible to post. Personal student accounts cannot post.</li>
+<li><strong>Branding (illustrative)</strong>: Pinecrest University has chosen the &ldquo;Branded&rdquo; tier; the ReCater mobile app displays the Pinecrest University logo and color scheme. The University has provided the branding assets in the tenant onboarding packet. <em>(ReCater&rsquo;s product packaging is one Mobile Platform subscription with optional included SSO; the &ldquo;Branded&rdquo; tier language is a legacy term preserved for reference and may be replaced when the executed addendum is signed.)</em></li>
+<li><strong>Reporting cadence (illustrative)</strong>: Pinecrest University receives monthly emissions summaries on the 1st of each month, and quarterly board-ready reports on the 1st of April, July, October, and January.</li>
+</ul>
+<h3 id="c9-acceptance">C.9 Acceptance</h3>
+<p>[Body omitted for brevity — see §B.9.]</p>
+<hr>
+<h2 id="d-per-state-addenda-optional-auto-included">D. Per-State Addenda (Optional, Auto-Included)</h2>
+<p>These per-state addenda are included by default in every university addendum unless the university opts out in writing. The current per-state addenda are drafts based on ReCater&rsquo;s review of each state&rsquo;s law; they are not legal opinions and the University should consult its own counsel.</p>
+<h3 id="d1-california">D.1 California</h3>
+<p>If the University is located in California, the following applies:</p>
+<ul>
+<li><strong>CCPA / CPRA rights</strong>: California residents have the right to know, delete, correct, opt out of sale, and limit the use of sensitive personal information, as described in the Privacy Policy §11.8.</li>
+<li><strong>Shine the Light</strong>: California Civil Code § 1798.83 permits California residents to request information about the categories of personal information disclosed to third parties for those third parties&rsquo; direct-marketing purposes. ReCater does not disclose personal information to third parties for their direct-marketing purposes.</li>
+<li><strong>Food-safety disclaimer</strong>: nothing in the Food Safety Statement or the User Terms waives rights that cannot be waived under California law.</li>
+</ul>
+<h3 id="d2-massachusetts">D.2 Massachusetts</h3>
+<p>If the University is located in Massachusetts, the following applies:</p>
+<ul>
+<li><strong>201 CMR 17.00</strong>: ReCater&rsquo;s security program is designed to align with the Massachusetts Standards for the Protection of Personal Information of Residents of the Commonwealth (201 CMR 17.00). A written information security program (WISP) is maintained for ReCater&rsquo;s internal operations and is available on request. ReCater does not represent that the WISP satisfies any particular University&rsquo;s independent obligations under 201 CMR 17.00.</li>
+<li><strong>Data breach notification (M.G.L. c. 93H)</strong>: ReCater will notify the University and affected Users in accordance with Massachusetts data breach notification law, including the requirement to notify the Attorney General and the Office of Consumer Affairs and Business Regulation.</li>
+</ul>
+<h3 id="d3-texas">D.3 Texas</h3>
+<p>If the University is located in Texas, the following applies:</p>
+<ul>
+<li><strong>Texas Good Samaritan Food Donation Act</strong>: the Texas Good Samaritan Food Donation Act (Tex. Civ. Prac. &amp; Rem. Code § 76.001) provides civil and criminal liability protection for good-faith food donations. ReCater&rsquo;s role is not a &ldquo;donation&rdquo; within the meaning of the Act; the Food Safety Statement §2 governs the assumption of risk.</li>
+<li><strong>Texas Data Privacy and Security Act (effective July 1, 2024)</strong>: Texas residents have the right to access, correct, delete, and obtain a portable copy of their personal data, and to opt out of targeted advertising. ReCater does not engage in targeted advertising. ReCater&rsquo;s compliance with TDPSA is described in the Privacy Policy §11.8.</li>
+</ul>
+<h3 id="d4-new-york">D.4 New York</h3>
+<p>If the University is located in New York, the following applies:</p>
+<ul>
+<li><strong>NY SHIELD Act</strong>: ReCater&rsquo;s security program is designed to align with the New York Stop Hacks and Improve Electronic Data Security (SHIELD) Act. ReCater maintains a written information security program for its internal operations and is available on request.</li>
+<li><strong>NY Food Donation and Food Scraps Recycling Law</strong>: nothing in the Food Safety Statement or the User Terms is intended to override the rights of any party under the New York Food Donation and Food Scraps Recycling Law.</li>
+</ul>
+<h3 id="d5-washington-state">D.5 Washington (state)</h3>
+<p>If the University is located in Washington, the following applies:</p>
+<ul>
+<li><strong>My Health My Data Act (effective March 31, 2024)</strong>: ReCater does not collect consumer health data within the meaning of the Washington My Health My Data Act. The Platform&rsquo;s dietary flags are not &ldquo;consumer health data&rdquo; because they are organizer-entered disclosures about the food, not user-specific health information.</li>
+<li><strong>Washington Good Food Act</strong>: nothing in the Food Safety Statement or the User Terms is intended to override the rights of any party under the Washington Good Food Act.</li>
+</ul>
+<h3 id="d6-other-states">D.6 Other states</h3>
+<p>For states not listed above, ReCater will work with the University to add a per-state addendum on request. Contact <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.</p>
+<hr>
+<h2 id="e-acceptance-record">E. Acceptance Record</h2>
+<p>ReCater will maintain a record of which University Tenants have completed and published addenda under this template, with effective dates and version numbers. The record is available on request to <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.</p>
+<hr>
+<p><em>End of University-specific Terms Addenda (Version 2.0).</em></p>
+<p><em>This template is informed by Free Food Alert&rsquo;s per-university addenda for Portland Community College, Oregon State University, and University of North Carolina Wilmington, which are public and served as a benchmark. It is expanded to cover FERPA explicitly, SSO authentication, and the per-state variations that ReCater anticipates across U.S. higher-education markets.</em></p>
+<div class="rc-crosslinks"><a class="rc-crosslinks__chip" href="terms.html">Terms of Use</a><a class="rc-crosslinks__chip" href="privacy.html">Privacy Policy</a><a class="rc-crosslinks__chip" href="food-safety.html">Food Safety</a><a class="rc-crosslinks__chip" href="dpa.html">Data Processing Addendum</a></div>
+<div class="rc-contact">
+  <h2 id="contact">Questions, comments, or concerns</h2>
+  <p>This document is published by ReCater, Inc. (the entity that operates the ReCater service). For questions about this document, contact us at <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.</p>
+  <p>For privacy and data-protection questions, contact <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>.</p>
+  <p>To report a security vulnerability, contact <a href="mailto:security@getrecater.com">security@getrecater.com</a>.</p>
+  <p>For product support, contact <a href="mailto:support@getrecater.com">support@getrecater.com</a>.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="rc-footer" role="contentinfo">
+  <div class="rc-shell">
+    <div class="rc-footer__grid">
+      <div class="rc-footer__brand-area">
+        <a href="/" class="rc-footer__brand" aria-label="ReCater home">
+          <img src="/assets/recater-mark.png" alt="" class="rc-footer__brand-mark" aria-hidden="true">
+          <span class="rc-footer__brand-word">ReCater</span>
+        </a>
+        <p class="rc-footer__tag">
+          The verified impact loop for campus food recovery. Multi-tenant SaaS for universities that need student energy and reportable data.
+        </p>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/#the-loop">The Loop</a></li>
+          <li><a href="/#how-it-works">How it works</a></li>
+          <li><a href="/#impact">Impact &amp; reporting</a></li>
+          <li><a href="/#students">For students</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/#security">Security &amp; trust</a></li>
+          <li><a href="/#compare">Capability comparison</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="mailto:hello@getrecater.com?subject=ReCater%20docs">University docs</a></li>
+          <li><a href="mailto:hello@getrecater.com?subject=Status%20page%20request">Status &amp; uptime</a></li>
+        </ul>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="terms.html">User Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="food-safety.html">Food Safety</a></li>
+          <li><a href="dpa.html">Data Processing Addendum</a></li>
+          <li><a href="addenda.html">Per-University Addenda</a></li>
+          <li><a href="mailto:legal@getrecater.com?subject=Legal%20inquiry">legal@getrecater.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rc-footer__bottom">
+      <span>© 2026 ReCater. Built for campuses that need both.</span>
+      <div class="rc-footer__bottom-links">
+        <a href="mailto:privacy@getrecater.com?subject=Privacy%20inquiry">Privacy</a>
+        <a href="mailto:legal@getrecater.com?subject=Terms%20inquiry">Terms</a>
+        <a href="mailto:security@getrecater.com?subject=Security%20report">Report a security issue</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

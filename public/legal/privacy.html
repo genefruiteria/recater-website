@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReCater — Privacy Policy</title>
+<meta name="description" content="How ReCater collects, uses, retains, shares, and protects the data of users, universities, and food-recovery partners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Stylish&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+/* ReCater Legal — page-specific styles
+   --------------------------------------------------------------------------
+   Brand constraint: this site uses two faces. Outfit handles all body and
+   display text. Stylish is reserved for 3 warm-accent rules (below) plus
+   the hand-drawn wordmark in the topbar. Do not use Stylish elsewhere.
+*/
+.rc-legal {
+  --rc-amber: #e0913a;
+  --rc-amber-deep: #c5762a;
+  --rc-paper: #f6f3ec;
+  --rc-ink: #263238;
+  --rc-sage: #5d7e68;
+  --rc-line: rgba(38, 50, 56, 0.13);
+  --rc-rule-1: 1.2rem;
+  --rc-rule-2: 1.6rem;
+  --rc-measure: 72ch;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--rc-ink);
+  background: var(--rc-paper);
+  line-height: 1.6;
+}
+
+.rc-legal__hero {
+  padding: clamp(64px, 8vw, 112px) 0 clamp(40px, 5vw, 64px);
+  border-bottom: 1px solid var(--rc-line);
+}
+.rc-legal__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin: 0 0 1rem;
+}
+.rc-legal__title {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  max-width: 18ch;
+}
+.rc-legal__blurb {
+  font-size: 1.05rem;
+  max-width: 56ch;
+  margin: 0 0 1.5rem;
+  color: rgba(38, 50, 56, 0.85);
+}
+.rc-legal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(38, 50, 56, 0.7);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rc-line);
+}
+.rc-legal__meta strong { color: var(--rc-ink); font-weight: 600; }
+
+.rc-legal__body {
+  padding: clamp(48px, 6vw, 80px) 0 clamp(80px, 10vw, 120px);
+}
+.rc-legal__body h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: var(--rc-rule-2) 0 0.75rem;
+  scroll-margin-top: 92px;
+  color: var(--rc-ink);
+}
+.rc-legal__body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: var(--rc-rule-1) 0 0.5rem;
+  scroll-margin-top: 92px;
+  color: var(--rc-ink);
+}
+.rc-legal__body h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.9rem 0 0.4rem;
+  color: var(--rc-ink);
+}
+.rc-legal__body p {
+  max-width: var(--rc-measure);
+  margin: 0 0 1rem;
+}
+.rc-legal__body ul, .rc-legal__body ol {
+  max-width: var(--rc-measure);
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+}
+.rc-legal__body li { margin: 0 0 0.4rem; }
+.rc-legal__body li > ul, .rc-legal__body li > ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.rc-legal__body a {
+  color: var(--rc-amber-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.rc-legal__body code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: rgba(38, 50, 56, 0.06);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+.rc-legal__body pre {
+  background: rgba(38, 50, 56, 0.05);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-width: var(--rc-measure);
+  font-size: 0.9em;
+}
+.rc-legal__body pre code { background: none; padding: 0; }
+.rc-legal__body hr {
+  border: none;
+  border-top: 1px solid var(--rc-line);
+  margin: 2rem 0;
+  max-width: var(--rc-measure);
+}
+.rc-legal__body blockquote {
+  border-left: 3px solid var(--rc-amber);
+  background: rgba(224, 145, 58, 0.07);
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0 1.25rem;
+  max-width: var(--rc-measure);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.97rem;
+}
+.rc-legal__body blockquote p:last-child { margin-bottom: 0; }
+
+.rc-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 8px;
+  background: #fffdf8;
+}
+.rc-legal__body table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92rem;
+}
+.rc-legal__body th, .rc-legal__body td {
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--rc-line);
+  vertical-align: top;
+}
+.rc-legal__body th {
+  background: rgba(93, 126, 104, 0.08);
+  font-weight: 600;
+  color: var(--rc-ink);
+}
+.rc-legal__body tr:last-child td { border-bottom: none; }
+.rc-legal__body td code, .rc-legal__body th code { font-size: 0.85em; }
+
+.rc-toc {
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  background: #fffdf8;
+  max-width: var(--rc-measure);
+  margin: 1.5rem 0 2rem;
+}
+.rc-toc__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin: 0 0 0.75rem;
+}
+.rc-toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+}
+.rc-toc__list li { margin: 0 0 0.4rem; }
+.rc-toc__list a { text-decoration: none; color: var(--rc-ink); }
+.rc-toc__list a:hover { color: var(--rc-amber-deep); text-decoration: underline; }
+.rc-toc__list li.lvl-3 { padding-left: 1.25rem; font-size: 0.88rem; color: rgba(38, 50, 56, 0.78); }
+
+.rc-crosslinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rc-line);
+}
+.rc-crosslinks__chip {
+  font-size: 0.82rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--rc-line-strong);
+  border-radius: 999px;
+  color: var(--rc-ink);
+  text-decoration: none;
+  background: #fffdf8;
+}
+.rc-crosslinks__chip:hover {
+  border-color: var(--rc-amber);
+  color: var(--rc-amber-deep);
+}
+
+.rc-contact {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  background: rgba(93, 126, 104, 0.05);
+  max-width: var(--rc-measure);
+}
+.rc-contact h2 { margin-top: 0; font-size: 1.2rem; }
+.rc-contact p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+.rc-contact a { font-weight: 500; }
+
+@media (max-width: 720px) {
+  .rc-legal__body h2 { scroll-margin-top: 76px; }
+  .rc-legal__body h3 { scroll-margin-top: 76px; }
+}
+</style>
+</head>
+<body class="rc-legal">
+<nav class="rc-topbar" aria-label="ReCater primary">
+  <a href="/" class="rc-topbar__brand" aria-label="ReCater home">
+    <img src="/assets/recater-logo.svg" alt="ReCater" class="rc-topbar__wordmark">
+  </a>
+  <ul class="rc-topbar__nav">
+    <li><a href="/#the-loop">The Loop</a></li>
+    <li><a href="/#how-it-works">How it works</a></li>
+    <li><a href="/#impact">Impact</a></li>
+    <li><a href="/#students">Students</a></li>
+    <li><a href="/#security">Trust</a></li>
+    <li><a href="/#pricing">Pricing</a></li>
+    <li><a href="/#journal">Journal</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+  <a href="/#contact" class="rc-topbar__cta">Get a demo</a>
+</nav>
+<main>
+<section class="rc-legal__hero">
+<div class="rc-shell">
+<span class="rc-legal__eyebrow">Legal · Privacy Policy</span>
+<h1 class="rc-legal__title">Privacy Policy</h1>
+<p class="rc-legal__blurb">How ReCater collects, uses, retains, shares, and protects the data of users, universities, and food-recovery partners.</p>
+<div class="rc-legal__meta">
+<span><strong>Effective:</strong> 1 July 2026</span>
+<span><strong>Published:</strong> 2026-06-07</span>
+<span><strong>Version:</strong> 2.0 (replaces "User Terms (5).pdf", June 2025)</span>
+</div>
+</div>
+</section>
+<section class="rc-legal__body">
+<div class="rc-shell">
+<p>This document is organized into 17 sections. Use the table of contents below to jump to a specific section.</p>
+<aside class="rc-toc">
+<p class="rc-toc__title">On this page</p>
+<ul class="rc-toc__list">
+<li class="lvl-2"><a href="#1-introduction">1. Introduction</a></li>
+<li class="lvl-2"><a href="#2-what-we-collect">2. What We Collect</a></li>
+<li class="lvl-2"><a href="#3-how-we-use-your-information">3. How We Use Your Information</a></li>
+<li class="lvl-2"><a href="#4-authentication-and-identity-architecture">4. Authentication and Identity Architecture</a></li>
+<li class="lvl-2"><a href="#5-sub-processors">5. Sub-processors</a></li>
+<li class="lvl-2"><a href="#6-cookies-and-tracking">6. Cookies and Tracking</a></li>
+<li class="lvl-2"><a href="#7-ai-and-automated-decision-making">7. AI and Automated Decision-Making</a></li>
+<li class="lvl-2"><a href="#8-information-sharing">8. Information Sharing</a></li>
+<li class="lvl-2"><a href="#9-international-data-transfers">9. International Data Transfers</a></li>
+<li class="lvl-2"><a href="#10-data-retention">10. Data Retention</a></li>
+<li class="lvl-2"><a href="#11-your-rights">11. Your Rights</a></li>
+<li class="lvl-2"><a href="#12-childrens-privacy">12. Children&amp;rsquo;s Privacy</a></li>
+<li class="lvl-2"><a href="#13-security">13. Security</a></li>
+<li class="lvl-2"><a href="#14-breach-notification">14. Breach Notification</a></li>
+<li class="lvl-2"><a href="#15-changes-to-this-policy">15. Changes to This Policy</a></li>
+<li class="lvl-2"><a href="#16-contact">16. Contact</a></li>
+<li class="lvl-2"><a href="#17-effective-date">17. Effective Date</a></li>
+</ul></aside>
+<h1 id="recater-privacy-policy">ReCater — Privacy Policy</h1>
+<p><strong>Last updated:</strong> 7 June 2026
+<strong>Effective:</strong> 1 July 2026
+<strong>Version:</strong> 2.0</p>
+<blockquote>
+<p><strong>Plain-English summary.</strong> ReCater is the verified impact loop for campus food recovery. We collect the minimum data needed to operate the platform, and we don&rsquo;t sell or trade student data. Your in-app identity is a generated pseudonym (&ldquo;Bread Falcon&rdquo;) — never your real name. Your authentication-layer identifier (campus email or SSO opaque ID) is stored separately and is never displayed in the app or shared with other universities. You can delete your account and export your data at any time.</p>
+<p><strong>Questions about this policy.</strong> Email <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>. We respond within 30 days. For data subject requests, see §11.</p>
+<p><strong>A note on tier language.</strong> ReCater has historically described two authentication paths (&ldquo;email-auth&rdquo; for the default campus-email signup, and &ldquo;SSO&rdquo; for universities using a configured Identity Provider). The current product packaging is <strong>one Mobile Platform subscription with optional included SSO</strong>; the privacy architecture below applies to both. If a future product tier distinction is introduced, this policy will be updated with tier-specific paragraphs.</p>
+</blockquote>
+<hr>
+<h2 id="1-introduction">1. Introduction</h2>
+<h3 id="11-who-we-are">1.1 Who we are</h3>
+<p>ReCater Inc. (&ldquo;ReCater,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) operates a multi-tenant SaaS platform that helps universities recover surplus catered food, route pickup notifications to verified students, and produce audit-ready sustainability reports. Each university is a Tenant; each Tenant is isolated at the database level.</p>
+<h3 id="12-what-this-policy-covers">1.2 What this policy covers</h3>
+<p>This Privacy Policy describes what personal data ReCater collects, why, how we protect it, who we share it with, how long we keep it, and the rights you have over it. It applies to:</p>
+<ul>
+<li>The ReCater mobile application (iOS and Android).</li>
+<li>The ReCater web dashboard (for approved university administrators).</li>
+<li>Any related APIs, notifications, or services.</li>
+</ul>
+<h3 id="13-other-documents-that-govern">1.3 Other documents that govern</h3>
+<p>This Privacy Policy is read together with:</p>
+<ul>
+<li>The <strong><a href="https://getrecater.com/legal/terms">User Terms of Use</a></strong>, which governs your use of the platform.</li>
+<li>The <strong><a href="https://getrecater.com/legal/food-safety">Food Safety Statement</a></strong>.</li>
+<li>The <strong><a href="https://getrecater.com/legal/dpa">Data Processing Addendum (DPA)</a></strong>, which universities sign before processing personal data through the platform.</li>
+<li>The <strong><a href="https://getrecater.com/legal/addenda">University-specific Addenda</a></strong>, which add per-state and per-university language.</li>
+</ul>
+<p>If any provision of this Privacy Policy conflicts with a per-university Addendum, the Addendum controls for that Tenant.</p>
+<hr>
+<h2 id="2-what-we-collect">2. What We Collect</h2>
+<p>We collect the minimum data necessary to operate the platform. The data falls into four categories.</p>
+<h3 id="21-from-the-university-authentication-layer">2.1 From the university (authentication layer)</h3>
+<p><strong>Email-auth tier</strong> (default for new Tenants): when you sign up with a campus email at the University Tenant&rsquo;s approved email domain, we receive and store:</p>
+<ul>
+<li>The email address itself, in our authentication layer (Supabase Auth).</li>
+<li>A pseudonymous User record, with the email held in the authentication layer only and not copied into the platform&rsquo;s other tables.</li>
+</ul>
+<p><strong>SSO tier</strong> (for Tenants that have configured a university Identity Provider, OIDC / SAML / InCommon): when you sign in via your university&rsquo;s SSO, we receive:</p>
+<ul>
+<li>An opaque external identifier (<code>external_uid</code>) from the IdP.</li>
+<li>Optionally, a verified email claim from the IdP, used only for account matching during a migration from email-auth to SSO. The email is stored in the authentication layer only.</li>
+<li>A <code>display_name</code> and <code>affiliation</code> claim (e.g., &ldquo;student,&rdquo; &ldquo;faculty,&rdquo; &ldquo;staff&rdquo;), used to determine your Tenant and your role within it.</li>
+</ul>
+<h3 id="22-you-provide">2.2 You provide</h3>
+<p>When you use the platform, you provide:</p>
+<ul>
+<li><strong>Pseudonym</strong>: a generated display name (e.g., &ldquo;Bread Falcon&rdquo;) generated at signup. You can request a different pseudonym by emailing <code>privacy@getrecater.com</code>; ReCater may decline requests for pseudonyms that impersonate, that are offensive, or that are already in use.</li>
+<li><strong>Food posts</strong>: text, images, food category tags, dietary flags, allergen information, pickup location, pickup window, estimated weight. Food posts are attributed to your Pseudonym, not your real name or email.</li>
+<li><strong>QR check-ins</strong>: the time, the food post, your Pseudonym, and the device fingerprint of the phone used to check in. Check-in device fingerprints are used to detect duplicate check-ins for the same post; they are not shared with other Users or with the University Tenant in identifiable form.</li>
+<li><strong>Survey responses</strong>: post-event satisfaction, allergen accuracy, food-quality feedback. Survey responses are optional and pseudonymized.</li>
+<li><strong>Support correspondence</strong>: anything you send to ReCater at <code>support@getrecater.com</code>, <code>privacy@getrecater.com</code>, or other ReCater email addresses.</li>
+</ul>
+<h3 id="23-automatic">2.3 Automatic</h3>
+<p>The platform automatically collects:</p>
+<ul>
+<li><strong>Device information</strong>: device type, operating system, app version, locale, push-notification token.</li>
+<li><strong>Usage events</strong>: page views, taps, time on screen. Usage events are pseudonymous and are used to operate the platform, improve the user experience, and produce aggregate reports. Usage events are <strong>not</strong> used for advertising, profiling, or any commercial purpose.</li>
+<li><strong>Crash reports</strong>: anonymized stack traces via Sentry, an error-tracking service. Crash reports do not contain personal data; if a crash log accidentally includes a personal data element, ReCater treats the entire log as personal data.</li>
+<li><strong>Push notification delivery status</strong>: whether a notification was delivered, opened, or dismissed, used to operate the notification service.</li>
+</ul>
+<h3 id="24-what-we-do-not-collect">2.4 What we do NOT collect</h3>
+<p>ReCater does <strong>not</strong> collect:</p>
+<ul>
+<li>Real names (other than what an IdP may release for SSO and what the University Tenant may configure for administrative display; in either case, real names are never displayed in the app or included in standard reports).</li>
+<li>Student ID numbers.</li>
+<li>Transcripts, course enrollment, or academic records.</li>
+<li>Financial aid or billing data.</li>
+<li>Health or disability information.</li>
+<li>Rosters or student lists imported from the university.</li>
+<li>Identifiable student-level exports (unless explicitly authorized by the University Tenant in writing).</li>
+<li>Biometric data (ReCater does not use fingerprint or face recognition for authentication; mobile OS biometric prompts are handled by the device, not by ReCater).</li>
+<li>Advertising cookies, third-party tracking pixels, or cross-site behavioral data.</li>
+<li>Location data from the device (ReCater does not request location permission; pickup locations are entered manually by Food Providers).</li>
+</ul>
+<hr>
+<h2 id="3-how-we-use-your-information">3. How We Use Your Information</h2>
+<p>We use the data we collect only for the purposes listed below. Each purpose is tied to a specific data category.</p>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Data category used</th>
+<th>Legal basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provide the platform (login, post, claim, check in, review)</td>
+<td>Authentication-layer ID, pseudonym, posts, check-ins, device info</td>
+<td>Contract (Terms §2.1)</td>
+</tr>
+<tr>
+<td>Send push notifications about food posts and account events</td>
+<td>Device push token, pseudonym, posts</td>
+<td>Contract</td>
+</tr>
+<tr>
+<td>Generate monthly emissions summaries for the University Tenant</td>
+<td>Posts, check-ins, estimated weights, FG01–FG13 classifications</td>
+<td>Contract</td>
+</tr>
+<tr>
+<td>Generate optional sustainability reports (STARS, Scope 3, SB 253) — Dashboard Add-On</td>
+<td>Same as monthly summaries, plus department attribution if configured</td>
+<td>Contract</td>
+</tr>
+<tr>
+<td>Run points, badges, seasons, and raffles</td>
+<td>Posts, check-ins, pseudonym</td>
+<td>Contract</td>
+</tr>
+<tr>
+<td>Moderate content and enforce these Terms</td>
+<td>Posts, reports, audit log entries, pseudonym</td>
+<td>Legitimate interest in platform integrity</td>
+</tr>
+<tr>
+<td>Detect fraud, abuse, and security incidents</td>
+<td>Device fingerprint, IP address, audit log entries</td>
+<td>Legitimate interest in security</td>
+</tr>
+<tr>
+<td>Respond to support requests</td>
+<td>Whatever you send us</td>
+<td>Contract</td>
+</tr>
+<tr>
+<td>Comply with legal obligations (e.g., lawful subpoenas)</td>
+<td>Whatever is required by the legal process</td>
+<td>Legal obligation</td>
+</tr>
+</tbody>
+</table>
+<p>We do not use any of the above data for advertising, profiling, or any commercial purpose unrelated to operating the platform.</p>
+<hr>
+<h2 id="4-authentication-and-identity-architecture">4. Authentication and Identity Architecture</h2>
+<p>The ReCater privacy model is built on a deliberate separation between two identity layers. This separation is the foundation of FERPA-aligned architecture.</p>
+<h3 id="41-the-authentication-layer">4.1 The authentication layer</h3>
+<p>The authentication layer is the technical mechanism by which you prove your identity to log in:</p>
+<ul>
+<li>For <strong>email-auth</strong> Tenants, the authentication layer is Supabase Auth, which stores your campus email address.</li>
+<li>For <strong>SSO</strong> Tenants, the authentication layer is the university Identity Provider, which issues an opaque identifier (and optionally a verified email claim) to ReCater.</li>
+</ul>
+<p>The authentication layer&rsquo;s data is used only for login, account recovery, and the limited purposes listed in §3.</p>
+<h3 id="42-the-in-app-identity-layer">4.2 The in-app identity layer</h3>
+<p>The in-app identity layer is what other Users see. It is your Pseudonym — a generated name (e.g., &ldquo;Bread Falcon&rdquo;) and an optional avatar.</p>
+<ul>
+<li>Your Pseudonym is generated at signup.</li>
+<li>Your Pseudonym is <strong>not</strong> derived from your real name, your email, or any authentication-layer data.</li>
+<li>Other Users, including Food Providers, dashboard admins, and other students, see only your Pseudonym.</li>
+<li>Approved dashboard admins see your Pseudonym in operational contexts (e.g., reports, moderation actions). They do not see your real name unless your University Tenant has explicitly configured that as an administrative preference, and even then, it is not displayed in user-facing contexts.</li>
+</ul>
+<h3 id="43-the-tenant-boundary">4.3 The Tenant boundary</h3>
+<p>Each University Tenant is isolated at the database level using PostgreSQL Row Level Security (RLS). One Tenant cannot see another Tenant&rsquo;s data. The University Tenant&rsquo;s approved administrators see aggregate and pseudonymous data within their own Tenant.</p>
+<h3 id="44-sso-migration-email-auth-to-sso">4.4 SSO migration (email-auth to SSO)</h3>
+<p>If your University Tenant migrates from email-auth to SSO:</p>
+<ul>
+<li>If the SSO provider returns a verified email claim that exactly matches your existing email-auth account, the accounts are linked automatically and your history is preserved.</li>
+<li>If the email does not match, a new SSO account is created. Your old email-auth account may remain inactive for support recovery until you request deletion.</li>
+<li>ReCater preserves your activity history across the migration; this migration is non-destructive.</li>
+</ul>
+<hr>
+<h2 id="5-sub-processors">5. Sub-processors</h2>
+<p>A sub-processor is a third-party service that helps ReCater operate part of the platform. ReCater engages the following sub-processors. Each is bound by a data-processing agreement that limits the use of your data to the specified purpose.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-processor</th>
+<th>Purpose</th>
+<th>Data shared</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Supabase</strong></td>
+<td>Database (PostgreSQL), authentication, file storage, edge functions</td>
+<td>All platform data (within Tenant scope)</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Vercel</strong></td>
+<td>Web dashboard hosting</td>
+<td>Web dashboard requests (IP, user agent, referer)</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>OneSignal</strong></td>
+<td>Mobile push notifications (iOS + Android)</td>
+<td>Push notification token, anonymous device ID</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>PostHog</strong></td>
+<td>Product analytics for ReCater&rsquo;s own use (not for tenant-facing reports)</td>
+<td>Anonymized event data, no individual user identifiers shared with tenants</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Apple App Store</strong></td>
+<td>iOS app distribution</td>
+<td>App downloads, App Store metadata</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Google Play Store</strong></td>
+<td>Android app distribution</td>
+<td>App downloads, Play Store metadata</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>OpenAI</strong></td>
+<td>LLM-based food classification (FG01–FG13)</td>
+<td>Food post text (not images)</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Sentry</strong></td>
+<td>Error tracking and observability</td>
+<td>Anonymized crash reports</td>
+<td>United States</td>
+</tr>
+</tbody>
+</table>
+<p>ReCater does not sell, rent, or otherwise commercially provide personal data to any third party. The sub-processors above are used only to operate the platform, and each is bound by a data-processing agreement.</p>
+<h3 id="51-new-sub-processors">5.1 New sub-processors</h3>
+<p>ReCater will provide at least 30 days&rsquo; notice via email and in-app banner before adding a new sub-processor that handles Tenant personal data. Material changes to existing sub-processor engagements will be communicated at least 15 days in advance. The University Tenant may object to a new sub-processor; if the objection cannot be resolved, the University Tenant may terminate the agreement for convenience.</p>
+<h3 id="52-sub-processor-security">5.2 Sub-processor security</h3>
+<p>Each sub-processor is required to implement appropriate technical and organizational measures to protect personal data. ReCater periodically reviews sub-processor security posture; the most recent review is available on request to <code>security@getrecater.com</code>.</p>
+<hr>
+<h2 id="6-cookies-and-tracking">6. Cookies and Tracking</h2>
+<h3 id="61-essential-cookies">6.1 Essential cookies</h3>
+<p>ReCater uses a small number of essential cookies to operate the platform:</p>
+<ul>
+<li><strong>Authentication session cookie</strong> (Supabase Auth): used to maintain your login state. This cookie is set with the <code>HttpOnly</code>, <code>Secure</code>, and <code>SameSite=Lax</code> attributes. It expires when you log out or after 30 days of inactivity.</li>
+<li><strong>CSRF token cookie</strong>: protects against cross-site request forgery on the web dashboard.</li>
+<li><strong>Theme preference cookie</strong>: remembers your light/dark mode preference. This cookie is non-essential and can be cleared without affecting platform functionality.</li>
+</ul>
+<p>ReCater does not use any advertising cookies, third-party tracking cookies, or cross-site behavioral cookies. ReCater does not use Facebook Pixel, Google Ads, TikTok Pixel, or any equivalent.</p>
+<h3 id="62-sentry-error-tracking">6.2 Sentry error tracking</h3>
+<p>Sentry collects anonymized crash reports and runtime errors. Sentry does not collect personal data. Where a crash log inadvertently includes a personal data element, ReCater treats the entire log as personal data. Sentry&rsquo;s data processing agreement is available on request.</p>
+<h3 id="63-vercel-hosting-logs-web-dashboard">6.3 Vercel hosting logs (web dashboard)</h3>
+<p>The web dashboard is hosted on Vercel. Vercel records request metadata (IP address, user agent, referer, response status) in its edge logs for security and reliability. ReCater does not use Vercel Analytics&rsquo; visitor-tracking features. Log retention is governed by Vercel&rsquo;s then-current platform settings and ReCater&rsquo;s plan. ReCater accesses these logs only when investigating a specific, documented incident (e.g., abuse, a Terms violation, a security incident).</p>
+<h3 id="64-posthog-product-analytics-recater-internal-only">6.4 PostHog product analytics (ReCater-internal only)</h3>
+<p>ReCater uses PostHog for <strong>first-party product analytics on ReCater&rsquo;s own use of the platform</strong> (e.g., feature usage trends, bug investigation, and product improvement). PostHog is configured to:</p>
+<ul>
+<li>Not collect individual User identifiers (no Pseudonym, no email, no SSO opaque ID, no IP address).</li>
+<li>Not be loaded on the public web dashboard or the User-facing mobile app.</li>
+<li>Be used only by ReCater employees on a need-to-know basis.</li>
+</ul>
+<p>ReCater does not use PostHog, Vercel Analytics, Google Analytics, or any third-party analytics product to track individual Users for advertising, profiling, or tenant-facing reports.</p>
+<h3 id="65-mobile-push-notifications">6.5 Mobile push notifications</h3>
+<p>The mobile app uses push notifications via OneSignal, which bridges Apple Push Notification Service (iOS) and Firebase Cloud Messaging (Android). ReCater&rsquo;s relationship with push delivery is with <strong>OneSignal</strong>; Apple and Google are infrastructure providers to OneSignal and are not separately engaged by ReCater as sub-processors. Push notification tokens are stored on ReCater&rsquo;s servers and are used only to deliver notifications. ReCater does not share push tokens with third parties.</p>
+<hr>
+<h2 id="7-ai-and-automated-decision-making">7. AI and Automated Decision-Making</h2>
+<p>ReCater uses AI (specifically, OpenAI&rsquo;s large language models) to classify food posts into the <strong>FG01–FG13 food group</strong> taxonomy. The classification is used to assign emission factors and generate sustainability estimates.</p>
+<h3 id="71-what-the-ai-does">7.1 What the AI does</h3>
+<ul>
+<li>Receives the food post text (e.g., &ldquo;catered sandwich trays and fruit&rdquo;).</li>
+<li>Returns an FG01–FG13 classification.</li>
+<li>The classification is paired with the estimated weight to compute a CO₂e estimate.</li>
+</ul>
+<h3 id="72-what-the-ai-does-not-do">7.2 What the AI does not do</h3>
+<ul>
+<li>The AI does not make decisions about Users (e.g., it does not ban Users, does not approve or deny food posts, does not assign ratings).</li>
+<li>The AI does not make any decision that has legal or similarly significant effects on a User.</li>
+<li>The AI does not profile Users for any purpose unrelated to operating the platform.</li>
+<li>The AI does not use personal data for training any model.</li>
+</ul>
+<h3 id="73-safeguards">7.3 Safeguards</h3>
+<ul>
+<li><strong>Rate limiting</strong>: 5 AI requests per User per day.</li>
+<li><strong>Model version tracking</strong>: the LLM model version used is recorded in the database for every classification.</li>
+<li><strong>Prompt sanitization</strong>: input is sanitized to prevent prompt injection.</li>
+<li><strong>Retry with backoff</strong>: requests retry with exponential backoff and a 30-second timeout.</li>
+<li><strong>Methodology versioning</strong>: the food-classification methodology version is recorded with every export.</li>
+</ul>
+<h3 id="74-right-to-human-review">7.4 Right to human review</h3>
+<p>Every moderation action is reviewed by a human administrator. Users may request a human review of any AI-driven classification or moderation action by emailing <code>privacy@getrecater.com</code>. ReCater will respond within 30 days.</p>
+<hr>
+<h2 id="8-information-sharing">8. Information Sharing</h2>
+<p>ReCater shares information only as described below.</p>
+<table>
+<thead>
+<tr>
+<th>Recipient</th>
+<th>What is shared</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>University Tenant (approved administrators)</td>
+<td>Aggregate and pseudonymous data within the Tenant</td>
+<td>Operationally, always</td>
+</tr>
+<tr>
+<td>Other Users (within the same Tenant)</td>
+<td>Your Pseudonym, your posts, your check-ins</td>
+<td>When you post or check in</td>
+</tr>
+<tr>
+<td>Service providers (sub-processors, see §5)</td>
+<td>The minimum data needed for the specified purpose</td>
+<td>Operationally, always</td>
+</tr>
+<tr>
+<td>Legal authorities</td>
+<td>Whatever is required by a valid legal process (subpoena, court order, etc.)</td>
+<td>On receipt of valid legal process</td>
+</tr>
+<tr>
+<td>Business successors</td>
+<td>If ReCater is acquired or merges, your data may transfer to the successor under the same Privacy Policy</td>
+<td>On a corporate transaction</td>
+</tr>
+<tr>
+<td>With your consent</td>
+<td>Whatever you specifically consent to</td>
+<td>When you consent</td>
+</tr>
+</tbody>
+</table>
+<h3 id="81-what-we-never-share">8.1 What we never share</h3>
+<ul>
+<li>ReCater does not sell, rent, or trade personal data.</li>
+<li>ReCater does not share data with advertisers or marketing platforms.</li>
+<li>ReCater does not share data between University Tenants.</li>
+<li>ReCater does not share authentication-layer identifiers with other Users. Authentication-layer identifiers may be shared with the University Tenant&rsquo;s own dashboard administrators for the purpose of administrative operations (e.g., account recovery, abuse investigation, legal compliance), or with ReCater employees with platform-administrator access when investigating a specific, documented incident. Both of these access paths are logged and audited. See the User Terms §10.2 for the binding statement.</li>
+</ul>
+<h3 id="82-university-tenants-role">8.2 University Tenant&rsquo;s role</h3>
+<p>The University Tenant is the data Controller for the personal data of its Users (students, organizers, and dashboard admins within the Tenant). ReCater processes that data on behalf of the University Tenant, as described in the Data Processing Addendum. If you are a User and have a question about how your data is handled, you may contact either ReCater at <code>privacy@getrecater.com</code> or your university&rsquo;s privacy office.</p>
+<hr>
+<h2 id="9-international-data-transfers">9. International Data Transfers</h2>
+<p>ReCater is based in the United States. All platform data is hosted in the United States.</p>
+<h3 id="91-for-users-in-the-european-economic-area-the-united-kingdom-or-switzerland">9.1 For users in the European Economic Area, the United Kingdom, or Switzerland</h3>
+<p>If you are in the EEA, UK, or Switzerland, your personal data is transferred to the United States. ReCater relies on the <strong>EU Standard Contractual Clauses (2021/914)</strong> for this transfer. The SCCs are available on request to <code>privacy@getrecater.com</code>.</p>
+<h3 id="92-for-users-in-other-jurisdictions">9.2 For users in other jurisdictions</h3>
+<p>If you are in a jurisdiction with data-transfer restrictions (e.g., Brazil&rsquo;s LGPD, China&rsquo;s PIPL, Canada&rsquo;s PIPEDA adequacy requirements), ReCater will work with the University Tenant to provide appropriate transfer safeguards on a case-by-case basis.</p>
+<hr>
+<h2 id="10-data-retention">10. Data Retention</h2>
+<p>ReCater retains data only as long as needed for the purposes described in this Privacy Policy, or as required by law.</p>
+<table>
+<thead>
+<tr>
+<th>Data category</th>
+<th>Retention period</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authentication-layer data (email or opaque IdP ID)</td>
+<td>For the life of the account + 90 days after account deletion</td>
+<td>Account recovery during the SSO migration window; legal hold</td>
+</tr>
+<tr>
+<td>Pseudonym, posts, check-ins, points history</td>
+<td>For the life of the account + 90 days after account deletion</td>
+<td>Audit-trail continuity; reporting history</td>
+</tr>
+<tr>
+<td>General audit logs</td>
+<td>90 days</td>
+<td>Security incident response</td>
+</tr>
+<tr>
+<td>Moderation audit logs</td>
+<td>Indefinite (required for moderation history)</td>
+<td>Community safety</td>
+</tr>
+<tr>
+<td>AI usage logs</td>
+<td>90 days</td>
+<td>Cost optimization; methodology versioning</td>
+</tr>
+<tr>
+<td>Food rescue events, monthly summaries, export run history</td>
+<td>For the life of the Tenant</td>
+<td>Year-over-year reporting continuity</td>
+</tr>
+<tr>
+<td>Crash reports (Sentry)</td>
+<td>90 days</td>
+<td>Stability monitoring</td>
+</tr>
+<tr>
+<td>Survey responses</td>
+<td>For the life of the season</td>
+<td>Aggregate reporting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="101-account-deletion">10.1 Account deletion</h3>
+<p>You may delete your account at any time via the mobile app&rsquo;s Account Settings, or by emailing <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>. Account deletion is permanent once completed. Your authentication-layer data is deleted within 30 days unless a longer period is required by law or needed to complete a security investigation; your pseudonym, posts, check-ins, and points history are anonymized to the extent possible while preserving Tenant reporting history. Dormant or inactive-account recovery applies only before a deletion request is completed.</p>
+<h3 id="102-tenant-termination">10.2 Tenant termination</h3>
+<p>If the University Tenant&rsquo;s agreement with ReCater terminates, all Tenant data is returned to the University Tenant in JSON within 30 days, and deleted from ReCater&rsquo;s production systems within 90 days, with a written attestation of deletion. Audit logs are retained for 7 years for legal and compliance purposes.</p>
+<hr>
+<h2 id="11-your-rights">11. Your Rights</h2>
+<p>You have the following rights with respect to your personal data. ReCater will respond to a verified request within 30 days.</p>
+<h3 id="111-right-to-know">11.1 Right to know</h3>
+<p>You have the right to know what personal data ReCater collects, why, how long we keep it, and who we share it with. This Privacy Policy is the primary disclosure. You may also email <code>privacy@getrecater.com</code> to request a specific list.</p>
+<h3 id="112-right-to-access">11.2 Right to access</h3>
+<p>You have the right to a copy of the personal data ReCater holds about you. You may request an export via the mobile app&rsquo;s Account Settings (export as JSON, pseudonymized where required) or by emailing <code>privacy@getrecater.com</code>.</p>
+<h3 id="113-right-to-correct">11.3 Right to correct</h3>
+<p>You have the right to correct inaccurate personal data. Most data (Pseudonym, posts) can be edited directly in the app. For authentication-layer data, contact <code>privacy@getrecater.com</code>.</p>
+<h3 id="114-right-to-delete">11.4 Right to delete</h3>
+<p>You have the right to delete your personal data, subject to the retention periods in §10. See §10.1 for the account-deletion flow.</p>
+<h3 id="115-right-to-opt-out-of-sale-or-sharing">11.5 Right to opt out of sale or sharing</h3>
+<p>ReCater does not sell personal data, and does not share personal data for cross-context behavioral advertising. This right is informational. ReCater commits to not engaging in such activities in the future without updating this Policy and providing the required opt-out mechanisms.</p>
+<h3 id="116-right-to-non-discrimination">11.6 Right to non-discrimination</h3>
+<p>ReCater will not deny service, charge different prices, or provide a different level of service to Users who exercise their privacy rights.</p>
+<h3 id="117-right-to-appeal">11.7 Right to appeal</h3>
+<p>If we deny your request, you may appeal by emailing <code>privacy@getrecater.com</code> with &ldquo;Appeal&rdquo; in the subject line. If the appeal is denied, you may have the right to complain to your local data protection authority.</p>
+<h3 id="118-california-specific-rights-ccpa-cpra">11.8 California-specific rights (CCPA / CPRA)</h3>
+<p>If you are a California resident, you have the right to:</p>
+<ul>
+<li>Know what categories of personal data we collect, the sources, the business purposes, and the categories of recipients (covered in this Policy).</li>
+<li>Request access to your personal data (covered in §11.2).</li>
+<li>Request deletion (covered in §11.4).</li>
+<li>Opt out of the sale or sharing of personal data (covered in §11.5; ReCater does not sell or share for cross-context advertising).</li>
+<li>Correct inaccurate personal data (covered in §11.3).</li>
+<li>Limit the use of sensitive personal data to that necessary to provide the service. ReCater does not collect sensitive personal data within the meaning of the CPRA.</li>
+</ul>
+<p>To exercise these rights, email <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>. ReCater does not currently operate a toll-free number; users may request a scheduled call by emailing that address, and ReCater targets an initial response within 5 business days.</p>
+<h3 id="119-european-data-subject-rights-gdpr">11.9 European data subject rights (GDPR)</h3>
+<p>If you are in the EEA, UK, or Switzerland, you have the right to:</p>
+<ul>
+<li>Access your personal data (Article 15).</li>
+<li>Rectification of inaccurate personal data (Article 16).</li>
+<li>Erasure (&ldquo;right to be forgotten&rdquo;) under the conditions in Article 17.</li>
+<li>Restriction of processing under the conditions in Article 18.</li>
+<li>Data portability in a structured, machine-readable format (Article 20).</li>
+<li>Object to processing based on legitimate interest (Article 21).</li>
+<li>Lodge a complaint with your local supervisory authority.</li>
+</ul>
+<p>To exercise these rights, email <code>privacy@getrecater.com</code>. If you are unsatisfied with our response, you have the right to lodge a complaint with your local data protection authority.</p>
+<hr>
+<h2 id="12-childrens-privacy">12. Children&rsquo;s Privacy</h2>
+<p>ReCater is not directed at children under 13. ReCater is designed for university students, faculty, and staff who are at least 18 years old (or the age of majority in their jurisdiction, whichever is higher). We do not knowingly collect personal data from children under 13.</p>
+<p>If we learn that we have collected personal data from a child under 13, we will delete it as soon as possible. If you believe a child under 13 has created an account, please email <code>privacy@getrecater.com</code>.</p>
+<hr>
+<h2 id="13-security">13. Security</h2>
+<h3 id="131-technical-and-organizational-measures">13.1 Technical and organizational measures</h3>
+<p>ReCater implements appropriate technical and organizational measures to protect personal data, including:</p>
+<ul>
+<li><strong>Encryption in transit</strong>: TLS 1.2+ for all client-server communication.</li>
+<li><strong>Encryption at rest</strong>: encryption at the database and storage layer.</li>
+<li><strong>Row Level Security (RLS)</strong>: PostgreSQL RLS enforces per-tenant access at the database level.</li>
+<li><strong>Role-based access control (RBAC)</strong>: only approved dashboard admins can access Tenant data.</li>
+<li><strong>Rate limiting</strong>: API endpoints are rate-limited to prevent abuse.</li>
+<li><strong>Audit logging</strong>: security events are logged for incident response.</li>
+<li><strong>AI rate limiting</strong>: AI requests are rate-limited per actor.</li>
+<li><strong>HSTS</strong>: HTTP Strict Transport Security is enabled.</li>
+</ul>
+<h3 id="132-no-method-is-100-secure">13.2 No method is 100% secure</h3>
+<p>No method of transmission over the Internet, or method of electronic storage, is 100% secure. While ReCater implements appropriate safeguards, ReCater cannot guarantee absolute security. Transmission of personal data to and from the platform is at your own risk.</p>
+<h3 id="133-reporting-a-security-issue">13.3 Reporting a security issue</h3>
+<p>If you believe you have found a security vulnerability, please email <code>security@getrecater.com</code>. ReCater maintains a coordinated vulnerability disclosure process. Please do not publicly disclose the vulnerability until ReCater has had a reasonable opportunity to investigate and remediate.</p>
+<hr>
+<h2 id="14-breach-notification">14. Breach Notification</h2>
+<p>If ReCater becomes aware of a security incident involving unauthorized access to or disclosure of personal data, ReCater will:</p>
+<ul>
+<li>Investigate and contain the incident within 48 hours of detection.</li>
+<li>Notify affected University Tenants within 72 hours of confirmation, with a description of the incident, the categories of data affected, the likely consequences, and the measures taken or proposed to address it.</li>
+<li>Notify affected Users directly when required by applicable law (e.g., GDPR, state breach notification laws).</li>
+</ul>
+<p>ReCater commits to a <strong>60-day</strong> breach notification window from the date of confirmed breach, in line with the security incident response framework described in the User Terms §13.2.</p>
+<hr>
+<h2 id="15-changes-to-this-policy">15. Changes to This Policy</h2>
+<p>ReCater may update this Privacy Policy from time to time. Material changes will be communicated via:</p>
+<ul>
+<li>Email to your authentication-layer email address.</li>
+<li>In-app banner with a 30-day notice period.</li>
+</ul>
+<p>Continued use of the platform after the effective date of the updated Policy constitutes acceptance. If you do not agree to the updated Policy, you may close your account before the effective date.</p>
+<p>The most current version of this Policy is always at <a href="https://getrecater.com/legal/privacy">getrecater.com/legal/privacy</a>. Previous versions are archived on request to <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>.</p>
+<hr>
+<h2 id="16-contact">16. Contact</h2>
+<h3 id="161-general-privacy-questions">16.1 General privacy questions</h3>
+<p><strong>Email</strong>: <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a></p>
+<h3 id="162-privacy-contact-for-international-users">16.2 Privacy contact for international users</h3>
+<p>For users in the EEA, UK, and Switzerland, privacy and data-protection requests should be sent to <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>. If ReCater appoints a formal privacy officer in the future, ReCater will update this Policy with that officer&rsquo;s contact details. Until then, ReCater&rsquo;s privacy team handles data-protection requests.</p>
+<h3 id="163-security-disclosure">16.3 Security disclosure</h3>
+<p><strong>Email</strong>: <a href="mailto:security@getrecater.com">security@getrecater.com</a></p>
+<h3 id="164-legal-and-dpa-questions">16.4 Legal and DPA questions</h3>
+<p><strong>Email</strong>: <a href="mailto:legal@getrecater.com">legal@getrecater.com</a></p>
+<h3 id="165-postal-address">16.5 Postal address</h3>
+<p>ReCater Inc.
+Registered-agent information is available from the Delaware Secretary of State&rsquo;s public business-records system.
+United States</p>
+<h3 id="166-eu-representative-article-27-gdpr">16.6 EU representative (Article 27 GDPR)</h3>
+<p>For users in the EEA, ReCater will appoint an Article 27 EU representative when required by Article 27 GDPR (i.e., when ReCater processes personal data of EEA-based Users and the appointment threshold is met). Until an appointment is required and completed, EEA-based Users may direct Article 27 correspondence to <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a> with the subject line &ldquo;Article 27.&rdquo;</p>
+<hr>
+<h2 id="17-effective-date">17. Effective Date</h2>
+<p>This Privacy Policy is effective as of 1 July 2026. The previous version (v1.0) is archived on request.</p>
+<hr>
+<p><em>End of Privacy Policy (Version 2.0).</em></p>
+<p><em>This policy is informed by the ReCater internal context bundle, including the Privacy and Data Protection primer (<code>university-docs/03_Privacy_and_Data_Protection.md</code>), the Security and Compliance doc (<code>university-docs/04_Security_and_Compliance.md</code>), the edu-email-auth tiering strategy (<code>business-context/edu-email-auth-tiering-strategy.md</code>), the privacy policy templates (<code>generated-docs/PRIVACY_POLICY_TEMPLATES.md</code>), and the InCommon compliance audit (<code>admin-dashboard/INCOMMON_COMPLIANCE_AUDIT.md</code>). It is also informed by the public privacy policies of comparable campus food-recovery platforms (Free Food Alert, Frood) for benchmarking purposes only.</em></p>
+<div class="rc-crosslinks"><a class="rc-crosslinks__chip" href="terms.html">Terms of Use</a><a class="rc-crosslinks__chip" href="food-safety.html">Food Safety</a><a class="rc-crosslinks__chip" href="dpa.html">Data Processing Addendum</a><a class="rc-crosslinks__chip" href="addenda.html">Per-University Addenda</a></div>
+<div class="rc-contact">
+  <h2 id="contact">Questions, comments, or concerns</h2>
+  <p>This document is published by ReCater, Inc. (the entity that operates the ReCater service). For questions about this document, contact us at <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.</p>
+  <p>For privacy and data-protection questions, contact <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>.</p>
+  <p>To report a security vulnerability, contact <a href="mailto:security@getrecater.com">security@getrecater.com</a>.</p>
+  <p>For product support, contact <a href="mailto:support@getrecater.com">support@getrecater.com</a>.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="rc-footer" role="contentinfo">
+  <div class="rc-shell">
+    <div class="rc-footer__grid">
+      <div class="rc-footer__brand-area">
+        <a href="/" class="rc-footer__brand" aria-label="ReCater home">
+          <img src="/assets/recater-mark.png" alt="" class="rc-footer__brand-mark" aria-hidden="true">
+          <span class="rc-footer__brand-word">ReCater</span>
+        </a>
+        <p class="rc-footer__tag">
+          The verified impact loop for campus food recovery. Multi-tenant SaaS for universities that need student energy and reportable data.
+        </p>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/#the-loop">The Loop</a></li>
+          <li><a href="/#how-it-works">How it works</a></li>
+          <li><a href="/#impact">Impact &amp; reporting</a></li>
+          <li><a href="/#students">For students</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/#security">Security &amp; trust</a></li>
+          <li><a href="/#compare">Capability comparison</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="mailto:hello@getrecater.com?subject=ReCater%20docs">University docs</a></li>
+          <li><a href="mailto:hello@getrecater.com?subject=Status%20page%20request">Status &amp; uptime</a></li>
+        </ul>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="terms.html">User Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="food-safety.html">Food Safety</a></li>
+          <li><a href="dpa.html">Data Processing Addendum</a></li>
+          <li><a href="addenda.html">Per-University Addenda</a></li>
+          <li><a href="mailto:legal@getrecater.com?subject=Legal%20inquiry">legal@getrecater.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rc-footer__bottom">
+      <span>© 2026 ReCater. Built for campuses that need both.</span>
+      <div class="rc-footer__bottom-links">
+        <a href="mailto:privacy@getrecater.com?subject=Privacy%20inquiry">Privacy</a>
+        <a href="mailto:legal@getrecater.com?subject=Terms%20inquiry">Terms</a>
+        <a href="mailto:security@getrecater.com?subject=Security%20report">Report a security issue</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

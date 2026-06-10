@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReCater — User Terms of Use</title>
+<meta name="description" content="The User Terms of Use for ReCater, the verified impact loop for campus food recovery. Read this before using the ReCater mobile app, web app, or any affiliated service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Stylish&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+/* ReCater Legal — page-specific styles
+   --------------------------------------------------------------------------
+   Brand constraint: this site uses two faces. Outfit handles all body and
+   display text. Stylish is reserved for 3 warm-accent rules (below) plus
+   the hand-drawn wordmark in the topbar. Do not use Stylish elsewhere.
+*/
+.rc-legal {
+  --rc-amber: #e0913a;
+  --rc-amber-deep: #c5762a;
+  --rc-paper: #f6f3ec;
+  --rc-ink: #263238;
+  --rc-sage: #5d7e68;
+  --rc-line: rgba(38, 50, 56, 0.13);
+  --rc-rule-1: 1.2rem;
+  --rc-rule-2: 1.6rem;
+  --rc-measure: 72ch;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--rc-ink);
+  background: var(--rc-paper);
+  line-height: 1.6;
+}
+
+.rc-legal__hero {
+  padding: clamp(64px, 8vw, 112px) 0 clamp(40px, 5vw, 64px);
+  border-bottom: 1px solid var(--rc-line);
+}
+.rc-legal__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin: 0 0 1rem;
+}
+.rc-legal__title {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  max-width: 18ch;
+}
+.rc-legal__blurb {
+  font-size: 1.05rem;
+  max-width: 56ch;
+  margin: 0 0 1.5rem;
+  color: rgba(38, 50, 56, 0.85);
+}
+.rc-legal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(38, 50, 56, 0.7);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rc-line);
+}
+.rc-legal__meta strong { color: var(--rc-ink); font-weight: 600; }
+
+.rc-legal__body {
+  padding: clamp(48px, 6vw, 80px) 0 clamp(80px, 10vw, 120px);
+}
+.rc-legal__body h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: var(--rc-rule-2) 0 0.75rem;
+  scroll-margin-top: 92px;
+  color: var(--rc-ink);
+}
+.rc-legal__body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: var(--rc-rule-1) 0 0.5rem;
+  scroll-margin-top: 92px;
+  color: var(--rc-ink);
+}
+.rc-legal__body h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.9rem 0 0.4rem;
+  color: var(--rc-ink);
+}
+.rc-legal__body p {
+  max-width: var(--rc-measure);
+  margin: 0 0 1rem;
+}
+.rc-legal__body ul, .rc-legal__body ol {
+  max-width: var(--rc-measure);
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+}
+.rc-legal__body li { margin: 0 0 0.4rem; }
+.rc-legal__body li > ul, .rc-legal__body li > ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.rc-legal__body a {
+  color: var(--rc-amber-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.rc-legal__body code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: rgba(38, 50, 56, 0.06);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+.rc-legal__body pre {
+  background: rgba(38, 50, 56, 0.05);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-width: var(--rc-measure);
+  font-size: 0.9em;
+}
+.rc-legal__body pre code { background: none; padding: 0; }
+.rc-legal__body hr {
+  border: none;
+  border-top: 1px solid var(--rc-line);
+  margin: 2rem 0;
+  max-width: var(--rc-measure);
+}
+.rc-legal__body blockquote {
+  border-left: 3px solid var(--rc-amber);
+  background: rgba(224, 145, 58, 0.07);
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0 1.25rem;
+  max-width: var(--rc-measure);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.97rem;
+}
+.rc-legal__body blockquote p:last-child { margin-bottom: 0; }
+
+.rc-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 8px;
+  background: #fffdf8;
+}
+.rc-legal__body table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92rem;
+}
+.rc-legal__body th, .rc-legal__body td {
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--rc-line);
+  vertical-align: top;
+}
+.rc-legal__body th {
+  background: rgba(93, 126, 104, 0.08);
+  font-weight: 600;
+  color: var(--rc-ink);
+}
+.rc-legal__body tr:last-child td { border-bottom: none; }
+.rc-legal__body td code, .rc-legal__body th code { font-size: 0.85em; }
+
+.rc-toc {
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  background: #fffdf8;
+  max-width: var(--rc-measure);
+  margin: 1.5rem 0 2rem;
+}
+.rc-toc__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin: 0 0 0.75rem;
+}
+.rc-toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+}
+.rc-toc__list li { margin: 0 0 0.4rem; }
+.rc-toc__list a { text-decoration: none; color: var(--rc-ink); }
+.rc-toc__list a:hover { color: var(--rc-amber-deep); text-decoration: underline; }
+.rc-toc__list li.lvl-3 { padding-left: 1.25rem; font-size: 0.88rem; color: rgba(38, 50, 56, 0.78); }
+
+.rc-crosslinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rc-line);
+}
+.rc-crosslinks__chip {
+  font-size: 0.82rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--rc-line-strong);
+  border-radius: 999px;
+  color: var(--rc-ink);
+  text-decoration: none;
+  background: #fffdf8;
+}
+.rc-crosslinks__chip:hover {
+  border-color: var(--rc-amber);
+  color: var(--rc-amber-deep);
+}
+
+.rc-contact {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  background: rgba(93, 126, 104, 0.05);
+  max-width: var(--rc-measure);
+}
+.rc-contact h2 { margin-top: 0; font-size: 1.2rem; }
+.rc-contact p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+.rc-contact a { font-weight: 500; }
+
+@media (max-width: 720px) {
+  .rc-legal__body h2 { scroll-margin-top: 76px; }
+  .rc-legal__body h3 { scroll-margin-top: 76px; }
+}
+</style>
+</head>
+<body class="rc-legal">
+<nav class="rc-topbar" aria-label="ReCater primary">
+  <a href="/" class="rc-topbar__brand" aria-label="ReCater home">
+    <img src="/assets/recater-logo.svg" alt="ReCater" class="rc-topbar__wordmark">
+  </a>
+  <ul class="rc-topbar__nav">
+    <li><a href="/#the-loop">The Loop</a></li>
+    <li><a href="/#how-it-works">How it works</a></li>
+    <li><a href="/#impact">Impact</a></li>
+    <li><a href="/#students">Students</a></li>
+    <li><a href="/#security">Trust</a></li>
+    <li><a href="/#pricing">Pricing</a></li>
+    <li><a href="/#journal">Journal</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+  <a href="/#contact" class="rc-topbar__cta">Get a demo</a>
+</nav>
+<main>
+<section class="rc-legal__hero">
+<div class="rc-shell">
+<span class="rc-legal__eyebrow">Legal · Terms of Use</span>
+<h1 class="rc-legal__title">User Terms of Use</h1>
+<p class="rc-legal__blurb">The User Terms of Use for ReCater, the verified impact loop for campus food recovery. Read this before using the ReCater mobile app, web app, or any affiliated service.</p>
+<div class="rc-legal__meta">
+<span><strong>Effective:</strong> 1 July 2026</span>
+<span><strong>Published:</strong> 2026-06-07</span>
+<span><strong>Version:</strong> 2.0 (replaces "User Terms (5).pdf", June 2025)</span>
+</div>
+</div>
+</section>
+<section class="rc-legal__body">
+<div class="rc-shell">
+<p>This document is organized into 14 sections plus a Community Guidelines appendix. Use the table of contents below to jump to a specific section.</p>
+<aside class="rc-toc">
+<p class="rc-toc__title">On this page</p>
+<ul class="rc-toc__list">
+<li class="lvl-2"><a href="#1-joining-the-recater-movement">1. Joining the ReCater Movement</a></li>
+<li class="lvl-2"><a href="#2-whats-covered-in-these-terms">2. What&amp;rsquo;s Covered in These Terms</a></li>
+<li class="lvl-2"><a href="#3-using-recater">3. Using ReCater</a></li>
+<li class="lvl-2"><a href="#4-liability-and-disclaimers">4. Liability and Disclaimers</a></li>
+<li class="lvl-2"><a href="#5-donations">5. Donations</a></li>
+<li class="lvl-2"><a href="#6-complaints-and-issue-reporting">6. Complaints and Issue Reporting</a></li>
+<li class="lvl-2"><a href="#7-points-badges-and-rewards">7. Points, Badges, and Rewards</a></li>
+<li class="lvl-2"><a href="#8-raffles-and-prizes">8. Raffles and Prizes</a></li>
+<li class="lvl-2"><a href="#9-intellectual-property-rights">9. Intellectual Property Rights</a></li>
+<li class="lvl-2"><a href="#9b-content-standards">9B. Content Standards</a></li>
+<li class="lvl-2"><a href="#10-privacy-and-data-usage">10. Privacy and Data Usage</a></li>
+<li class="lvl-2"><a href="#11-dispute-resolution">11. Dispute Resolution</a></li>
+<li class="lvl-2"><a href="#12-governing-law-and-jurisdiction">12. Governing Law and Jurisdiction</a></li>
+<li class="lvl-2"><a href="#13-user-support-and-contact-information">13. User Support and Contact Information</a></li>
+<li class="lvl-2"><a href="#14-environmental-impact-of-food-choices">14. Environmental Impact of Food Choices</a></li>
+<li class="lvl-2"><a href="#a1-disclaimer-of-liability">A.1 Disclaimer of Liability</a></li>
+<li class="lvl-2"><a href="#a2-responsibility-of-event-organizers-food-providers">A.2 Responsibility of Event Organizers (Food Providers)</a></li>
+<li class="lvl-2"><a href="#a3-responsibility-of-students-picking-up-food">A.3 Responsibility of Students Picking Up Food</a></li>
+<li class="lvl-2"><a href="#a4-pickup-window-guidelines">A.4 Pickup Window Guidelines</a></li>
+<li class="lvl-2"><a href="#a5-general-conduct">A.5 General Conduct</a></li>
+<li class="lvl-2"><a href="#a6-prohibited-activities-and-safety-guidelines">A.6 Prohibited Activities and Safety Guidelines</a></li>
+<li class="lvl-2"><a href="#a7-acceptance">A.7 Acceptance</a></li>
+</ul></aside>
+<h1 id="recater-user-terms-of-use">ReCater — User Terms of Use</h1>
+<p><strong>Last updated:</strong> 7 June 2026
+<strong>Effective:</strong> 1 July 2026
+<strong>Version:</strong> 2.0</p>
+<blockquote>
+<p><strong>About this document.</strong> This is the binding ReCater User Terms of Use, version 2.0. It supersedes the previous &ldquo;User Terms&rdquo; draft dated 1 June 2025. The four companion policies — the <a href="https://getrecater.com/legal/privacy">Privacy Policy</a>, <a href="https://getrecater.com/legal/food-safety">Food Safety Statement</a>, <a href="https://getrecater.com/legal/dpa">Data Processing Addendum</a>, and <a href="https://getrecater.com/legal/addenda">Per-University Addenda template</a> — are incorporated by reference. Changes from the previous version are summarized in <code>DIFF_SUMMARY.md</code> in the policy source bundle.</p>
+<p><strong>Questions about this document.</strong> Email <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>. ReCater targets an initial response within 2 business days.</p>
+</blockquote>
+<hr>
+<h2 id="1-joining-the-recater-movement">1. Joining the ReCater Movement</h2>
+<h3 id="11-mission">1.1 Mission</h3>
+<p>ReCater is the verified impact loop for campus food recovery. We connect members of the campus community — student organizations, campus departments, and food providers — with each other so that surplus catered food from events and meetings reaches students who can claim it in time. ReCater is an information platform: we send notifications, generate audit records, and produce reports. We do not prepare, inspect, transport, store, or serve food. The platform exists because universities have asked for a more controlled, auditable way to share surplus food than email lists, group chats, or general-purpose sign-up tools allow.</p>
+<h3 id="12-the-good-samaritan-framework-does-not-apply">1.2 The Good Samaritan framework does not apply</h3>
+<p>Members of the campus community — such as student organizations, campus departments, and food providers — are unable to donate food to nonprofit agencies under the federal Good Samaritan Food Donation Act (42 U.S.C. § 1791) because these organizations are not recognized as parties protected by the Act. ReCater&rsquo;s role is to connect surplus food with students who can claim it on the campus where it was prepared. The &ldquo;donation&rdquo; framework does not apply to this workflow. The relevant framework is the <em>assumption of risk</em> the user accepts when consuming leftover food, as described in §3 (the &ldquo;Same Risk as Event Guest&rdquo; Principle) and the companion <a href="https://getrecater.com/legal/food-safety">Food Safety Statement</a>.</p>
+<h3 id="13-what-recater-does">1.3 What ReCater does</h3>
+<ul>
+<li>Operates a branded mobile app for students to receive pickup alerts and check in to claims.</li>
+<li>Operates a branded web dashboard for university sustainability offices and approved administrators to monitor activity, export sustainability reports, and moderate content.</li>
+<li>Provides QR-code check-in at pickup, which records the time and the parties involved.</li>
+<li>Generates monthly emissions summaries, optional STARS / Scope 3 / SB 253 reports (with the Dashboard Add-On), and per-university trend data.</li>
+<li>Provides points, badges, and seasonal rewards that recognize repeat participation.</li>
+<li>Runs raffles for prizes, where the university opts in.</li>
+</ul>
+<h3 id="14-what-recater-does-not-do">1.4 What ReCater does not do</h3>
+<ul>
+<li>ReCater does not prepare, inspect, transport, store, or serve food.</li>
+<li>ReCater does not independently verify that food available through the platform is safe for consumption, free of allergens, or otherwise suitable for any particular user.</li>
+<li>ReCater does not provide insurance, indemnification, or any warranty as to the safety, quality, or suitability of food distributed through the platform.</li>
+<li>ReCater does not make any decision on behalf of a university&rsquo;s sustainability office about credit eligibility, scope boundary, or third-party assurance for sustainability reporting. ReCater provides structured evidence; the university makes the call.</li>
+</ul>
+<h3 id="15-definitions">1.5 Definitions</h3>
+<p>Throughout these Terms:</p>
+<ul>
+<li><strong>&ldquo;User&rdquo;</strong> means any individual who has created an account on ReCater, whether student, organizer, dashboard admin, or other authorized role.</li>
+<li><strong>&ldquo;Food Provider&rdquo;</strong> means a User who creates a food post on the platform. Food Providers are typically event organizers, student-organization officers, or campus department staff.</li>
+<li><strong>&ldquo;Surplus Food&rdquo;</strong> means food from a registered food business (such as catered meals) that remains after the main portion of an event is ending but is distributed before or during the cleanup period. Distribution must comply with the catering guidelines to ensure proper handling and safety.</li>
+<li><strong>&ldquo;Pickup Window&rdquo;</strong> means the time range during which a posted food item can be claimed. Pickup Windows are set by the Food Provider when creating a post.</li>
+<li><strong>&ldquo;Event Guest&rdquo;</strong> means any person who would have been present at the original event and consumed the food on-site had it not been shared.</li>
+<li><strong>&ldquo;QR Check-In&rdquo;</strong> means the act of a User scanning the venue QR code at the time of pickup, which records the pickup in the platform&rsquo;s audit log.</li>
+<li><strong>&ldquo;Pseudonym&rdquo;</strong> means a generated name (e.g., &ldquo;Bread Falcon&rdquo;) assigned to a User at signup, used in place of the User&rsquo;s real name throughout the platform.</li>
+<li><strong>&ldquo;Tenant&rdquo;</strong> means one university&rsquo;s scoped ReCater environment, including users, posts, reports, settings, and branding.</li>
+<li><strong>&ldquo;Authentication Layer&rdquo;</strong> means the technical mechanism by which a User proves their identity to log in (email address in Supabase Auth, or opaque IdP identifier from university SSO).</li>
+<li><strong>&ldquo;In-App Identity&rdquo;</strong> means the pseudonymous name and avatar other Users see — never the real name, never the authentication-layer email.</li>
+</ul>
+<h3 id="16-food-provider-verification">1.6 Food Provider verification</h3>
+<p>To post food on ReCater, a User must be a verified, active member of an approved campus community. Verification is performed via:</p>
+<ul>
+<li>A campus email address at an approved email domain registered for the University Tenant you are joining (the <strong>email-auth</strong> tier); <strong>OR</strong></li>
+<li>An OIDC / SAML assertion from a university Identity Provider that ReCater has been configured to trust (the <strong>SSO tier</strong>).</li>
+</ul>
+<p>In either case, the University Tenant may impose additional restrictions on who is allowed to post (e.g., faculty and staff only, or specific student organizations). The Food Provider confirms they are authorized to post on behalf of the event&rsquo;s host organization by checking a box at post creation. ReCater does not independently verify this authorization.</p>
+<h3 id="17-university-event-only-scope">1.7 University-event-only scope</h3>
+<p>Surplus Food posts are only accepted for events held at or in association with the University Tenant. Posts for events outside the university community, or posts by Users not affiliated with the Tenant, may be removed by approved administrators without notice. ReCater is not a peer-to-peer food-sharing platform, a community fridge, or a food pantry locator; it is a campus-internal food-recovery system.</p>
+<h3 id="18-legal-protections">1.8 Legal protections</h3>
+<p>These Terms do not waive any legal protection that cannot be waived under applicable law. Nothing in these Terms is intended to override the rights of a User under the user&rsquo;s university policies, the laws of the user&rsquo;s state, or federal law (including FERPA, where applicable — see §10).</p>
+<hr>
+<h2 id="2-whats-covered-in-these-terms">2. What&rsquo;s Covered in These Terms</h2>
+<h3 id="21-binding-agreement">2.1 Binding agreement</h3>
+<p>By creating an account on ReCater, by using the platform, or by accepting these Terms in the mobile app, you enter into a binding agreement with ReCater Inc. (&ldquo;ReCater,&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) governed by these Terms of Use (&ldquo;Terms&rdquo;). If you do not agree to these Terms, do not create an account or use the platform.</p>
+<h3 id="22-scope">2.2 Scope</h3>
+<p>These Terms apply to your use of the ReCater mobile app, the ReCater web dashboard, and any related APIs, notifications, or services operated by ReCater. They also apply to any data you submit to or generate through the platform.</p>
+<h3 id="23-additional-policies">2.3 Additional policies</h3>
+<p>These Terms incorporate by reference:</p>
+<ul>
+<li>The <strong><a href="https://getrecater.com/legal/privacy">Privacy Policy</a></strong>, which describes how ReCater collects, uses, retains, and shares data.</li>
+<li>The <strong><a href="https://getrecater.com/legal/food-safety">Food Safety Statement</a></strong>, which describes the food-safety framework, assumption of risk, and temperature / allergen guidelines.</li>
+<li>The <strong><a href="https://getrecater.com/legal/dpa">Data Processing Addendum (DPA)</a></strong>, which universities sign before processing personal data through the platform.</li>
+<li>The <strong><a href="https://getrecater.com/legal/addenda">University-specific Terms Addenda</a></strong>, which add per-state and per-university language to these Terms.</li>
+</ul>
+<p>If any provision of these Terms conflicts with a per-university Addendum, the Addendum controls for that Tenant.</p>
+<hr>
+<h2 id="3-using-recater">3. Using ReCater</h2>
+<h3 id="31-access-flow">3.1 Access flow</h3>
+<p>To use ReCater, a User must:</p>
+<ul>
+<li>Be at least 18 years of age (or the age of majority in the User&rsquo;s jurisdiction, whichever is higher).</li>
+<li>Have a valid, active affiliation with an approved University Tenant, verified through email authentication or SSO.</li>
+<li>Provide accurate information during signup.</li>
+<li>Accept these Terms and the Privacy Policy.</li>
+</ul>
+<h3 id="32-eligibility-university-affiliates">3.2 Eligibility — university affiliates</h3>
+<p>Eligibility to use ReCater is determined by your University Tenant. The university may set additional eligibility requirements (e.g., limiting to currently-enrolled students, or to specific staff roles). ReCater relies on the university to enforce these requirements.</p>
+<h3 id="33-account">3.3 Account</h3>
+<ul>
+<li>You are responsible for the security of your account credentials.</li>
+<li>Do not share your account credentials with any other person.</li>
+<li>Do not impersonate any other person, organization, or entity.</li>
+<li>Do not create an account on behalf of someone else without their written consent.</li>
+<li>Accounts are non-transferable.</li>
+</ul>
+<h3 id="34-in-app-identity-is-pseudonymous">3.4 In-app identity is pseudonymous</h3>
+<p>Your in-app identity is your Pseudonym, not your real name. Your Pseudonym is generated at signup and cannot be changed without administrative action. Other Users, including Food Providers and dashboard admins, see only your Pseudonym, not your real name or email.</p>
+<h3 id="35-authentication-sso-and-email-auth">3.5 Authentication: SSO and email-auth</h3>
+<p>ReCater supports two authentication paths, depending on your University Tenant&rsquo;s configuration:</p>
+<ul>
+<li><strong>Email-auth</strong> (the default for new Tenants): you sign up with your campus email at the University Tenant&rsquo;s approved email domain. The email is stored in ReCater&rsquo;s authentication layer (Supabase Auth) for login and account recovery, and is never copied into the platform&rsquo;s other tables, posts, or reports. The email is not displayed in the app or in standard reports.</li>
+<li><strong>SSO</strong> (available for Tenants that have configured a university Identity Provider): you sign in via the university&rsquo;s existing OIDC / SAML flow. ReCater receives an opaque identifier from the IdP (and optionally a verified email claim used for account matching during migration). The opaque identifier is what ReCater stores; real name and email remain with the IdP. ReCater is designed to integrate with InCommon Federation member institutions.</li>
+</ul>
+<p>Your University Tenant determines which path is available. Your authentication-layer email or IdP identifier is <strong>never</strong> displayed in the app, included in standard reports, or shared with other Users.</p>
+<h3 id="36-notifications-and-posts">3.6 Notifications and Posts</h3>
+<ul>
+<li>A food post, once submitted and approved by the system, is <strong>final</strong>. Food Providers cannot edit a post after it has been published. Food Providers can end a post early (e.g., when the food is gone) by tapping &ldquo;End Post&rdquo; in the mobile app, which sends a closing notification to subscribers.</li>
+<li>Push notifications are sent to opted-in Users within the relevant Tenant when a new post is published.</li>
+<li>An &ldquo;I&rsquo;m on my way&rdquo; informational button may be available; it is informational only and does not reserve the food. The first User to scan the venue QR code at the time of pickup is the one who claims the meal. No-shows after &ldquo;I&rsquo;m on my way&rdquo; are tracked and may affect your account standing.</li>
+</ul>
+<h3 id="37-the-same-risk-as-event-guest-principle">3.7 The &ldquo;Same Risk as Event Guest&rdquo; Principle</h3>
+<p>When you consume Surplus Food through ReCater, you assume the <strong>same risk as an Event Guest</strong> would have assumed had they consumed the same food on-site at the original event. ReCater does not transform, alter, or substitute the food; we route it from a posted event to a student who claims it within the posted Pickup Window. The food safety, allergen disclosure, and handling rules that applied at the original event apply unchanged. ReCater does not provide additional warranties.</p>
+<h3 id="38-pickup-protocol">3.8 Pickup Protocol</h3>
+<ul>
+<li>A pickup requires the User to scan the venue QR code (or otherwise check in) within the Pickup Window. The QR check-in records the time, the food post, and the User&rsquo;s Pseudonym in the platform&rsquo;s audit log.</li>
+<li>Bring your own container. <strong>ReCater does not supply to-go containers, plates, or wrap.</strong></li>
+<li>Only enter the venue during the Pickup Window. Outside the Pickup Window, the venue is being cleaned or has been returned to its prior use.</li>
+<li>Do not eat in the venue unless the venue has explicitly authorized eating on-site.</li>
+<li>Respect the venue&rsquo;s rules and the host&rsquo;s instructions.</li>
+</ul>
+<h3 id="39-cancellations">3.9 Cancellations</h3>
+<ul>
+<li>The Food Provider may end a post early. An &ldquo;ended&rdquo; notification is sent to Users who had tapped &ldquo;I&rsquo;m on my way.&rdquo;</li>
+<li>If the Food Provider ends the post before the Pickup Window opens, no claim has occurred and no audit entry is created.</li>
+<li>ReCater reserves the right to cancel or pause any post at any time for moderation, safety, or operational reasons.</li>
+</ul>
+<hr>
+<h2 id="4-liability-and-disclaimers">4. Liability and Disclaimers</h2>
+<h3 id="41-no-warranties">4.1 No warranties</h3>
+<p>ReCater provides the platform &ldquo;as is&rdquo; and &ldquo;as available.&rdquo; ReCater disclaims, to the maximum extent permitted by law, all warranties of any kind, express or implied, including the warranties of merchantability, fitness for a particular purpose, non-infringement, and accuracy of any content.</p>
+<h3 id="42-limitation-of-liability">4.2 Limitation of liability</h3>
+<p>To the maximum extent permitted by law, ReCater&rsquo;s total liability arising out of or related to the use of the platform shall not exceed the greater of (a) USD $100 or (b) the total amount paid by the University Tenant to ReCater in the twelve (12) months preceding the event giving rise to the claim.</p>
+<h3 id="43-indemnification">4.3 Indemnification</h3>
+<p>You agree to indemnify, defend, and hold harmless ReCater, its affiliates, and their respective officers, directors, employees, and agents from any claims, damages, losses, or expenses (including reasonable attorneys&rsquo; fees) arising out of your breach of these Terms, your misuse of the platform, or your violation of any applicable law.</p>
+<h3 id="44-organizer-responsibility">4.4 Organizer Responsibility</h3>
+<p>Food Providers are solely responsible for:</p>
+<ul>
+<li>The food they post, including its safety, freshness, allergen disclosure, and compliance with their caterer&rsquo;s food-safety guidelines.</li>
+<li>Ensuring the Surplus Food was managed in accordance with the practices outlined by the food business or catering group that prepared it, and was sourced from a registered food business.</li>
+<li>Following the temperature guidelines in the companion Food Safety Statement.</li>
+<li>Reserving the venue for the Pickup Window and the cleanup period.</li>
+<li>Returning the venue to its prior condition after the Pickup Window closes (catering equipment must be left at the event; missing equipment is the organizer&rsquo;s responsibility).</li>
+<li>Not extending the Pickup Window beyond what was posted.</li>
+</ul>
+<h3 id="45-user-responsibility">4.5 User Responsibility</h3>
+<p>Users are responsible for making reasonable judgments about food suitability before consumption, such as checking for obvious signs of spoilage or contamination. When Food Providers have followed the caterer&rsquo;s food-safety guidelines, liability for food-related incidents generally remains with the caterer (or, in the case of homemade items, with the food preparer). These Terms do not eliminate the caterer&rsquo;s liability for harmful products in cases where the Food Provider has properly followed the caterer&rsquo;s handling guidelines. This right for Users to pursue legal action against the caterer is equivalent to the legal recourse available to an Event Guest who consumes food directly from the caterer at the event.</p>
+<h3 id="46-perishable-food-window">4.6 Perishable food window</h3>
+<p><strong>Perishable food should be eaten within 4 hours of leaving temperature control</strong> (cold below 40°F, hot above 140°F). Beyond that window, the food may no longer be safe regardless of the platform&rsquo;s posting.</p>
+<h3 id="47-recater-does-not-supply-to-go-containers">4.7 ReCater does not supply to-go containers</h3>
+<p>ReCater does not provide to-go containers, plates, or food wrap. Users must bring their own. This is consistent with the Food Safety Statement and the assumption-of-risk framework.</p>
+<hr>
+<h2 id="5-donations">5. Donations</h2>
+<p>Any financial contribution to ReCater (via the in-app support button, the university sponsorship tier, or other channels) is voluntary, non-refundable, and not linked to the availability of food or the outcome of any pickup. ReCater does not solicit, accept, or process food donations; all Surplus Food is the responsibility of the Food Provider.</p>
+<hr>
+<h2 id="6-complaints-and-issue-reporting">6. Complaints and Issue Reporting</h2>
+<h3 id="61-submit-a-bug">6.1 Submit a Bug</h3>
+<p>If you encounter a technical issue, broken functionality, or unexpected behavior, use the &ldquo;Submit a Bug&rdquo; link in the mobile app or web dashboard. Include a description, the affected post or event (if applicable), and screenshots if possible. ReCater targets an initial response within 5 business days.</p>
+<h3 id="62-report-a-user">6.2 Report a User</h3>
+<p>If you observe behavior that violates these Terms, the Community Guidelines, or applicable law, use the &ldquo;Report a User&rdquo; link on the relevant post, profile, or message. Reports are reviewed by approved administrators. ReCater may warn, suspend, or ban the reported User; actions are recorded in the moderation audit log.</p>
+<h3 id="63-food-safety-incident">6.3 Food safety incident</h3>
+<p>If you believe a posted food item is unsafe, has caused illness, or has caused an allergic reaction, report it immediately via &ldquo;Report a User&rdquo; with the &ldquo;Food safety&rdquo; tag, and also contact your campus health services. ReCater cooperates with university investigations of food-safety incidents. Food safety reports are prioritized over all other reports and trigger a 48-hour response.</p>
+<h3 id="64-required-report-fields">6.4 Required report fields</h3>
+<p>A report must include: (a) the reported User&rsquo;s Pseudonym, (b) the post or interaction, (c) the date and approximate time, (d) a description of the issue, and (e) any supporting context. Reports submitted in bad faith (e.g., to harass another User) may themselves result in moderation action against the reporter.</p>
+<h3 id="65-resolution-process">6.5 Resolution Process</h3>
+<p>ReCater follows an informal-first resolution process:</p>
+<ol>
+<li><strong>Informal resolution</strong>: ReCater will attempt to resolve the issue through direct communication with the affected parties. ReCater will respond to a complaint within 48 hours of receipt.</li>
+<li><strong>Moderation action</strong>: If informal resolution fails, ReCater may issue a warning, suspend the account, or ban the User. Actions are recorded in the moderation audit log.</li>
+<li><strong>Appeal</strong>: Users may appeal a moderation action within 10 business days of the action by emailing <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>. ReCater targets a response to the appeal within 15 business days.</li>
+</ol>
+<h3 id="66-class-action-waiver">6.6 Class action waiver</h3>
+<p>To the maximum extent permitted by law, you and ReCater agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action. If a court determines this waiver is unenforceable, the class action will be severed and the remaining claims will proceed individually.</p>
+<h3 id="67-exceptions-to-dispute-resolution">6.7 Exceptions to dispute resolution</h3>
+<p>The following disputes are not subject to binding arbitration (see §11): (a) criminal proceedings, (b) food-safety incidents escalated to campus health authorities, (c) small-claims court actions within the court&rsquo;s jurisdictional limit, (d) intellectual property disputes seeking injunctive relief, and (e) disputes in any jurisdiction where pre-dispute arbitration agreements are prohibited by law.</p>
+<h3 id="68-severability">6.8 Severability</h3>
+<p>If any provision of these Terms is found unenforceable, the remaining provisions continue in effect, and the unenforceable provision shall be modified to the minimum extent necessary to be enforceable.</p>
+<h3 id="69-account-termination-by-recater">6.9 Account termination by ReCater</h3>
+<p>ReCater may suspend or terminate any account that violates these Terms, the Community Guidelines, or applicable law, or that engages in behavior that threatens the safety, integrity, or availability of the platform. ReCater will provide notice of termination when feasible, except in cases of immediate safety risk.</p>
+<hr>
+<h2 id="7-points-badges-and-rewards">7. Points, Badges, and Rewards</h2>
+<h3 id="71-points">7.1 Points</h3>
+<p>Users earn points for participating in food rescue. Points are calculated based on:</p>
+<ul>
+<li><strong>Compliance bonus</strong>: points for completing the post-event survey and providing accurate allergen and dietary information.</li>
+<li><strong>Food weight rescued</strong>: points proportional to the estimated weight of the food the User helped rescue.</li>
+<li><strong>Repeat check-ins</strong>: bonus points for Users who complete multiple QR check-ins within a season.</li>
+</ul>
+<p>ReCater reserves the right to modify the points formula at any time, with notice. Points have no monetary value and are not redeemable for cash.</p>
+<h3 id="72-badges">7.2 Badges</h3>
+<p>ReCater awards achievement badges to recognize participation milestones (e.g., &ldquo;First Pickup,&rdquo; &ldquo;10 Pickups,&rdquo; &ldquo;First 100 Pickups,&rdquo; &ldquo;Streak&rdquo; badges for consecutive-day participation). Badges are pseudonymous and visible only to the User and (in aggregate) to the University Tenant. Badges are awarded automatically based on activity and cannot be transferred.</p>
+<h3 id="73-seasons">7.3 Seasons</h3>
+<p>Each University Tenant runs its own seasons with defined start and end dates, aligned to the academic calendar. Points reset at the end of each season. Season progress is visible to the User and (in aggregate) to the University Tenant.</p>
+<h3 id="74-no-employment-relationship">7.4 No employment relationship</h3>
+<p>Participation in points, badges, and seasons does not create an employment, contractor, or agency relationship between the User and ReCater or the University Tenant. Points and badges are recognition only and do not constitute compensation.</p>
+<hr>
+<h2 id="8-raffles-and-prizes">8. Raffles and Prizes</h2>
+<h3 id="81-eligibility">8.1 Eligibility</h3>
+<p>Where a University Tenant has opted in to raffles, Users who have completed at least one verified pickup within the current season are eligible to enter. Eligibility for specific raffles may have additional requirements (e.g., a minimum number of pickups, or enrollment status).</p>
+<h3 id="82-entry">8.2 Entry</h3>
+<p>Users may enter raffles by spending tickets earned through verified pickups. The number of tickets per User is tracked in the platform. ReCater may, at the User&rsquo;s option, auto-enter the User into raffles for which they are eligible.</p>
+<h3 id="83-winner-selection-and-notification">8.3 Winner selection and notification</h3>
+<p>Winners are selected by an automated drawing or by the University Tenant&rsquo;s manual selection, as described in the specific raffle. Winners are notified in the app and by email (to the email in the authentication layer, never displayed to other Users).</p>
+<h3 id="84-fulfillment">8.4 Fulfillment</h3>
+<p>Prize fulfillment is handled by the University Tenant. ReCater provides the University Tenant with the winner&rsquo;s Pseudonym, the verified pickup history, and the contact channel (push notification, in-app message, or authentication-layer email — at the Tenant&rsquo;s election). ReCater does not ship, deliver, or hold prizes.</p>
+<h3 id="85-tax-obligations">8.5 Tax obligations</h3>
+<p>Prize winnings may be subject to tax reporting (e.g., IRS Form 1099-MISC for U.S. prize values at or above the reporting threshold). Where required, the University Tenant is responsible for issuing tax documents to winners. ReCater does not provide tax advice and is not a tax reporting party.</p>
+<h3 id="86-disqualification">8.6 Disqualification</h3>
+<p>ReCater and the University Tenant reserve the right to disqualify any entry obtained through fraud, automated means, or violation of these Terms. Disqualified Users forfeit any tickets spent on the disqualified entry.</p>
+<hr>
+<h2 id="9-intellectual-property-rights">9. Intellectual Property Rights</h2>
+<h3 id="91-recaters-intellectual-property">9.1 ReCater&rsquo;s intellectual property</h3>
+<p>ReCater owns the platform, including the mobile app, the web dashboard, the brand marks (including the turtle-cloche mark and the ReCater wordmark), the design system, the source code, the documentation, and the methodology behind the FG01–FG13 food-classification system and the emissions-calculation pipeline.</p>
+<h3 id="92-your-content">9.2 Your content</h3>
+<p>You retain ownership of the content you post on ReCater, including food post text, images, and any associated metadata (&ldquo;Your Content&rdquo;).</p>
+<h3 id="93-license-grant-to-recater">9.3 License grant to ReCater</h3>
+<p>By posting content on ReCater, you grant ReCater a non-exclusive, worldwide, royalty-free, sublicensable license to host, store, display, and transmit Your Content for the purpose of operating the platform, generating reports for the University Tenant, and producing aggregate sustainability data. This license terminates when you delete the content, except for content that has been incorporated into aggregate reports.</p>
+<h3 id="94-removal-of-content">9.4 Removal of content</h3>
+<p>ReCater may remove or restrict access to any content that violates these Terms, the Community Guidelines, or applicable law, or that is the subject of a valid takedown notice (including DMCA notices).</p>
+<h3 id="95-content-standards">9.5 Content standards</h3>
+<p>Your Content must comply with the content standards in §9B below. ReCater may remove content that violates these standards, with or without notice.</p>
+<h3 id="96-recater-trademarks">9.6 ReCater trademarks</h3>
+<p>You may not use the ReCater name, logo, wordmark, or other brand marks without ReCater&rsquo;s prior written consent, except as required to identify ReCater as the source of the platform.</p>
+<hr>
+<h2 id="9b-content-standards">9B. Content Standards</h2>
+<h3 id="9b1-prohibited-content">9B.1 Prohibited content</h3>
+<p>You may not post content that:</p>
+<ul>
+<li>Is illegal, infringing, or fraudulent.</li>
+<li>Promotes or depicts violence, harassment, or hate speech.</li>
+<li>Contains sexually explicit or pornographic material.</li>
+<li>Depicts or promotes the use of drugs, alcohol, or tobacco.</li>
+<li>Is commercial advertising, spam, or unsolicited promotion.</li>
+<li>Impersonates any other person, organization, or entity.</li>
+<li>Contains malicious code, viruses, or attempts to compromise the platform&rsquo;s security.</li>
+<li>Violates the privacy or publicity rights of any other person.</li>
+</ul>
+<h3 id="9b2-prohibited-food-sources">9B.2 Prohibited food sources</h3>
+<p>You may not post:</p>
+<ul>
+<li>Homemade or home-prepared food (including personal-cookout, dorm-room, or apartment-kitchen preparations).</li>
+<li>Potluck or shared-plate food where the chain of custody is unclear.</li>
+<li>Takeout or restaurant leftovers intended for personal use.</li>
+<li>Food from unlicensed vendors.</li>
+<li>Food past its labeled &ldquo;use by,&rdquo; &ldquo;best by,&rdquo; or &ldquo;sell by&rdquo; date.</li>
+</ul>
+<h3 id="9b3-image-rules">9B.3 Image rules</h3>
+<p>Images posted with food posts must:</p>
+<ul>
+<li>Be of the food being posted, taken at the event.</li>
+<li>Be no larger than 10 MB.</li>
+<li>Be in JPG, PNG, or HEIC format.</li>
+<li>Not contain text overlays, watermarks, or other third-party branding (other than the caterer&rsquo;s own).</li>
+<li>Not contain identifiable images of people without their consent.</li>
+</ul>
+<p>ReCater uses automated image moderation (Google Cloud Vision SafeSearch and label detection) on all uploaded images. Images that fail moderation are removed and the post is held for review.</p>
+<h3 id="9b4-rate-limits">9B.4 Rate limits</h3>
+<p>To prevent abuse, ReCater enforces the following rate limits per User:</p>
+<ul>
+<li><strong>Posts</strong>: maximum 3 per hour, 10 per day, 2 per pickup event.</li>
+<li><strong>Reports</strong>: maximum 10 per day.</li>
+<li><strong>Push notifications</strong>: rate-limited by the platform&rsquo;s notification service.</li>
+</ul>
+<p>Repeated attempts to exceed rate limits may result in temporary account suspension.</p>
+<h3 id="9b5-auto-hide-and-community-moderation">9B.5 Auto-hide and community moderation</h3>
+<p>ReCater uses a 5-report auto-hide threshold: when a post receives 5 reports from distinct Users, it is automatically hidden from the feed pending administrator review. Hidden posts are visible only to the Food Provider, approved administrators, and the moderation team.</p>
+<h3 id="9b6-content-moderation-audit-log">9B.6 Content moderation audit log</h3>
+<p>All moderation actions (warnings, suspensions, bans, content removals) are recorded in the moderation audit log. The log has restricted application-client write access, meaning Users cannot edit or delete moderation history. Audit logs are retained indefinitely.</p>
+<hr>
+<h2 id="10-privacy-and-data-usage">10. Privacy and Data Usage</h2>
+<h3 id="101-what-this-section-covers">10.1 What this section covers</h3>
+<p>This section summarizes how ReCater handles personal data. The full <a href="https://getrecater.com/legal/privacy">Privacy Policy</a> is the binding document.</p>
+<h3 id="102-the-authentication-layer-principle">10.2 The authentication-layer principle</h3>
+<p>Your authentication-layer identifier (email in Supabase Auth, or opaque IdP identifier from university SSO) is stored in the authentication layer. It is <strong>not</strong> copied into ReCater&rsquo;s general-purpose database tables, food posts, check-in records, reports, exports, or leaderboards. Two narrow exceptions apply:</p>
+<ul>
+<li>The University Tenant&rsquo;s designated dashboard administrators may view the email addresses of Users within their own Tenant for the purpose of administrative operations (e.g., account recovery, abuse investigation, legal compliance). This access is logged and audited.</li>
+<li>ReCater employees with platform-administrator access may view authentication-layer identifiers when investigating a specific, documented incident (e.g., a Terms violation, a law-enforcement request, or a security incident). This access is logged, audited, and reviewed quarterly.</li>
+</ul>
+<p>The full scope of when and how authentication-layer identifiers may be shared is described in the <a href="https://getrecater.com/legal/privacy">Privacy Policy</a> §8.</p>
+<h3 id="103-the-in-app-identity-principle">10.3 The in-app identity principle</h3>
+<p>Your in-app identity is your Pseudonym. The Pseudonym is what other Users see. The Pseudonym is not your real name, your email, or any other identifier from the authentication layer.</p>
+<h3 id="104-what-we-do-with-your-authentication-layer-data">10.4 What we do with your authentication-layer data</h3>
+<p>ReCater uses your authentication-layer identifier only for:</p>
+<ul>
+<li>Logging you in.</li>
+<li>Verifying your eligibility to use the platform.</li>
+<li>Sending you transactional notifications (e.g., monthly emissions summary).</li>
+<li>Responding to your direct support requests.</li>
+</ul>
+<h3 id="105-what-we-never-do">10.5 What we never do</h3>
+<p>ReCater does not:</p>
+<ul>
+<li>Sell, rent, or trade student data to any third party.</li>
+<li>Use student data for advertising.</li>
+<li>Display real names or emails in the app or in standard reports.</li>
+<li>Share your data with other universities (Tenant isolation enforced by Row Level Security).</li>
+</ul>
+<h3 id="106-the-data-processing-addendum">10.6 The Data Processing Addendum</h3>
+<p>Universities that process personal data through ReCater may request a signed Data Processing Addendum via <a href="mailto:legal@getrecater.com">legal@getrecater.com</a> or review the standard-form DPA at <a href="https://getrecater.com/legal/dpa">getrecater.com/legal/dpa</a>. The DPA describes ReCater&rsquo;s data-processing obligations, sub-processor list, security measures, international transfer mechanisms, breach notification timeline, and audit rights.</p>
+<h3 id="107-questions">10.7 Questions</h3>
+<p>For privacy questions, email <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>. For data subject requests, see the Privacy Policy §11.</p>
+<hr>
+<h2 id="11-dispute-resolution">11. Dispute Resolution</h2>
+<h3 id="111-informal-resolution-first">11.1 Informal resolution first</h3>
+<p>Before filing any formal claim, you agree to first contact ReCater at <a href="mailto:legal@getrecater.com">legal@getrecater.com</a> and attempt to resolve the dispute informally. ReCater will attempt to resolve the dispute by direct communication with you within 30 days of your notice.</p>
+<h3 id="112-binding-individual-arbitration">11.2 Binding individual arbitration</h3>
+<p>If the dispute is not resolved informally within 30 days, you and ReCater agree that any unresolved dispute arising out of or related to these Terms or the use of the platform shall be resolved by <strong>binding individual arbitration</strong> administered by the American Arbitration Association (AAA) under its Consumer Arbitration Rules then in effect. The arbitration shall be conducted by a single arbitrator, online, in the English language. The arbitrator&rsquo;s decision shall be final and binding and may be entered as a judgment in any court of competent jurisdiction.</p>
+<h3 id="113-each-party-bears-its-own-costs">11.3 Each party bears its own costs</h3>
+<p>Each party shall bear its own costs and attorneys&rsquo; fees, except that the arbitrator may award the prevailing party reasonable attorneys&rsquo; fees and costs to the extent permitted by applicable law.</p>
+<h3 id="114-class-action-waiver">11.4 Class action waiver</h3>
+<p>To the maximum extent permitted by law, you and ReCater agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action.</p>
+<h3 id="115-exceptions-to-arbitration">11.5 Exceptions to arbitration</h3>
+<p>The following disputes are not subject to binding arbitration: (a) criminal proceedings; (b) food-safety incidents escalated to campus health authorities; (c) small-claims court actions within the court&rsquo;s jurisdictional limit; (d) intellectual property disputes seeking injunctive relief; and (e) disputes in any jurisdiction where pre-dispute arbitration agreements are prohibited by law.</p>
+<h3 id="116-right-to-opt-out-of-arbitration">11.6 Right to opt out of arbitration</h3>
+<p>You may opt out of the arbitration agreement by sending written notice to <a href="mailto:legal@getrecater.com">legal@getrecater.com</a> within 30 days of first accepting these Terms. Your opt-out notice must include your name, the email address associated with your account, and a clear statement that you wish to opt out of arbitration.</p>
+<hr>
+<h2 id="12-governing-law-and-jurisdiction">12. Governing Law and Jurisdiction</h2>
+<h3 id="121-choice-of-law">12.1 Choice of law</h3>
+<p>These Terms are governed by the laws of the State of Delaware, United States of America, without regard to its conflict of laws principles, except to the extent the law of another jurisdiction is mandatory for a User who is a consumer in that jurisdiction. If a University Tenant&rsquo;s per-Tenant Addendum specifies a different governing law, that specification governs disputes between the University Tenant and ReCater only.</p>
+<h3 id="122-venue">12.2 Venue</h3>
+<p>Any judicial proceedings permitted under §11.5 (exceptions to arbitration) shall be brought in the state or federal courts located in Wilmington, Delaware (or, if the University Tenant&rsquo;s per-Tenant Addendum specifies a different venue, that venue), and you and ReCater each consent to the exclusive jurisdiction and venue of such courts.</p>
+<h3 id="123-per-state-addenda">12.3 Per-state addenda</h3>
+<p>For per-state variations and addenda (e.g., California&rsquo;s CCPA rights, Massachusetts&rsquo; data breach notification, Texas&rsquo;s Good Samaritan food donation law), see the <a href="https://getrecater.com/legal/addenda">Addenda template</a>.</p>
+<hr>
+<h2 id="13-user-support-and-contact-information">13. User Support and Contact Information</h2>
+<h3 id="131-support-channels">13.1 Support channels</h3>
+<p>For general questions, bug reports, or feature requests:</p>
+<ul>
+<li><strong>Support</strong>: <a href="mailto:support@getrecater.com">support@getrecater.com</a></li>
+<li><strong>Privacy and data questions</strong>: <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a></li>
+<li><strong>Legal, Terms, and DPA questions</strong>: <a href="mailto:legal@getrecater.com">legal@getrecater.com</a></li>
+<li><strong>Security disclosure</strong>: <a href="mailto:security@getrecater.com">security@getrecater.com</a></li>
+</ul>
+<h3 id="132-response-times">13.2 Response times</h3>
+<p>ReCater targets the following response times, in line with the security incident response framework:</p>
+<ul>
+<li><strong>P0 (Critical — active security or data breach)</strong>: immediate response.</li>
+<li><strong>P1 (High — significant issue)</strong>: within 24 hours.</li>
+<li><strong>P2 (Medium — non-critical)</strong>: within 7 days.</li>
+<li><strong>P3 (Low — minor)</strong>: scheduled response.</li>
+</ul>
+<h3 id="133-historical-contact-references">13.3 Historical contact references</h3>
+<p>Earlier drafts of these Terms used <code>recaterapp@gmail.com</code> as the contact address. <strong>This is now deprecated.</strong> All new correspondence should go to one of the addresses above.</p>
+<hr>
+<h2 id="14-environmental-impact-of-food-choices">14. Environmental Impact of Food Choices</h2>
+<h3 id="141-methodology">14.1 Methodology</h3>
+<p>ReCater&rsquo;s emissions estimates use emission factors derived from <strong>Poore &amp; Nemecek (2018)</strong> and <strong>FAO</strong> publications, applied to estimated food weight categorized into the <strong>FG01–FG13 food group</strong> taxonomy. The classification itself is performed by an LLM (OpenAI), with the model version recorded for auditability. Methodology versions are tracked; historical reports can be reproduced with the same parameters.</p>
+<h3 id="142-per-serving-breakdown-max-of-range-kg-co2e-per-serving">14.2 Per-serving breakdown (max-of-range, kg CO₂e per serving)</h3>
+<ul>
+<li><strong>Dairy</strong>: 0.6</li>
+<li><strong>Produce</strong>: 0.3</li>
+<li><strong>Grains</strong>: 0.5</li>
+<li><strong>Poultry, pork, seafood</strong>: 1.0</li>
+<li><strong>Beef, lamb</strong>: 4.0</li>
+</ul>
+<h3 id="143-important-disclaimer">14.3 Important disclaimer</h3>
+<p>These figures are <strong>directional sustainability indicators, not precise measurements.</strong> They are intended to support, not replace, the University&rsquo;s own reporting decisions. The University remains responsible for the final accounting, scope boundary, credit eligibility, and third-party assurance decisions. ReCater does not warrant the accuracy of the estimates for any specific reporting purpose.</p>
+<h3 id="144-methodology-versioning">14.4 Methodology versioning</h3>
+<p>Every report records the emission factor version, the classification methodology version, and the LLM model version used. Reports can be reproduced with the same parameters to verify historical numbers. Methodology changes are versioned and documented; changes that materially affect the numbers will be communicated to University Tenants in advance.</p>
+<hr>
+<h1 id="appendix-a-recater-community-guidelines">Appendix A — ReCater Community Guidelines</h1>
+<p>The ReCater Community Guidelines are part of these Terms. By using ReCater, you agree to follow the Community Guidelines in addition to the Terms above.</p>
+<h2 id="a1-disclaimer-of-liability">A.1 Disclaimer of Liability</h2>
+<p>ReCater is an information platform. ReCater does not independently verify that food available through the platform is safe, allergen-free, or otherwise suitable for any particular user. Food Providers, Event Guests, and other Users assume equal risk when consuming Surplus Food through ReCater as they would assume when consuming the same food on-site at the original event. ReCater&rsquo;s role is to route information, not to certify or warrant food safety.</p>
+<h2 id="a2-responsibility-of-event-organizers-food-providers">A.2 Responsibility of Event Organizers (Food Providers)</h2>
+<ul>
+<li>Follow your caterer&rsquo;s food-safety guidelines at all times.</li>
+<li>Reserve the venue for the Pickup Window and the cleanup period. Do not extend the Pickup Window beyond what was posted.</li>
+<li>Comply with the <strong>Food Location and Event Continuity Policy</strong>: the food remains at the original serving location and is not relocated.</li>
+<li><strong>Approved food sources</strong>: university dining services, licensed caterers, campus retail, and club-purchased food from licensed vendors. Homemade, potluck, takeout, and unlicensed food are prohibited.</li>
+<li>Schedule pickups to align with catering cleanup. Aim for 15-minute windows. Perishable food must be claimed within 4 hours of leaving temperature control.</li>
+<li>Comply with your university&rsquo;s policies on event registration, food service, and venue use.</li>
+<li>Liability protection rests on the caterer (or, for homemade items, the food preparer). ReCater does not assume that liability.</li>
+</ul>
+<h2 id="a3-responsibility-of-students-picking-up-food">A.3 Responsibility of Students Picking Up Food</h2>
+<ul>
+<li>You assume the same risk as an Event Guest when consuming Surplus Food through ReCater. This is the <strong>&ldquo;Same Risk as Event Guest&rdquo; Principle</strong> (see §3.7).</li>
+<li>Only enter the venue during the posted Pickup Window. Outside that window, the venue is being cleaned or has been returned to its prior use.</li>
+<li>Vacate the venue promptly after pickup. Do not remain in the venue after the Pickup Window closes.</li>
+<li>Do not eat in the venue unless the venue has explicitly authorized eating on-site.</li>
+<li>Bring your own container. <strong>ReCater does not supply to-go containers, plates, or wrap.</strong></li>
+</ul>
+<h2 id="a4-pickup-window-guidelines">A.4 Pickup Window Guidelines</h2>
+<ul>
+<li>Pickups occur during the original event reservation or in the window immediately after the main portion of the event ends.</li>
+<li>The 15-minute window is the default. Longer windows are configurable per Tenant.</li>
+<li>The catering staff begins cleanup immediately after the Pickup Window closes. <strong>Pickups do not extend the event reservation.</strong></li>
+<li>Posts are final once published. The Pickup Window cannot be extended after the fact.</li>
+</ul>
+<h2 id="a5-general-conduct">A.5 General Conduct</h2>
+<ul>
+<li>Respect the venue, the caterers, the event organizers, and other Users.</li>
+<li>Do not consume alcohol or drugs in the venue.</li>
+<li>Do not leave personal belongings behind.</li>
+<li>Follow the venue&rsquo;s safety guidelines (e.g., no open flames, no food on the floor, no consumption in restricted areas).</li>
+<li>If the venue has a designated consumption area, use it.</li>
+</ul>
+<h2 id="a6-prohibited-activities-and-safety-guidelines">A.6 Prohibited Activities and Safety Guidelines</h2>
+<ul>
+<li><strong>Prohibited food sources</strong>: homemade, potluck, takeout, restaurant leftovers intended for personal use, unlicensed vendor food, food past its labeled date.</li>
+<li><strong>Prohibited platform content</strong>: see §9B.1 above (illegal content, hate speech, harassment, commercial advertising, impersonation, malicious code, privacy violations).</li>
+<li><strong>Prohibited pickup behavior</strong>: entering the venue outside the Pickup Window, eating on-site without authorization, taking food for distribution outside the platform, and any behavior that violates the venue&rsquo;s rules.</li>
+<li><strong>Food Provider authentication</strong>: ReCater relies on email-auth or SSO authentication to verify that Food Providers are affiliated with the University Tenant. The Tenant may impose additional restrictions on who is allowed to post.</li>
+<li><strong>Reporting violations</strong>: see §6.2 (Report a User). Reports submitted in bad faith may themselves result in moderation action.</li>
+<li><strong>Environmental responsibility</strong>: do not waste food, do not use ReCater to circumvent any university&rsquo;s food-safety or food-waste policies, and respect the platform&rsquo;s role as a campus-internal food-recovery system.</li>
+</ul>
+<hr>
+<h2 id="a7-acceptance">A.7 Acceptance</h2>
+<p>By creating an account on ReCater, by using the platform, or by clicking &ldquo;I accept&rdquo; in the mobile app, you confirm that you have read, understood, and agree to be bound by these Terms of Use, the Privacy Policy, the Food Safety Statement, the Data Processing Addendum, and the University-specific Addenda applicable to your Tenant.</p>
+<hr>
+<p><em>End of User Terms of Use (Version 2.0).</em></p>
+<p><em>Previous version: 1.0 (1 June 2025, file: User Terms (5).pdf). This v2 version reflects the strategic changes documented in the ReCater internal context bundle, including: tier-aware authentication, SSO and InCommon Federation support, the points/badges/rewards system, the raffles/prizes system, content-moderation user-visible rules, the dedicated Food Safety Statement, the standalone Data Processing Addendum, and the per-university Addenda template.</em></p>
+<p><em>For comparison, the v1.0 PDF (User Terms (5).pdf, 1 June 2025) is archived in the context directory at <code>recater-terms-context-from-macbookair-20260607/downloaded-pdfs/</code>.</em></p>
+<div class="rc-crosslinks"><a class="rc-crosslinks__chip" href="privacy.html">Privacy Policy</a><a class="rc-crosslinks__chip" href="food-safety.html">Food Safety</a><a class="rc-crosslinks__chip" href="dpa.html">Data Processing Addendum</a><a class="rc-crosslinks__chip" href="addenda.html">Per-University Addenda</a></div>
+<div class="rc-contact">
+  <h2 id="contact">Questions, comments, or concerns</h2>
+  <p>This document is published by ReCater, Inc. (the entity that operates the ReCater service). For questions about this document, contact us at <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.</p>
+  <p>For privacy and data-protection questions, contact <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>.</p>
+  <p>To report a security vulnerability, contact <a href="mailto:security@getrecater.com">security@getrecater.com</a>.</p>
+  <p>For product support, contact <a href="mailto:support@getrecater.com">support@getrecater.com</a>.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="rc-footer" role="contentinfo">
+  <div class="rc-shell">
+    <div class="rc-footer__grid">
+      <div class="rc-footer__brand-area">
+        <a href="/" class="rc-footer__brand" aria-label="ReCater home">
+          <img src="/assets/recater-mark.png" alt="" class="rc-footer__brand-mark" aria-hidden="true">
+          <span class="rc-footer__brand-word">ReCater</span>
+        </a>
+        <p class="rc-footer__tag">
+          The verified impact loop for campus food recovery. Multi-tenant SaaS for universities that need student energy and reportable data.
+        </p>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/#the-loop">The Loop</a></li>
+          <li><a href="/#how-it-works">How it works</a></li>
+          <li><a href="/#impact">Impact &amp; reporting</a></li>
+          <li><a href="/#students">For students</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/#security">Security &amp; trust</a></li>
+          <li><a href="/#compare">Capability comparison</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="mailto:hello@getrecater.com?subject=ReCater%20docs">University docs</a></li>
+          <li><a href="mailto:hello@getrecater.com?subject=Status%20page%20request">Status &amp; uptime</a></li>
+        </ul>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="terms.html">User Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="food-safety.html">Food Safety</a></li>
+          <li><a href="dpa.html">Data Processing Addendum</a></li>
+          <li><a href="addenda.html">Per-University Addenda</a></li>
+          <li><a href="mailto:legal@getrecater.com?subject=Legal%20inquiry">legal@getrecater.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rc-footer__bottom">
+      <span>© 2026 ReCater. Built for campuses that need both.</span>
+      <div class="rc-footer__bottom-links">
+        <a href="mailto:privacy@getrecater.com?subject=Privacy%20inquiry">Privacy</a>
+        <a href="mailto:legal@getrecater.com?subject=Terms%20inquiry">Terms</a>
+        <a href="mailto:security@getrecater.com?subject=Security%20report">Report a security issue</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

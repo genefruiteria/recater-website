@@ -1,6 +1,46 @@
 {
   "rewrites": [
     {
+      "source": "/terms",
+      "destination": "/legal/terms.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/legal/privacy.html"
+    },
+    {
+      "source": "/food-safety",
+      "destination": "/legal/food-safety.html"
+    },
+    {
+      "source": "/dpa",
+      "destination": "/legal/dpa.html"
+    },
+    {
+      "source": "/addenda",
+      "destination": "/legal/addenda.html"
+    },
+    {
+      "source": "/legal/terms",
+      "destination": "/legal/terms.html"
+    },
+    {
+      "source": "/legal/privacy",
+      "destination": "/legal/privacy.html"
+    },
+    {
+      "source": "/legal/food-safety",
+      "destination": "/legal/food-safety.html"
+    },
+    {
+      "source": "/legal/dpa",
+      "destination": "/legal/dpa.html"
+    },
+    {
+      "source": "/legal/addenda",
+      "destination": "/legal/addenda.html"
+    },
+    {
       "source": "/contact",
       "destination": "/index.html"
     },

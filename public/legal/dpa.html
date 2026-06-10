@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReCater — Data Processing Addendum (DPA)</title>
+<meta name="description" content="The Data Processing Addendum that supplements the User Terms of Use and the per-University Addendum. Controls the relationship between ReCater (Processor) and the University Tenant (Controller) under GDPR, CCPA, and FERPA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Stylish&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+<style>
+/* ReCater Legal — page-specific styles
+   --------------------------------------------------------------------------
+   Brand constraint: this site uses two faces. Outfit handles all body and
+   display text. Stylish is reserved for 3 warm-accent rules (below) plus
+   the hand-drawn wordmark in the topbar. Do not use Stylish elsewhere.
+*/
+.rc-legal {
+  --rc-amber: #e0913a;
+  --rc-amber-deep: #c5762a;
+  --rc-paper: #f6f3ec;
+  --rc-ink: #263238;
+  --rc-sage: #5d7e68;
+  --rc-line: rgba(38, 50, 56, 0.13);
+  --rc-rule-1: 1.2rem;
+  --rc-rule-2: 1.6rem;
+  --rc-measure: 72ch;
+  font-family: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--rc-ink);
+  background: var(--rc-paper);
+  line-height: 1.6;
+}
+
+.rc-legal__hero {
+  padding: clamp(64px, 8vw, 112px) 0 clamp(40px, 5vw, 64px);
+  border-bottom: 1px solid var(--rc-line);
+}
+.rc-legal__eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin: 0 0 1rem;
+}
+.rc-legal__title {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  max-width: 18ch;
+}
+.rc-legal__blurb {
+  font-size: 1.05rem;
+  max-width: 56ch;
+  margin: 0 0 1.5rem;
+  color: rgba(38, 50, 56, 0.85);
+}
+.rc-legal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 0.85rem;
+  color: rgba(38, 50, 56, 0.7);
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rc-line);
+}
+.rc-legal__meta strong { color: var(--rc-ink); font-weight: 600; }
+
+.rc-legal__body {
+  padding: clamp(48px, 6vw, 80px) 0 clamp(80px, 10vw, 120px);
+}
+.rc-legal__body h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: var(--rc-rule-2) 0 0.75rem;
+  scroll-margin-top: 92px;
+  color: var(--rc-ink);
+}
+.rc-legal__body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: var(--rc-rule-1) 0 0.5rem;
+  scroll-margin-top: 92px;
+  color: var(--rc-ink);
+}
+.rc-legal__body h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.9rem 0 0.4rem;
+  color: var(--rc-ink);
+}
+.rc-legal__body p {
+  max-width: var(--rc-measure);
+  margin: 0 0 1rem;
+}
+.rc-legal__body ul, .rc-legal__body ol {
+  max-width: var(--rc-measure);
+  margin: 0 0 1rem 1.25rem;
+  padding: 0;
+}
+.rc-legal__body li { margin: 0 0 0.4rem; }
+.rc-legal__body li > ul, .rc-legal__body li > ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+.rc-legal__body a {
+  color: var(--rc-amber-deep);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.rc-legal__body code {
+  font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9em;
+  background: rgba(38, 50, 56, 0.06);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+.rc-legal__body pre {
+  background: rgba(38, 50, 56, 0.05);
+  padding: 1rem 1.2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  max-width: var(--rc-measure);
+  font-size: 0.9em;
+}
+.rc-legal__body pre code { background: none; padding: 0; }
+.rc-legal__body hr {
+  border: none;
+  border-top: 1px solid var(--rc-line);
+  margin: 2rem 0;
+  max-width: var(--rc-measure);
+}
+.rc-legal__body blockquote {
+  border-left: 3px solid var(--rc-amber);
+  background: rgba(224, 145, 58, 0.07);
+  padding: 0.85rem 1.1rem;
+  margin: 1rem 0 1.25rem;
+  max-width: var(--rc-measure);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.97rem;
+}
+.rc-legal__body blockquote p:last-child { margin-bottom: 0; }
+
+.rc-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0 1.5rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 8px;
+  background: #fffdf8;
+}
+.rc-legal__body table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.92rem;
+}
+.rc-legal__body th, .rc-legal__body td {
+  text-align: left;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--rc-line);
+  vertical-align: top;
+}
+.rc-legal__body th {
+  background: rgba(93, 126, 104, 0.08);
+  font-weight: 600;
+  color: var(--rc-ink);
+}
+.rc-legal__body tr:last-child td { border-bottom: none; }
+.rc-legal__body td code, .rc-legal__body th code { font-size: 0.85em; }
+
+.rc-toc {
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  background: #fffdf8;
+  max-width: var(--rc-measure);
+  margin: 1.5rem 0 2rem;
+}
+.rc-toc__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rc-sage);
+  margin: 0 0 0.75rem;
+}
+.rc-toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+}
+.rc-toc__list li { margin: 0 0 0.4rem; }
+.rc-toc__list a { text-decoration: none; color: var(--rc-ink); }
+.rc-toc__list a:hover { color: var(--rc-amber-deep); text-decoration: underline; }
+.rc-toc__list li.lvl-3 { padding-left: 1.25rem; font-size: 0.88rem; color: rgba(38, 50, 56, 0.78); }
+
+.rc-crosslinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 2rem 0 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rc-line);
+}
+.rc-crosslinks__chip {
+  font-size: 0.82rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--rc-line-strong);
+  border-radius: 999px;
+  color: var(--rc-ink);
+  text-decoration: none;
+  background: #fffdf8;
+}
+.rc-crosslinks__chip:hover {
+  border-color: var(--rc-amber);
+  color: var(--rc-amber-deep);
+}
+
+.rc-contact {
+  margin-top: 2.5rem;
+  padding: 1.5rem 1.75rem;
+  border: 1px solid var(--rc-line);
+  border-radius: 10px;
+  background: rgba(93, 126, 104, 0.05);
+  max-width: var(--rc-measure);
+}
+.rc-contact h2 { margin-top: 0; font-size: 1.2rem; }
+.rc-contact p { margin-bottom: 0.5rem; font-size: 0.95rem; }
+.rc-contact a { font-weight: 500; }
+
+@media (max-width: 720px) {
+  .rc-legal__body h2 { scroll-margin-top: 76px; }
+  .rc-legal__body h3 { scroll-margin-top: 76px; }
+}
+</style>
+</head>
+<body class="rc-legal">
+<nav class="rc-topbar" aria-label="ReCater primary">
+  <a href="/" class="rc-topbar__brand" aria-label="ReCater home">
+    <img src="/assets/recater-logo.svg" alt="ReCater" class="rc-topbar__wordmark">
+  </a>
+  <ul class="rc-topbar__nav">
+    <li><a href="/#the-loop">The Loop</a></li>
+    <li><a href="/#how-it-works">How it works</a></li>
+    <li><a href="/#impact">Impact</a></li>
+    <li><a href="/#students">Students</a></li>
+    <li><a href="/#security">Trust</a></li>
+    <li><a href="/#pricing">Pricing</a></li>
+    <li><a href="/#journal">Journal</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+  <a href="/#contact" class="rc-topbar__cta">Get a demo</a>
+</nav>
+<main>
+<section class="rc-legal__hero">
+<div class="rc-shell">
+<span class="rc-legal__eyebrow">Legal · Data Processing Addendum</span>
+<h1 class="rc-legal__title">Data Processing Addendum (DPA)</h1>
+<p class="rc-legal__blurb">The Data Processing Addendum that supplements the User Terms of Use and the per-University Addendum. Controls the relationship between ReCater (Processor) and the University Tenant (Controller) under GDPR, CCPA, and FERPA.</p>
+<div class="rc-legal__meta">
+<span><strong>Effective:</strong> 1 July 2026</span>
+<span><strong>Published:</strong> 2026-06-07</span>
+<span><strong>Version:</strong> 2.0 (replaces "User Terms (5).pdf", June 2025)</span>
+</div>
+</div>
+</section>
+<section class="rc-legal__body">
+<div class="rc-shell">
+<p>This document is organized into 18 sections. Use the table of contents below to jump to a specific section.</p>
+<aside class="rc-toc">
+<p class="rc-toc__title">On this page</p>
+<ul class="rc-toc__list">
+<li class="lvl-2"><a href="#1-definitions">1. Definitions</a></li>
+<li class="lvl-2"><a href="#2-roles-and-responsibilities">2. Roles and Responsibilities</a></li>
+<li class="lvl-2"><a href="#3-subject-matter-and-duration">3. Subject Matter and Duration</a></li>
+<li class="lvl-2"><a href="#4-nature-and-purpose-of-the-processing">4. Nature and Purpose of the Processing</a></li>
+<li class="lvl-2"><a href="#5-types-of-personal-data">5. Types of Personal Data</a></li>
+<li class="lvl-2"><a href="#6-categories-of-data-subjects">6. Categories of Data Subjects</a></li>
+<li class="lvl-2"><a href="#7-technical-and-organizational-security-measures">7. Technical and Organizational Security Measures</a></li>
+<li class="lvl-2"><a href="#8-sub-processors">8. Sub-processors</a></li>
+<li class="lvl-2"><a href="#9-data-subject-requests">9. Data Subject Requests</a></li>
+<li class="lvl-2"><a href="#10-audit-rights">10. Audit Rights</a></li>
+<li class="lvl-2"><a href="#11-international-data-transfers">11. International Data Transfers</a></li>
+<li class="lvl-2"><a href="#12-return-or-deletion-at-end">12. Return or Deletion at End</a></li>
+<li class="lvl-2"><a href="#13-personal-data-breach">13. Personal Data Breach</a></li>
+<li class="lvl-2"><a href="#14-liability">14. Liability</a></li>
+<li class="lvl-2"><a href="#15-term-and-termination">15. Term and Termination</a></li>
+<li class="lvl-2"><a href="#16-general-provisions">16. General Provisions</a></li>
+<li class="lvl-2"><a href="#17-contact">17. Contact</a></li>
+<li class="lvl-2"><a href="#18-effective-date">18. Effective Date</a></li>
+</ul></aside>
+<h1 id="recater-data-processing-addendum">ReCater — Data Processing Addendum</h1>
+<p><strong>Last updated:</strong> 7 June 2026
+<strong>Effective:</strong> 1 July 2026
+<strong>Version:</strong> 2.0
+<strong>ReCater Inc. and the University Tenant</strong></p>
+<blockquote>
+<p><strong>This Data Processing Addendum (the &ldquo;DPA&rdquo;) is entered into between ReCater Inc. (&ldquo;ReCater,&rdquo; &ldquo;Processor&rdquo;) and the University Tenant identified in the executed Master Services Agreement (the &ldquo;University,&rdquo; &ldquo;Controller&rdquo;).</strong> It forms part of the Master Services Agreement and applies to the extent that ReCater processes Personal Data on behalf of the University in connection with the ReCater platform.</p>
+<p><strong>Plain-English summary.</strong> When your university uses ReCater, your university is the &ldquo;controller&rdquo; of the data (it&rsquo;s the university that decides why and how the data is used), and ReCater is the &ldquo;processor&rdquo; (we process the data on the university&rsquo;s behalf, under the university&rsquo;s instructions). This DPA spells out exactly what data ReCater processes, who else is involved (the sub-processors), what security measures we take, what happens if something goes wrong, and what the university can do to verify our compliance. It also covers international data transfers (because ReCater is US-based) and what happens to the data if the university stops using ReCater.</p>
+<p><strong>Questions about this DPA.</strong> Email <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.</p>
+</blockquote>
+<hr>
+<h2 id="1-definitions">1. Definitions</h2>
+<p>In this DPA, the following terms have the meanings given below. Capitalized terms not defined here have the meaning given in the Master Services Agreement or the Privacy Policy.</p>
+<ul>
+<li><strong>&ldquo;Personal Data&rdquo;</strong> has the meaning given in the GDPR (Article 4(1)) and includes any information relating to an identified or identifiable natural person that ReCater processes on behalf of the University.</li>
+<li><strong>&ldquo;Processing&rdquo;</strong> has the meaning given in the GDPR (Article 4(2)) and includes any operation performed on Personal Data.</li>
+<li><strong>&ldquo;Controller&rdquo;</strong> means the University, which determines the purposes and means of the Processing of Personal Data.</li>
+<li><strong>&ldquo;Processor&rdquo;</strong> means ReCater, which processes Personal Data on behalf of the Controller.</li>
+<li><strong>&ldquo;Sub-processor&rdquo;</strong> means any third party engaged by ReCater to process Personal Data on behalf of the Controller.</li>
+<li><strong>&ldquo;Data Subject&rdquo;</strong> means an identified or identifiable natural person to whom Personal Data relates, including students, organizers, and dashboard admins.</li>
+<li><strong>&ldquo;Personal Data Breach&rdquo;</strong> means a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorized disclosure of, or access to, Personal Data.</li>
+<li><strong>&ldquo;Supervisory Authority&rdquo;</strong> means an independent public authority established by a Member State pursuant to the GDPR (Article 51) or its equivalent in the UK, Switzerland, or another relevant jurisdiction.</li>
+<li><strong>&ldquo;GDPR&rdquo;</strong> means Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016.</li>
+</ul>
+<hr>
+<h2 id="2-roles-and-responsibilities">2. Roles and Responsibilities</h2>
+<h3 id="21-the-university-controller">2.1 The University (Controller)</h3>
+<p>The University is the Controller. As the Controller, the University:</p>
+<ul>
+<li>Determines the purposes and means of the Processing of Personal Data within its Tenant.</li>
+<li>Determines the legal basis for the Processing under the GDPR or other applicable data-protection law.</li>
+<li>Is responsible for providing notice to Data Subjects (students, organizers, dashboard admins) about the Processing, including through the University&rsquo;s own privacy notice.</li>
+<li>Is responsible for responding to Data Subject requests, with ReCater&rsquo;s reasonable assistance as described in §9.</li>
+<li>Is responsible for ensuring that the University has the legal authority to share any Personal Data it provides to ReCater (e.g., authentication-layer email, IdP assertions, configuration data).</li>
+</ul>
+<h3 id="22-recater-processor">2.2 ReCater (Processor)</h3>
+<p>ReCater is the Processor. As the Processor, ReCater:</p>
+<ul>
+<li>Processes Personal Data only on documented instructions from the University, including with regard to transfers of Personal Data to a third country or international organization, unless required to do so by applicable law (in which case ReCater will inform the University of that legal requirement before Processing, unless that law prohibits such information).</li>
+<li>Ensures that all personnel authorized to process Personal Data are bound by appropriate confidentiality obligations.</li>
+<li>Implements the technical and organizational measures described in §7 to ensure a level of security appropriate to the risk.</li>
+<li>Engages Sub-processors only in accordance with §5.</li>
+<li>Assists the University in fulfilling its obligations to respond to Data Subject requests, in accordance with §9.</li>
+<li>Returns or deletes Personal Data at the end of the provision of services, in accordance with §12.</li>
+<li>Makes available to the University all information necessary to demonstrate compliance with this DPA, in accordance with §10.</li>
+</ul>
+<hr>
+<h2 id="3-subject-matter-and-duration">3. Subject Matter and Duration</h2>
+<h3 id="31-subject-matter">3.1 Subject matter</h3>
+<p>The subject matter of the Processing is the operation of the ReCater platform on behalf of the University, as described in the Master Services Agreement and the Privacy Policy.</p>
+<h3 id="32-duration">3.2 Duration</h3>
+<p>The Processing will continue for the duration of the Master Services Agreement between the University and ReCater. Upon termination, ReCater will return or delete the Personal Data in accordance with §12.</p>
+<hr>
+<h2 id="4-nature-and-purpose-of-the-processing">4. Nature and Purpose of the Processing</h2>
+<p>The nature and purpose of the Processing are:</p>
+<ul>
+<li>To provide the ReCater mobile app, web dashboard, and related services to the University&rsquo;s students, organizers, and dashboard admins.</li>
+<li>To send push notifications about food posts and account events.</li>
+<li>To generate monthly emissions summaries, optional STARS / Scope 3 / SB 253 reports, and per-university trend data.</li>
+<li>To run points, badges, seasons, and raffles.</li>
+<li>To moderate content and enforce the User Terms.</li>
+<li>To respond to support requests.</li>
+<li>To comply with legal obligations.</li>
+</ul>
+<p>The Processing is not used for advertising, profiling, or any commercial purpose unrelated to operating the platform.</p>
+<hr>
+<h2 id="5-types-of-personal-data">5. Types of Personal Data</h2>
+<p>ReCater processes the following types of Personal Data on behalf of the University. Each type is tied to a specific processing purpose described in §4.</p>
+<table>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Source</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authentication-layer email</td>
+<td>User (email-auth) or University SSO</td>
+<td>Login, account recovery, transactional notifications</td>
+</tr>
+<tr>
+<td>Opaque IdP identifier (<code>external_uid</code>)</td>
+<td>University SSO</td>
+<td>Login, account linkage, account recovery</td>
+</tr>
+<tr>
+<td>Pseudonym (generated name)</td>
+<td>Generated by ReCater at signup</td>
+<td>In-app identity, posts, check-ins, leaderboards</td>
+</tr>
+<tr>
+<td>Food post content (text, images, dietary flags, allergen info, weight, location, pickup window)</td>
+<td>User</td>
+<td>Posting, viewing, claiming, reporting</td>
+</tr>
+<tr>
+<td>QR check-in records (time, post, pseudonym, device fingerprint)</td>
+<td>User, automatic</td>
+<td>Audit trail, attendance tracking, no-show detection</td>
+</tr>
+<tr>
+<td>Survey responses (optional)</td>
+<td>User</td>
+<td>Aggregate feedback, methodology improvement</td>
+</tr>
+<tr>
+<td>Device and usage data (device type, OS, app version, push token, usage events)</td>
+<td>Automatic</td>
+<td>Operating the platform, push notifications, stability monitoring</td>
+</tr>
+<tr>
+<td>Crash reports (anonymized)</td>
+<td>Automatic</td>
+<td>Stability monitoring</td>
+</tr>
+<tr>
+<td>Support correspondence</td>
+<td>User</td>
+<td>Resolving the request</td>
+</tr>
+</tbody>
+</table>
+<p>ReCater does <strong>not</strong> process the following:</p>
+<ul>
+<li>Real names (unless configured for administrative display at the University&rsquo;s election, in which case they are stored in the administrative layer only, not in the user-facing app or standard reports).</li>
+<li>Student ID numbers, transcripts, course enrollment, financial aid records, health records, dietary records (other than the dietary flags entered by the Food Provider), or other education records.</li>
+<li>Rosters imported from the University.</li>
+<li>Biometric data.</li>
+<li>Location data from the device.</li>
+</ul>
+<hr>
+<h2 id="6-categories-of-data-subjects">6. Categories of Data Subjects</h2>
+<p>The Data Subjects whose Personal Data ReCater processes include:</p>
+<ul>
+<li><strong>Students</strong> of the University who have created accounts on ReCater.</li>
+<li><strong>Event organizers</strong> (typically student-organization officers or campus department staff) who post Surplus Food.</li>
+<li><strong>Dashboard administrators</strong> (approved by the University) who access the web dashboard.</li>
+<li><strong>Other authorized users</strong> of the ReCater platform, as determined by the University.</li>
+</ul>
+<p>ReCater does not knowingly process Personal Data of children under 13. The Platform is designed for university affiliates who are at least 18 years old (or the age of majority in their jurisdiction).</p>
+<hr>
+<h2 id="7-technical-and-organizational-security-measures">7. Technical and Organizational Security Measures</h2>
+<p>ReCater implements the following technical and organizational measures to protect Personal Data, consistent with the requirements of GDPR Article 32 and industry best practices.</p>
+<h3 id="71-technical-measures">7.1 Technical measures</h3>
+<ul>
+<li><strong>Encryption in transit</strong>: TLS 1.2+ for all client-server communication. HSTS is enabled.</li>
+<li><strong>Encryption at rest</strong>: encryption at the database and storage layer.</li>
+<li><strong>Row Level Security (RLS)</strong>: PostgreSQL RLS policies enforce per-Tenant access at the database level. RLS applies to all tenant-scoped tables.</li>
+<li><strong>Role-based access control (RBAC)</strong>: only approved dashboard admins can access Tenant data. Application-side checks verify role on every request.</li>
+<li><strong>Authentication</strong>: email-auth (Supabase Auth) or SSO (OIDC / SAML / InCommon). Session tokens are JWT-based with refresh tokens stored encrypted at rest.</li>
+<li><strong>Rate limiting</strong>: API endpoints are rate-limited to prevent abuse. Sensitive endpoints (exports, moderation) have stricter per-actor limits.</li>
+<li><strong>AI rate limiting</strong>: AI requests (OpenAI) are rate-limited per actor (5/day) with prompt sanitization and retry with exponential backoff.</li>
+<li><strong>Audit logging</strong>: security events (login, role change, export, moderation, breach detection) are logged to a tamper-evident audit log.</li>
+<li><strong>Sub-processor security</strong>: each sub-processor is required to implement appropriate technical and organizational measures.</li>
+</ul>
+<h3 id="72-organizational-measures">7.2 Organizational measures</h3>
+<ul>
+<li><strong>Personnel confidentiality</strong>: all ReCater personnel with access to Personal Data are bound by confidentiality obligations (in their employment agreements and ReCater&rsquo;s information-security policy).</li>
+<li><strong>Access control</strong>: access to Personal Data is limited to personnel with a need-to-know.</li>
+<li><strong>Security training</strong>: ReCater personnel receive annual security and privacy training.</li>
+<li><strong>Vendor management</strong>: ReCater conducts security reviews of sub-processors before engagement and periodically thereafter.</li>
+<li><strong>Incident response</strong>: ReCater maintains documented incident-response procedures (PB-001 Security Breach Response, PB-002 Vulnerability Disclosure, PB-003 Data Loss Prevention).</li>
+<li><strong>Change management</strong>: changes to the platform that affect Personal Data processing are subject to code review, security review, and change-advisory board approval.</li>
+<li><strong>Backup and recovery</strong>: ReCater maintains daily backups with encryption, with documented restoration procedures.</li>
+</ul>
+<h3 id="73-security-certifications">7.3 Security certifications</h3>
+<p>ReCater is pursuing a SOC 2 Type I report as a future goal. Until a SOC 2 report is available, ReCater will provide the University with a written summary of its security controls (the &ldquo;Security Summary&rdquo;) on request. The Security Summary describes ReCater&rsquo;s current control posture, including the measures listed in §7.1–7.2 and the sub-processor list in §8. The University may also conduct an audit under §10, or accept a third-party security assessment (e.g., a Vanta, Drata, or Tugboat Logic report) as evidence of ReCater&rsquo;s security posture where one is available.</p>
+<hr>
+<h2 id="8-sub-processors">8. Sub-processors</h2>
+<p>ReCater engages the sub-processors listed below. Each is bound by a data-processing agreement that limits the use of Personal Data to the specified purpose.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-processor</th>
+<th>Purpose</th>
+<th>Data shared</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Supabase</strong></td>
+<td>Database (PostgreSQL), authentication, file storage, edge functions</td>
+<td>All Tenant data</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Vercel</strong></td>
+<td>Web dashboard hosting</td>
+<td>Web dashboard requests (IP, user agent, referer)</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>OneSignal</strong></td>
+<td>Mobile push notifications (iOS + Android)</td>
+<td>Push notification token, anonymous device ID</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>PostHog</strong></td>
+<td>Product analytics for ReCater&rsquo;s own use (not tenant-facing)</td>
+<td>Anonymized event data</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Apple App Store</strong></td>
+<td>iOS app distribution</td>
+<td>App downloads, App Store metadata</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Google Play Store</strong></td>
+<td>Android app distribution</td>
+<td>App downloads, Play Store metadata</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>OpenAI</strong></td>
+<td>LLM-based food classification (FG01–FG13)</td>
+<td>Food post text (not images)</td>
+<td>United States</td>
+</tr>
+<tr>
+<td><strong>Sentry</strong></td>
+<td>Error tracking and observability</td>
+<td>Anonymized crash reports</td>
+<td>United States</td>
+</tr>
+</tbody>
+</table>
+<h3 id="81-new-sub-processors">8.1 New sub-processors</h3>
+<p>ReCater will provide the University with at least 30 days&rsquo; notice before adding a new sub-processor that handles Tenant Personal Data. Material changes to existing sub-processor engagements will be communicated at least 15 days in advance. The University may object to a new sub-processor on reasonable grounds related to data protection; if the objection cannot be resolved, the University may terminate the affected services for convenience.</p>
+<h3 id="82-sub-processor-security">8.2 Sub-processor security</h3>
+<p>Each sub-processor is required to implement appropriate technical and organizational measures to protect Personal Data, at least equivalent to the measures described in §7. ReCater periodically reviews sub-processor security posture; relevant security-review summaries are available on request to <a href="mailto:security@getrecater.com">security@getrecater.com</a> where disclosure is permitted.</p>
+<hr>
+<h2 id="9-data-subject-requests">9. Data Subject Requests</h2>
+<h3 id="91-controller-handles">9.1 Controller handles</h3>
+<p>The University, as Controller, is responsible for responding to Data Subject requests (e.g., access, rectification, erasure, restriction, portability, objection) under the GDPR or other applicable law. ReCater will not respond directly to Data Subject requests unless required by law or unless the University has authorized ReCater to do so in writing.</p>
+<h3 id="92-processors-assistance">9.2 Processor&rsquo;s assistance</h3>
+<p>ReCater will assist the University in fulfilling its obligations to respond to Data Subject requests. Specifically, ReCater will:</p>
+<ul>
+<li>Provide tools (in the mobile app and dashboard) for Data Subjects to access, correct, or delete their own data.</li>
+<li>Provide a data-export endpoint that the University can use to fulfill portability requests.</li>
+<li>Target an initial response to the University&rsquo;s request for assistance within 5 business days.</li>
+<li>Implement technical changes (e.g., bulk data deletion) within 30 days of the University&rsquo;s verified request.</li>
+</ul>
+<h3 id="93-fees">9.3 Fees</h3>
+<p>ReCater&rsquo;s assistance with Data Subject requests is included in the University&rsquo;s subscription fee. If a Data Subject request is unreasonable, repetitive, or excessive, ReCater may charge a reasonable fee, with the University&rsquo;s prior written approval.</p>
+<hr>
+<h2 id="10-audit-rights">10. Audit Rights</h2>
+<h3 id="101-the-universitys-audit-rights">10.1 The University&rsquo;s audit rights</h3>
+<p>The University may audit ReCater&rsquo;s compliance with this DPA, including ReCater&rsquo;s technical and organizational measures, once per calendar year, with at least 30 days&rsquo; written notice.</p>
+<h3 id="102-audit-methods">10.2 Audit methods</h3>
+<p>The University may conduct the audit by:</p>
+<ul>
+<li>Reviewing ReCater&rsquo;s written security and privacy documentation (including this DPA, the Privacy Policy, the security incident response procedures, and any available security certifications).</li>
+<li>Requesting a security questionnaire or completed HECVAT from ReCater.</li>
+<li>Requesting a video conference with ReCater&rsquo;s security and privacy team to discuss controls.</li>
+<li>Conducting an on-site audit at ReCater&rsquo;s offices, with at least 60 days&rsquo; notice and at the University&rsquo;s expense, no more than once per year.</li>
+</ul>
+<h3 id="103-confidentiality-of-audit-findings">10.3 Confidentiality of audit findings</h3>
+<p>Audit findings are the confidential information of the University and ReCater. The University may not disclose audit findings to any third party without ReCater&rsquo;s prior written consent, except as required by law.</p>
+<h3 id="104-substitute-for-audit">10.4 Substitute for audit</h3>
+<p>In lieu of an audit, the University may accept any of the following as evidence of ReCater&rsquo;s compliance with this DPA: a SOC 2 report (Type I or Type II, when available), a third-party security assessment (e.g., Vanta, Drata, Tugboat Logic), or the Security Summary described in §7.3.</p>
+<hr>
+<h2 id="11-international-data-transfers">11. International Data Transfers</h2>
+<h3 id="111-recater-is-us-based">11.1 ReCater is US-based</h3>
+<p>ReCater is based in the United States. All Personal Data is hosted in the United States. The University acknowledges that Personal Data of Data Subjects located in the European Economic Area (EEA), the United Kingdom (UK), Switzerland, or other jurisdictions with data-transfer restrictions will be transferred to the United States.</p>
+<h3 id="112-eea-uk-and-switzerland">11.2 EEA, UK, and Switzerland</h3>
+<p>For Data Subjects in the EEA, UK, or Switzerland, ReCater relies on the <strong>EU Standard Contractual Clauses (Commission Decision 2021/914)</strong> for the transfer. The SCCs are available on request to <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>. ReCater will also cooperate with the University to provide additional safeguards (e.g., supplementary measures, encryption in transit and at rest, contractual controls) as required.</p>
+<h3 id="113-other-jurisdictions">11.3 Other jurisdictions</h3>
+<p>For Data Subjects in other jurisdictions with data-transfer restrictions (e.g., Brazil&rsquo;s LGPD, China&rsquo;s PIPL, Canada&rsquo;s PIPEDA), ReCater will work with the University to provide appropriate transfer safeguards on a case-by-case basis, which may include additional contractual clauses, supplementary measures, or local data residency arrangements.</p>
+<hr>
+<h2 id="12-return-or-deletion-at-end">12. Return or Deletion at End</h2>
+<h3 id="121-return">12.1 Return</h3>
+<p>Within 30 days of the termination of the Master Services Agreement, the University may request a copy of all Tenant Personal Data in a structured, machine-readable format (JSON). The export includes:</p>
+<ul>
+<li>All posts and check-ins attributed to the Tenant.</li>
+<li>All monthly emissions summaries and report history.</li>
+<li>All survey responses.</li>
+<li>All audit logs (subject to §10.3 confidentiality).</li>
+</ul>
+<h3 id="122-deletion">12.2 Deletion</h3>
+<p>Within 90 days of the termination, ReCater will delete all Tenant Personal Data from production systems and certify the deletion in writing. Audit logs are retained for 7 years for legal and compliance purposes, in a restricted-access archive that is not used for any operational purpose.</p>
+<h3 id="123-sub-processors">12.3 Sub-processors</h3>
+<p>ReCater will instruct all sub-processors to delete Tenant Personal Data within the same 90-day window, with written attestation of deletion.</p>
+<hr>
+<h2 id="13-personal-data-breach">13. Personal Data Breach</h2>
+<h3 id="131-recaters-obligations">13.1 ReCater&rsquo;s obligations</h3>
+<p>If ReCater becomes aware of a Personal Data Breach affecting Tenant Personal Data, ReCater will:</p>
+<ul>
+<li>Investigate and contain the incident within 48 hours of detection.</li>
+<li>Notify the affected University Tenant within 72 hours of confirmation, with a description of the breach, the categories of Personal Data affected, the likely consequences, and the measures taken or proposed to address it.</li>
+<li>Cooperate with the University&rsquo;s investigation and remediation.</li>
+<li>Document the breach, the response, and the lessons learned in a written incident report, available to the University on request.</li>
+</ul>
+<h3 id="132-the-universitys-obligations">13.2 The University&rsquo;s obligations</h3>
+<p>The University is responsible for:</p>
+<ul>
+<li>Notifying affected Data Subjects in accordance with the GDPR, state breach notification laws, or other applicable law.</li>
+<li>Notifying Supervisory Authorities in accordance with the GDPR (within 72 hours of becoming aware of the breach, where applicable).</li>
+<li>Coordinating with ReCater on the content of any public statement or press release about the breach.</li>
+</ul>
+<h3 id="133-no-liability-for-the-universitys-failures">13.3 No liability for the University&rsquo;s failures</h3>
+<p>ReCater is not liable for the University&rsquo;s failure to notify Data Subjects or Supervisory Authorities, except to the extent that the failure is caused by ReCater&rsquo;s own breach of this DPA.</p>
+<hr>
+<h2 id="14-liability">14. Liability</h2>
+<h3 id="141-liability-cap">14.1 Liability cap</h3>
+<p>Unless the Master Services Agreement states otherwise, ReCater&rsquo;s total liability under this DPA is capped at the <strong>greater of (a) USD $100 or (b) the total amount paid by the University to ReCater in the twelve (12) months preceding the event giving rise to the claim</strong>. Nothing in this DPA limits liability that cannot be limited under applicable law.</p>
+<h3 id="142-data-breach-liability">14.2 Data breach liability</h3>
+<p>Personal Data Breach liability is governed by the limitation of liability in the Master Services Agreement, if one exists. If no Master Services Agreement exists, the cap in §14.1 applies, except to the extent applicable law prohibits that limitation.</p>
+<h3 id="143-indirect-damages">14.3 Indirect damages</h3>
+<p>Neither party is liable for indirect, incidental, special, consequential, or punitive damages, except for liability arising from a party&rsquo;s gross negligence or willful misconduct.</p>
+<hr>
+<h2 id="15-term-and-termination">15. Term and Termination</h2>
+<h3 id="151-term">15.1 Term</h3>
+<p>This DPA is effective from the Effective Date and continues for the duration of the Master Services Agreement.</p>
+<h3 id="152-termination">15.2 Termination</h3>
+<p>This DPA terminates automatically upon termination of the Master Services Agreement, except for those provisions that by their nature survive termination (including §10.3 Confidentiality of audit findings, §12 Return or Deletion at End, §13 Personal Data Breach, §14 Liability, and §16 General Provisions).</p>
+<h3 id="153-effect-of-termination">15.3 Effect of termination</h3>
+<p>Upon termination, ReCater will return or delete the Personal Data in accordance with §12. The University may, at its election, request an extension of the return-or-delete window for up to 90 days for legitimate operational reasons (e.g., transition to a successor platform).</p>
+<hr>
+<h2 id="16-general-provisions">16. General Provisions</h2>
+<h3 id="161-order-of-precedence">16.1 Order of precedence</h3>
+<p>In the event of a conflict between this DPA and the Master Services Agreement or the Privacy Policy, this DPA controls with respect to the Processing of Personal Data.</p>
+<h3 id="162-severability">16.2 Severability</h3>
+<p>If any provision of this DPA is found unenforceable, the remaining provisions continue in effect, and the unenforceable provision shall be modified to the minimum extent necessary to be enforceable.</p>
+<h3 id="163-amendment">16.3 Amendment</h3>
+<p>ReCater may amend this DPA from time to time. Material amendments will be communicated to the University at least 30 days in advance. If the University does not agree to the amendment, the University may terminate the affected services for convenience.</p>
+<h3 id="164-governing-law">16.4 Governing law</h3>
+<p>This DPA is governed by the laws of the state of <code>[STATE — to be specified in the executed agreement]</code>, without regard to its conflict of laws principles.</p>
+<h3 id="165-dispute-resolution">16.5 Dispute resolution</h3>
+<p>Disputes under this DPA are subject to the dispute-resolution provisions of the User Terms §11, except that Data Subject requests and Supervisory Authority inquiries are not subject to arbitration and may be addressed through the courts of the state specified in §16.4.</p>
+<h3 id="166-entire-agreement">16.6 Entire agreement</h3>
+<p>This DPA, together with the Master Services Agreement, the User Terms, the Privacy Policy, the Food Safety Statement, and the University-specific Addenda, constitutes the entire agreement between the parties with respect to the Processing of Personal Data.</p>
+<hr>
+<h2 id="17-contact">17. Contact</h2>
+<p>For questions about this DPA:</p>
+<ul>
+<li><strong>Email</strong>: <a href="mailto:legal@getrecater.com">legal@getrecater.com</a></li>
+<li><strong>Privacy contact</strong>: <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a></li>
+<li><strong>Mail</strong>: ReCater Inc. (registered agent&rsquo;s address; current address is on file with the Delaware Secretary of State)</li>
+<li><strong>EU representative (Article 27)</strong>: If ReCater is required to appoint an Article 27 representative, appointment details will be added to this DPA and the Privacy Policy. Until then, EEA-based correspondence may be directed to <a href="mailto:legal@getrecater.com">legal@getrecater.com</a> with the subject line &ldquo;Article 27.&rdquo;</li>
+</ul>
+<hr>
+<h2 id="18-effective-date">18. Effective Date</h2>
+<p>This DPA is effective as of 1 July 2026.</p>
+<hr>
+<p><em>End of Data Processing Addendum (Version 2.0).</em></p>
+<p><em>This DPA is informed by the European Union&rsquo;s General Data Protection Regulation (Articles 28, 32, and the Standard Contractual Clauses in Commission Decision 2021/914), the ReCater Privacy and Data Protection primer (<code>university-docs/03_Privacy_and_Data_Protection.md</code>), the ReCater Security and Compliance doc (<code>university-docs/04_Security_and_Compliance.md</code>), the InCommon compliance audit (<code>admin-dashboard/INCOMMON_COMPLIANCE_AUDIT.md</code>), and the public privacy policies of comparable campus platforms (Free Food Alert, Frood) for benchmarking only.</em></p>
+<div class="rc-crosslinks"><a class="rc-crosslinks__chip" href="terms.html">Terms of Use</a><a class="rc-crosslinks__chip" href="privacy.html">Privacy Policy</a><a class="rc-crosslinks__chip" href="food-safety.html">Food Safety</a><a class="rc-crosslinks__chip" href="addenda.html">Per-University Addenda</a></div>
+<div class="rc-contact">
+  <h2 id="contact">Questions, comments, or concerns</h2>
+  <p>This document is published by ReCater, Inc. (the entity that operates the ReCater service). For questions about this document, contact us at <a href="mailto:legal@getrecater.com">legal@getrecater.com</a>.</p>
+  <p>For privacy and data-protection questions, contact <a href="mailto:privacy@getrecater.com">privacy@getrecater.com</a>.</p>
+  <p>To report a security vulnerability, contact <a href="mailto:security@getrecater.com">security@getrecater.com</a>.</p>
+  <p>For product support, contact <a href="mailto:support@getrecater.com">support@getrecater.com</a>.</p>
+</div>
+</div>
+</section>
+</main>
+<footer class="rc-footer" role="contentinfo">
+  <div class="rc-shell">
+    <div class="rc-footer__grid">
+      <div class="rc-footer__brand-area">
+        <a href="/" class="rc-footer__brand" aria-label="ReCater home">
+          <img src="/assets/recater-mark.png" alt="" class="rc-footer__brand-mark" aria-hidden="true">
+          <span class="rc-footer__brand-word">ReCater</span>
+        </a>
+        <p class="rc-footer__tag">
+          The verified impact loop for campus food recovery. Multi-tenant SaaS for universities that need student energy and reportable data.
+        </p>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="/#the-loop">The Loop</a></li>
+          <li><a href="/#how-it-works">How it works</a></li>
+          <li><a href="/#impact">Impact &amp; reporting</a></li>
+          <li><a href="/#students">For students</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+        </ul>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/#security">Security &amp; trust</a></li>
+          <li><a href="/#compare">Capability comparison</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="mailto:hello@getrecater.com?subject=ReCater%20docs">University docs</a></li>
+          <li><a href="mailto:hello@getrecater.com?subject=Status%20page%20request">Status &amp; uptime</a></li>
+        </ul>
+      </div>
+      <div class="rc-footer__col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="terms.html">User Terms of Use</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="food-safety.html">Food Safety</a></li>
+          <li><a href="dpa.html">Data Processing Addendum</a></li>
+          <li><a href="addenda.html">Per-University Addenda</a></li>
+          <li><a href="mailto:legal@getrecater.com?subject=Legal%20inquiry">legal@getrecater.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rc-footer__bottom">
+      <span>© 2026 ReCater. Built for campuses that need both.</span>
+      <div class="rc-footer__bottom-links">
+        <a href="mailto:privacy@getrecater.com?subject=Privacy%20inquiry">Privacy</a>
+        <a href="mailto:legal@getrecater.com?subject=Terms%20inquiry">Terms</a>
+        <a href="mailto:security@getrecater.com?subject=Security%20report">Report a security issue</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
